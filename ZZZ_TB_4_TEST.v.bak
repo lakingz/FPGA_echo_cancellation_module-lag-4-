@@ -6,24 +6,30 @@ reg clk,rst;
 wire [63:0] double;
 wire stop;
 
-s
 always #125 clk = ~clk;
 
 initial begin
 	clk = 1;
 	rst = 1;
-	sig = $urandom;
+	sig = 16'b0000000000001001;
+	sigg = 16'b0000000000000001;
 end
 
-sig16b_to_double MUTTT (
+sig16b_to_double MUT (
 	.clk(clk),
 	.rst(rst),
 	.sig16b(sig),
 	.double(double),
 	.stop(stop)
 );
+sig16b_to_double MUTT (
+	.clk(clk),
+	.rst(rst),
+	.sig16b(sigg),
+	.double(double),
+	.stop(stop)
+);
 
-always @(negedge stop) rst <= 0;
-always @(posedge stop) rst <= 1;
+always @(stop) rst <= 0;
 
 endmodule //ZZZ_TB_4_TEST

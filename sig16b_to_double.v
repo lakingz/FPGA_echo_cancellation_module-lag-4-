@@ -14,7 +14,7 @@ output reg stop;
 reg double_sign;
 reg [14:0] sig_amp;
 reg [10:0] double_exponent;
-integer i,j;
+integer i;
 
 always @(posedge clk) begin
    if (rst == 1) begin
@@ -27,7 +27,7 @@ always @(posedge clk) begin
    else if (stop == 0) begin
       case (sig_amp[14])
       1: begin
-         double_exponent <= i + 1;
+         double_exponent <= i - 1;
          sig_amp <= sig_amp << 1;
          stop <= 1;
       end
@@ -49,7 +49,7 @@ end
 
 
 assign double[63] = double_sign;
-assign double[62:52] = double_exponent;
+assign double[62:52] = double_exponent + 1023; //exponent is offset by 1023
 assign double[51:36] = sig_amp;
 assign double[35:0] = 0;
 

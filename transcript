@@ -1,3 +1,84 @@
 # Reading D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/tcl/vsim/pref.tcl
 # OpenFile D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.mpf
 # Loading project echo_cancelation
+# Load canceled
+# Compile of ZZZ_TB_4_TEST.v was successful.
+vsim -gui work.ZZZ_TB_4_TEST
+# vsim -gui work.ZZZ_TB_4_TEST 
+# Start time: 19:44:19 on Jul 18,2018
+# Loading work.ZZZ_TB_4_TEST
+# Loading work.sig16b_to_double
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftm2k2dh".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftm2k2dh
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/MUTTT/*
+run
+quit -sim
+# End time: 19:47:11 on Jul 18,2018, Elapsed time: 0:02:52
+# Errors: 0, Warnings: 2
+# Compile of ZZZ_TB_4_TEST.v was successful.
+vsim -gui work.ZZZ_TB_4_TEST
+# vsim -gui work.ZZZ_TB_4_TEST 
+# Start time: 19:47:24 on Jul 18,2018
+# Loading work.ZZZ_TB_4_TEST
+# Loading work.sig16b_to_double
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftmvx27m".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftmvx27m
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/MUTTT/*
+run
+# Can't move the Now cursor.
+quit -sim
+# End time: 19:58:53 on Jul 18,2018, Elapsed time: 0:11:29
+# Errors: 1, Warnings: 2
+# Compile of ZZZ_TB_4_TEST.v was successful.
+# Compile of sig16b_to_double.v was successful.
+vsim -gui work.ZZZ_TB_4_TEST
+# vsim -gui work.ZZZ_TB_4_TEST 
+# Start time: 19:59:34 on Jul 18,2018
+# Loading work.ZZZ_TB_4_TEST
+# Loading work.sig16b_to_double
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftdseixd".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftdseixd
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/MUTTT/*
+run
+quit -sim
+# End time: 20:02:17 on Jul 18,2018, Elapsed time: 0:02:43
+# Errors: 0, Warnings: 2
+# Compile of sig16b_to_double.v was successful.
+# Compile of ZZZ_TB_4_TEST.v failed with 1 errors.
+# Compile of ZZZ_TB_4_TEST.v was successful.
+vsim -gui work.ZZZ_TB_4_TEST
+# vsim -gui work.ZZZ_TB_4_TEST 
+# Start time: 20:03:59 on Jul 18,2018
+# Loading work.ZZZ_TB_4_TEST
+# Loading work.sig16b_to_double
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftv5h6sh".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftv5h6sh
+run
+# Can't move the Now cursor.
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/MUT/*
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/MUTT/*
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+quit -sim
+# End time: 20:07:50 on Jul 18,2018, Elapsed time: 0:03:51
+# Errors: 1, Warnings: 2
+# Compile of sig16b_to_double.v was successful.
