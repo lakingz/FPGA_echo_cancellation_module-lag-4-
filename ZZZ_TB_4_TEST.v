@@ -1,7 +1,7 @@
 `timescale 1us / 1us
 module ZZZ_TB_4_TEST();
 
-reg [15:0] sig,sig1,sig2;
+reg [10:0] sig,sig1,sig2;
 reg clk;
 wire [63:0] double;
 reg stop,prestop;
@@ -11,7 +11,7 @@ always #125 clk = ~clk;
 
 initial begin
 	clk = 1;
-	sig = 16'b1010101010101010;
+	sig = 11'b10000000010;
 	shift = 4'b1111 + 5'b00001;
 end
 
