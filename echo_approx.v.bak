@@ -3,7 +3,6 @@
 ***                            Author :   LAK                           ***  
 **************************************************************************/
 
-//we first look at 3 lag with parameter 1 2 1
 
 
 `timescale 1us/1us

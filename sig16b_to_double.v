@@ -24,7 +24,7 @@ always @(posedge clk) begin
       i <= 15;
       stop <= 0;
    end
-   else if (stop == 0) begin
+   else if (stop == 0) begin   //if 'stop == 1'' do not make any updates.
       case (sig16b_amp[14])
       1: begin
          double_exponent <= i - 1;

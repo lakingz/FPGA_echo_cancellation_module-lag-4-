@@ -1,84 +1,61 @@
 # Reading D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/tcl/vsim/pref.tcl
 # OpenFile D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.mpf
 # Loading project echo_cancelation
+vsim -gui work.ZZZ_TB_4_TEST
+# vsim -gui work.ZZZ_TB_4_TEST 
+# Start time: 19:56:15 on Jul 26,2018
+# Loading work.ZZZ_TB_4_TEST
+# Loading work.STACKMODULE_TEST
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v(31): [PCDPC] - Port size (1) does not match connection size (32) for port 'mod'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v(2).
+#    Time: 0 us  Iteration: 0  Instance: /ZZZ_TB_4_TEST/MUT File: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v(40): [PCDPC] - Port size (1) does not match connection size (32) for port 'mod'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v(2).
+#    Time: 0 us  Iteration: 0  Instance: /ZZZ_TB_4_TEST/MUTT File: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlfte1n83a".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfte1n83a
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/MUT/*
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/MUTT/*
+run
+quit -sim
+# End time: 20:08:32 on Jul 26,2018, Elapsed time: 0:12:17
+# Errors: 0, Warnings: 4
+# Compile of ZZZ_TB_4_TEST.v was successful.
+# Compile of ZZZ_TB_4_TEST.v failed with 1 errors.
 # Load canceled
-# Compile of ZZZ_TB_4_TEST.v was successful.
-vsim -gui work.ZZZ_TB_4_TEST
-# vsim -gui work.ZZZ_TB_4_TEST 
-# Start time: 19:44:19 on Jul 18,2018
-# Loading work.ZZZ_TB_4_TEST
-# Loading work.sig16b_to_double
-add wave -position insertpoint sim:/ZZZ_TB_4_TEST/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
-#           Attempting to use alternate WLF file "./wlftm2k2dh".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftm2k2dh
-add wave -position insertpoint sim:/ZZZ_TB_4_TEST/MUTTT/*
-run
-quit -sim
-# End time: 19:47:11 on Jul 18,2018, Elapsed time: 0:02:52
-# Errors: 0, Warnings: 2
-# Compile of ZZZ_TB_4_TEST.v was successful.
-vsim -gui work.ZZZ_TB_4_TEST
-# vsim -gui work.ZZZ_TB_4_TEST 
-# Start time: 19:47:24 on Jul 18,2018
-# Loading work.ZZZ_TB_4_TEST
-# Loading work.sig16b_to_double
-add wave -position insertpoint sim:/ZZZ_TB_4_TEST/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
-#           Attempting to use alternate WLF file "./wlftmvx27m".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftmvx27m
-add wave -position insertpoint sim:/ZZZ_TB_4_TEST/MUTTT/*
-run
-# Can't move the Now cursor.
-quit -sim
-# End time: 19:58:53 on Jul 18,2018, Elapsed time: 0:11:29
-# Errors: 1, Warnings: 2
-# Compile of ZZZ_TB_4_TEST.v was successful.
-# Compile of sig16b_to_double.v was successful.
-vsim -gui work.ZZZ_TB_4_TEST
-# vsim -gui work.ZZZ_TB_4_TEST 
-# Start time: 19:59:34 on Jul 18,2018
-# Loading work.ZZZ_TB_4_TEST
-# Loading work.sig16b_to_double
-add wave -position insertpoint sim:/ZZZ_TB_4_TEST/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
-#           Attempting to use alternate WLF file "./wlftdseixd".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftdseixd
-add wave -position insertpoint sim:/ZZZ_TB_4_TEST/MUTTT/*
-run
-quit -sim
-# End time: 20:02:17 on Jul 18,2018, Elapsed time: 0:02:43
-# Errors: 0, Warnings: 2
-# Compile of sig16b_to_double.v was successful.
+# Compile of ZZZ_TB_4_TEST.v failed with 3 errors.
+# Compile of ZZZ_TB_4_TEST.v failed with 2 errors.
+# Compile of ZZZ_TB_4_TEST.v failed with 2 errors.
+# Compile of ZZZ_TB_4_TEST.v failed with 2 errors.
+# Compile of ZZZ_TB_4_TEST.v failed with 7 errors.
+# Compile of ZZZ_TB_4_TEST.v failed with 7 errors.
 # Compile of ZZZ_TB_4_TEST.v failed with 1 errors.
 # Compile of ZZZ_TB_4_TEST.v was successful.
 vsim -gui work.ZZZ_TB_4_TEST
 # vsim -gui work.ZZZ_TB_4_TEST 
-# Start time: 20:03:59 on Jul 18,2018
+# Start time: 20:20:49 on Jul 26,2018
 # Loading work.ZZZ_TB_4_TEST
-# Loading work.sig16b_to_double
-add wave -position insertpoint sim:/ZZZ_TB_4_TEST/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
-#           Attempting to use alternate WLF file "./wlftv5h6sh".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftv5h6sh
-run
-# Can't move the Now cursor.
-add wave -position insertpoint sim:/ZZZ_TB_4_TEST/MUT/*
-add wave -position insertpoint sim:/ZZZ_TB_4_TEST/MUTT/*
-restart
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-quit -sim
-# End time: 20:07:50 on Jul 18,2018, Elapsed time: 0:03:51
-# Errors: 1, Warnings: 2
-# Compile of sig16b_to_double.v was successful.
+# Loading work.STACKMODULE_TEST
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v(25): Illegal output or inout port connection for port 'c'.
+#    Time: 0 us  Iteration: 0  Instance: /ZZZ_TB_4_TEST/MUTT File: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v(25): [PCDPC] - Port size (1) does not match connection size (32) for port 'mod'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v(2).
+#    Time: 0 us  Iteration: 0  Instance: /ZZZ_TB_4_TEST/MUTT File: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v
+# Error loading design
+# End time: 20:20:49 on Jul 26,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# Compile of ZZZ_TB_4_TEST.v failed with 2 errors.
+# Compile of ZZZ_TB_4_TEST.v was successful.
+vsim -gui work.ZZZ_TB_4_TEST
+# vsim -gui work.ZZZ_TB_4_TEST 
+# Start time: 20:23:15 on Jul 26,2018
+# Loading work.ZZZ_TB_4_TEST
+# Loading work.STACKMODULE_TEST
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v(25): Illegal output or inout port connection for port 'c'.
+#    Time: 0 us  Iteration: 0  Instance: /ZZZ_TB_4_TEST/MUTT File: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v(25): [PCDPC] - Port size (1) does not match connection size (32) for port 'mod'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v(2).
+#    Time: 0 us  Iteration: 0  Instance: /ZZZ_TB_4_TEST/MUTT File: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v
+# Error loading design
+# End time: 20:23:15 on Jul 26,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1

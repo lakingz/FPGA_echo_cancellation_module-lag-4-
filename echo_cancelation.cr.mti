@@ -5,15 +5,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	fpu_exceptions
 
-} {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_div.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_div.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module fpu_div
-
-Top level modules:
-	fpu_div
-
 } {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/double_to_sig16b.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/double_to_sig16b.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module double_to_sig16b
+
+Top level modules:
+	double_to_sig16b
+
+} {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/double_16b_tb.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/double_16b_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module double_16b_tb
+
+Top level modules:
+	double_16b_tb
 
 } {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/float_to_double.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/float_to_double.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -36,6 +40,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	fpu_round
 
+} {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module STACKMODULE_TEST
+
+Top level modules:
+	STACKMODULE_TEST
+
 } {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/signal_generator.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/signal_generator.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module signal_generator
@@ -50,13 +61,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	fpu_sub
 
-} {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module ZZZ_TB_4_TEST
-
-Top level modules:
-	ZZZ_TB_4_TEST
-
 } {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_double.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_double.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module fpu
@@ -70,13 +74,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	tb_all
-
-} {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module echo_approx
-
-Top level modules:
-	echo_approx
 
 } {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_TB.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_TB.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016

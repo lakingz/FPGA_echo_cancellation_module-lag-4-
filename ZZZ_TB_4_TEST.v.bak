@@ -1,35 +1,52 @@
 `timescale 1us / 1us
 module ZZZ_TB_4_TEST();
 
-reg [15:0] sig;
-reg clk,rst;
-wire [63:0] double;
-wire stop;
+reg [2:0] sig,sig1,sig2,a,b,c;
+reg clk;
+reg [2:0] double,double_2;
+reg enable;
+reg [1:0] phase;
 
 always #125 clk = ~clk;
 
 initial begin
-	clk = 1;
-	rst = 1;
-	sig = 16'b0000000000001001;
-	sigg = 16'b0000000000000001;
+	clk = 1;	
+	enable = 0;
 end
 
-sig16b_to_double MUT (
-	.clk(clk),
-	.rst(rst),
-	.sig16b(sig),
-	.double(double),
-	.stop(stop)
-);
-sig16b_to_double MUTT (
-	.clk(clk),
-	.rst(rst),
-	.sig16b(sigg),
-	.double(double),
-	.stop(stop)
+initial phase = 2'b00;
+
+always @(posedge clk) begin
+	sig <= $urandom;
+	sig1 <= $urandom;
+	sig2 <= $urandom;
+end
+
+STACKMODULE_TEST MUTT (      //<=
+.clk(clk), 
+.a(a), 
+.b(b), 
+.c(c), 
+.mod(0),
+.enable(enable)
 );
 
-always @(stop) rst <= 0;
-
+always @(posedge clk) begin
+if (phase == 2'b00) begin
+a <= sig;
+b <= sig1;
+c <= double;
+phase <= 2'b01;
+end
+else if (phase == 2'b01) begin
+a <= sig2;
+b <= double;
+c <= double_2;
+phase <= 2'b10;
+end
+else if (phase == 2'b10) begin
+double <= double_2;
+phase <= 2'b00;
+end
+end
 endmodule //ZZZ_TB_4_TEST

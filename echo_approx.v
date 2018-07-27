@@ -58,5 +58,22 @@ assign para_0 = parat_0;
 assign para_1 = parat_1;
 assign para_2 = parat_2;
 
+/*fpu UUT (
+		.clk(clk),
+		.rst(rst),
+		.enable(enable),
+		.rmode(rmode),
+		.fpu_op(fpu_op),
+		.opa(opa),
+		.opb(opb),
+		.out(out),
+		.ready(ready),
+		.underflow(underflow),
+		.overflow(overflow),
+		.inexact(inexact),
+		.exception(exception),
+		.invalid(invalid));*/
+
+
 endmodule // echo_approx
 
