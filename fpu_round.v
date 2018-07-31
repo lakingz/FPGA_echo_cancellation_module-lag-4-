@@ -33,7 +33,7 @@
 /////////////////////////////////////////////////////////////////////
 
 
-`timescale 1ns / 100ps
+`timescale 1us / 1us
 
 module fpu_round( clk, rst, enable, round_mode, sign_term, 
 mantissa_term, exponent_term, round_out, exponent_final);

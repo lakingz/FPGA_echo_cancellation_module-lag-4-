@@ -33,7 +33,7 @@
 /////////////////////////////////////////////////////////////////////
 
 
-`timescale 1ns / 100ps
+`timescale 1us / 1us
 
 module fpu_div( clk, rst, enable, opa, opb, sign, mantissa_7,
 exponent_out);

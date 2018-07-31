@@ -33,7 +33,7 @@
 /////////////////////////////////////////////////////////////////////
 
 
-`timescale 1ns / 100ps
+`timescale 1us / 1us
 
 module fpu_exceptions( clk, rst, enable, rmode, opa, opb, in_except,
 exponent_in, mantissa_in, fpu_op, out, ex_enable, underflow, overflow, 

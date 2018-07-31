@@ -33,7 +33,7 @@
 /////////////////////////////////////////////////////////////////////
 
 
-`timescale 1ns / 100ps
+`timescale 1us / 1us
 
 module fpu_mul( clk, rst, enable, opa, opb, sign, product_7, exponent_5);
 input		clk;

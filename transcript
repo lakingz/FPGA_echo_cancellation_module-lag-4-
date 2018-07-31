@@ -1,61 +1,645 @@
 # Reading D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/tcl/vsim/pref.tcl
 # OpenFile D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.mpf
 # Loading project echo_cancelation
+# Compile of ZZZ_TB_4_TEST.v was successful.
+# Load canceled
+# Load canceled
 vsim -gui work.ZZZ_TB_4_TEST
 # vsim -gui work.ZZZ_TB_4_TEST 
-# Start time: 19:56:15 on Jul 26,2018
+# Start time: 14:30:55 on Jul 31,2018
 # Loading work.ZZZ_TB_4_TEST
-# Loading work.STACKMODULE_TEST
-# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v(31): [PCDPC] - Port size (1) does not match connection size (32) for port 'mod'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v(2).
-#    Time: 0 us  Iteration: 0  Instance: /ZZZ_TB_4_TEST/MUT File: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v
-# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v(40): [PCDPC] - Port size (1) does not match connection size (32) for port 'mod'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v(2).
-#    Time: 0 us  Iteration: 0  Instance: /ZZZ_TB_4_TEST/MUTT File: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
 add wave -position insertpoint sim:/ZZZ_TB_4_TEST/*
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
-#           Attempting to use alternate WLF file "./wlfte1n83a".
+#           Attempting to use alternate WLF file "./wlft1czweg".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfte1n83a
-add wave -position insertpoint sim:/ZZZ_TB_4_TEST/MUT/*
-add wave -position insertpoint sim:/ZZZ_TB_4_TEST/MUTT/*
+#           Using alternate file: ./wlft1czweg
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/UUT/*
+run
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 run
 quit -sim
-# End time: 20:08:32 on Jul 26,2018, Elapsed time: 0:12:17
-# Errors: 0, Warnings: 4
-# Compile of ZZZ_TB_4_TEST.v was successful.
-# Compile of ZZZ_TB_4_TEST.v failed with 1 errors.
+# End time: 14:34:40 on Jul 31,2018, Elapsed time: 0:03:45
+# Errors: 0, Warnings: 2
+vsim -gui work.fpu_tb
+# vsim -gui work.fpu_tb 
+# Start time: 14:34:48 on Jul 31,2018
+# Loading work.fpu_tb
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/fpu_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftxerrwv".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftxerrwv
+run
+# Compile of fpu_TB.v was successful.
+run
+#                28200ps Error! out is incorrect 0000000000000000
+#                36400ps Error! out is incorrect 0000000000000000
+run
+#                44600ps Error! out is incorrect 0000000000000000
+#                52800ps Error! out is incorrect 0000000000000000
+# Break key hit
+quit -sim
+# End time: 14:36:25 on Jul 31,2018, Elapsed time: 0:01:37
+# Errors: 0, Warnings: 2
+# Compile of fpu_TB.v was successful.
 # Load canceled
-# Compile of ZZZ_TB_4_TEST.v failed with 3 errors.
-# Compile of ZZZ_TB_4_TEST.v failed with 2 errors.
-# Compile of ZZZ_TB_4_TEST.v failed with 2 errors.
-# Compile of ZZZ_TB_4_TEST.v failed with 2 errors.
-# Compile of ZZZ_TB_4_TEST.v failed with 7 errors.
-# Compile of ZZZ_TB_4_TEST.v failed with 7 errors.
+# Compile of fpu_TB.v was successful.
+vsim -gui work.fpu_tb
+# vsim -gui work.fpu_tb 
+# Start time: 14:36:49 on Jul 31,2018
+# Loading work.fpu_tb
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint b011
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftqjtjmw".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftqjtjmw
+# (vish-4014) No objects found matching 'b011'.
+add wave -position insertpoint sim:/fpu_tb/*
+run
+quit -sim
+# End time: 14:37:59 on Jul 31,2018, Elapsed time: 0:01:10
+# Errors: 1, Warnings: 2
+# Compile of fpu_TB.v was successful.
+# Compile of fpu_TB.v was successful.
+vsim -gui work.fpu_tb
+# vsim -gui work.fpu_tb 
+# Start time: 14:38:20 on Jul 31,2018
+# Loading work.fpu_tb
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/fpu_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlfthiy9gv".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthiy9gv
+run
+run
+#                25500ps Answer is correct 3cf323ea98d06fb6
+#                33700ps Answer is correct 000010914a4c025a
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+#                41900ps Answer is correct 4079000000000000
+#                50100ps Error! out is incorrect 4079000000000000
+#                58300ps Error! out is incorrect 4079000000000000
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+#                66500ps Answer is correct c0d28e0000000000
+#                74700ps Answer is correct c02a000000000000
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+#                82900ps Answer is correct c08b900000000000
+#                91100ps Error! out is incorrect c08b900000000000
+#                99300ps Answer is correct 4012dc91d14e3bce
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+#               107500ps Answer is correct 407b38cccccccccc
+#               115700ps Answer is correct 000012688b70e62b
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+quit -sim
+# End time: 14:42:29 on Jul 31,2018, Elapsed time: 0:04:09
+# Errors: 13, Warnings: 3
+# Compile of fpu_TB.v was successful.
+vsim -gui work.fpu_tb
+# vsim -gui work.fpu_tb 
+# Start time: 14:43:43 on Jul 31,2018
+# Loading work.fpu_tb
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/fpu_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftmcj38j".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftmcj38j
+run
+run
+#                25500ps Answer is correct 3cf323ea98d06fb6
+run
+#                46000ps Answer is correct 000010914a4c025a
+run
+#                66500ps Answer is correct 4079000000000000
+run
+#                87000ps Answer is correct 40411d0e56041894
+run
+#               107500ps Answer is correct 400fdb6db6db6db7
+#               115700ps Answer is correct c0d28e0000000000
+run
+#               123900ps Answer is correct c02a000000000000
+#               132100ps Error! out is incorrect c02a000000000000
+run
+#               140300ps Error! out is incorrect c02a000000000000
+#               148500ps Answer is correct 4012dc91d14e3bce
+#               156700ps Answer is correct 407b38cccccccccc
+run
+#               164900ps Answer is correct 000012688b70e62b
+#               173100ps Error! out is incorrect 000012688b70e62b
+run
+#               181300ps Error! out is incorrect 000012688b70e62b
+#               189500ps Error! out is incorrect 000012688b70e62b
+#               197700ps Error! out is incorrect 000012688b70e62b
+run
+#               205900ps Answer is correct 40e7e9eccccccccd
+#               214100ps Error! out is incorrect 40e7e9eccccccccd
+run
+#               222300ps Error! out is incorrect 40e7e9eccccccccd
+#               230500ps Error! out is incorrect 40e7e9eccccccccd
+#               238700ps Answer is correct c053133333333334
+quit -sim
+# End time: 14:49:24 on Jul 31,2018, Elapsed time: 0:05:41
+# Errors: 0, Warnings: 2
+vsim -gui work.fpu_tb
+# vsim -gui work.fpu_tb 
+# Start time: 14:51:37 on Jul 31,2018
+# Loading work.fpu_tb
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/fpu_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlfttjfdyb".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfttjfdyb
+run
+run
+#                25500ps Answer is correct 3cf323ea98d06fb6
+run
+#                46000ps Answer is correct 000010914a4c025a
+run
+#                66500ps Answer is correct 4079000000000000
+run
+#                87000ps Answer is correct 40411d0e56041894
+run
+#               107500ps Answer is correct 400fdb6db6db6db7
+#               115700ps Answer is correct c0d28e0000000000
+run
+#               123900ps Answer is correct c02a000000000000
+#               132100ps Error! out is incorrect c02a000000000000
+run
+#               140300ps Error! out is incorrect c02a000000000000
+#               148500ps Answer is correct 4012dc91d14e3bce
+#               156700ps Answer is correct 407b38cccccccccc
+run
+#               164900ps Answer is correct 000012688b70e62b
+#               173100ps Error! out is incorrect 000012688b70e62b
+quit -sim
+# End time: 14:58:28 on Jul 31,2018, Elapsed time: 0:06:51
+# Errors: 0, Warnings: 2
 # Compile of ZZZ_TB_4_TEST.v failed with 1 errors.
+# Compile of ZZZ_TB_4_TEST.v failed with 1 errors.
+# Compile of ZZZ_TB_4_TEST.v was successful with warnings.
+# Compile of ZZZ_TB_4_TEST.v was successful.
+vsim -gui work.TFclarification
+# vsim -gui work.TFclarification 
+# Start time: 15:03:16 on Jul 31,2018
+# Loading work.TFclarification
+add wave -position insertpoint sim:/TFclarification/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftad1f4z".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftad1f4z
+run
+quit -sim
+# End time: 15:04:13 on Jul 31,2018, Elapsed time: 0:00:57
+# Errors: 0, Warnings: 2
+vsim -gui work.fpu_tb
+# vsim -gui work.fpu_tb 
+# Start time: 15:06:19 on Jul 31,2018
+# Loading work.fpu_tb
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/fpu_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlft8ktfie".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft8ktfie
+run
+run
+#                25500ps Answer is correct 3cf323ea98d06fb6
+run
+#                46000ps Answer is correct 000010914a4c025a
+run
+#                66500ps Answer is correct 4079000000000000
+run
+#                87000ps Answer is correct 40411d0e56041894
+run
+#               107500ps Answer is correct 400fdb6db6db6db7
+#               115700ps Answer is correct c0d28e0000000000
+run
+#               123900ps Answer is correct c02a000000000000
+#               132100ps Error! out is incorrect c02a000000000000
+run
+#               140300ps Error! out is incorrect c02a000000000000
+#               148500ps Answer is correct 4012dc91d14e3bce
+#               156700ps Answer is correct 407b38cccccccccc
+run
+#               164900ps Answer is correct 000012688b70e62b
+#               173100ps Error! out is incorrect 000012688b70e62b
+run
+#               181300ps Error! out is incorrect 000012688b70e62b
+#               189500ps Error! out is incorrect 000012688b70e62b
+#               197700ps Error! out is incorrect 000012688b70e62b
+run
+#               205900ps Answer is correct 40e7e9eccccccccd
+#               214100ps Error! out is incorrect 40e7e9eccccccccd
+run
+#               222300ps Error! out is incorrect 40e7e9eccccccccd
+#               230500ps Error! out is incorrect 40e7e9eccccccccd
+#               238700ps Answer is correct c053133333333334
+run
+#               246900ps Answer is correct 3ff0000000000000
+#               255100ps Error! out is incorrect 3ff0000000000000
+restart
+add wave -position insertpoint sim:/fpu_tb/*
+add wave -position insertpoint sim:/fpu_tb/UUT/*
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+#                25500ps Answer is correct 3cf323ea98d06fb6
+run
+#                46000ps Answer is correct 000010914a4c025a
+run
+#                66500ps Answer is correct 4079000000000000
+run
+#                87000ps Answer is correct 40411d0e56041894
+run
+#               107500ps Answer is correct 400fdb6db6db6db7
+#               115700ps Answer is correct c0d28e0000000000
+quit -sim
+# End time: 15:20:13 on Jul 31,2018, Elapsed time: 0:13:54
+# Errors: 0, Warnings: 2
 # Compile of ZZZ_TB_4_TEST.v was successful.
 vsim -gui work.ZZZ_TB_4_TEST
 # vsim -gui work.ZZZ_TB_4_TEST 
-# Start time: 20:20:49 on Jul 26,2018
+# Start time: 15:20:31 on Jul 31,2018
 # Loading work.ZZZ_TB_4_TEST
-# Loading work.STACKMODULE_TEST
-# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v(25): Illegal output or inout port connection for port 'c'.
-#    Time: 0 us  Iteration: 0  Instance: /ZZZ_TB_4_TEST/MUTT File: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v
-# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v(25): [PCDPC] - Port size (1) does not match connection size (32) for port 'mod'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v(2).
-#    Time: 0 us  Iteration: 0  Instance: /ZZZ_TB_4_TEST/MUTT File: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v
-# Error loading design
-# End time: 20:20:49 on Jul 26,2018, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 1
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlft4wdm3n".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4wdm3n
+run
+quit -sim
+# End time: 15:22:30 on Jul 31,2018, Elapsed time: 0:01:59
+# Errors: 0, Warnings: 2
+# Compile of ZZZ_TB_4_TEST.v was successful.
+vsim -gui work.ZZZ_TB_4_TEST
+# vsim -gui work.ZZZ_TB_4_TEST 
+# Start time: 15:22:43 on Jul 31,2018
+# Loading work.ZZZ_TB_4_TEST
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlfts7b1a9".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfts7b1a9
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 15:24:31 on Jul 31,2018, Elapsed time: 0:01:48
+# Errors: 0, Warnings: 2
 # Compile of ZZZ_TB_4_TEST.v failed with 2 errors.
 # Compile of ZZZ_TB_4_TEST.v was successful.
 vsim -gui work.ZZZ_TB_4_TEST
 # vsim -gui work.ZZZ_TB_4_TEST 
-# Start time: 20:23:15 on Jul 26,2018
+# Start time: 15:25:37 on Jul 31,2018
 # Loading work.ZZZ_TB_4_TEST
-# Loading work.STACKMODULE_TEST
-# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v(25): Illegal output or inout port connection for port 'c'.
-#    Time: 0 us  Iteration: 0  Instance: /ZZZ_TB_4_TEST/MUTT File: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v
-# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v(25): [PCDPC] - Port size (1) does not match connection size (32) for port 'mod'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v(2).
-#    Time: 0 us  Iteration: 0  Instance: /ZZZ_TB_4_TEST/MUTT File: D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v
-# Error loading design
-# End time: 20:23:15 on Jul 26,2018, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 1
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftnc213y".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftnc213y
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 15:26:25 on Jul 31,2018, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 2
+# Compile of ZZZ_TB_4_TEST.v was successful.
+vsim -gui work.ZZZ_TB_4_TEST
+# vsim -gui work.ZZZ_TB_4_TEST 
+# Start time: 15:27:18 on Jul 31,2018
+# Loading work.ZZZ_TB_4_TEST
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlft26gzhr".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft26gzhr
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 15:28:43 on Jul 31,2018, Elapsed time: 0:01:25
+# Errors: 0, Warnings: 2
+# Compile of fpu_TB.v was successful.
+vsim -gui work.ZZZ_TB_4_TEST
+# vsim -gui work.ZZZ_TB_4_TEST 
+# Start time: 15:32:54 on Jul 31,2018
+# Loading work.ZZZ_TB_4_TEST
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+quit -sim
+# End time: 15:33:03 on Jul 31,2018, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0
+# Compile of ZZZ_TB_4_TEST.v was successful.
+vsim -gui work.ZZZ_TB_4_TEST
+# vsim -gui work.ZZZ_TB_4_TEST 
+# Start time: 15:33:14 on Jul 31,2018
+# Loading work.ZZZ_TB_4_TEST
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftg50d6s".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftg50d6s
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 15:35:21 on Jul 31,2018, Elapsed time: 0:02:07
+# Errors: 0, Warnings: 2
+# Compile of ZZZ_TB_4_TEST.v failed with 2 errors.
+# Compile of ZZZ_TB_4_TEST.v was successful.
+vsim -gui work.ZZZ_TB_4_TEST
+# vsim -gui work.ZZZ_TB_4_TEST 
+# Start time: 15:35:57 on Jul 31,2018
+# Loading work.ZZZ_TB_4_TEST
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftygcm6t".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftygcm6t
+run
+run
+run
+run
+quit -sim
+# End time: 15:36:32 on Jul 31,2018, Elapsed time: 0:00:35
+# Errors: 0, Warnings: 2
+# Compile of ZZZ_TB_4_TEST.v was successful.
+vsim -gui work.ZZZ_TB_4_TEST
+# vsim -gui work.ZZZ_TB_4_TEST 
+# Start time: 15:38:44 on Jul 31,2018
+# Loading work.ZZZ_TB_4_TEST
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/ZZZ_TB_4_TEST/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftmm9nk2".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftmm9nk2
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 15:39:08 on Jul 31,2018, Elapsed time: 0:00:24
+# Errors: 0, Warnings: 2

@@ -33,7 +33,7 @@
 /////////////////////////////////////////////////////////////////////
 
 
-`timescale 1ns / 100ps
+`timescale 1us / 1us
 
 
 module fpu_sub( clk, rst, enable, opa, opb, fpu_op, sign, diff_2, exponent_2);

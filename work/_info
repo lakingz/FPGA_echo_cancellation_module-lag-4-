@@ -179,13 +179,13 @@ R5
 R6
 n@divide
 vdouble_16b_tb
-Z11 !s110 1532295482
+!s110 1532906528
 !i10b 1
-!s100 b95d9Oh1k6Mefh>e;fAK:2
-ITNRb:oB>WdmP?gVY5Fl<12
+!s100 [jT_NF_4IeccN2n>I]VA<0
+IoY7Q<L?IoVaLg@2XM7B261
 R1
 R2
-w1532288105
+w1532906447
 8D:/WORKING_FOLDER/echo_cancelation/A_code/double_16b_tb.v
 FD:/WORKING_FOLDER/echo_cancelation/A_code/double_16b_tb.v
 L0 2
@@ -193,14 +193,14 @@ R3
 r1
 !s85 0
 31
-Z12 !s108 1532295482.000000
+!s108 1532906528.000000
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/double_16b_tb.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/double_16b_tb.v|
 !i113 1
 R5
 R6
 vdouble_to_float
-Z13 !s110 1532295481
+!s110 1532295481
 !i10b 1
 !s100 A@97aPT9[I@P`8oda5?;^0
 IzzmVnfKe<k>1=PIc7k8h`0
@@ -214,7 +214,7 @@ R3
 r1
 !s85 0
 31
-Z14 !s108 1532295481.000000
+!s108 1532295481.000000
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/double_to_float.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/double_to_float.v|
 !i113 1
@@ -242,13 +242,13 @@ r1
 R5
 R6
 vecho_approx
-Z15 !s110 1532295480
+!s110 1532808241
 !i10b 1
-!s100 jBdJMM_;Kj0P1]9?aBF^^0
-I=KF>bUge8cR[jS=@E6QJ@0
+!s100 mV`TPb;lhmTfj_UOQ=CYO3
+Ik?e7NQ8g[NcohLSQ]Hb>=2
 R1
 R2
-w1531444495
+w1532377835
 8D:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v
 FD:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v
 L0 9
@@ -256,14 +256,14 @@ R3
 r1
 !s85 0
 31
-Z16 !s108 1532295480.000000
+!s108 1532808241.000000
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v|
 !i113 1
 R5
 R6
 vfloat_to_double
-R11
+Z11 !s110 1532295482
 !i10b 1
 !s100 =<8Kf@l2RAki9Sl9naK260
 IR]zTSoID;[X3BGoz<AS]n2
@@ -277,20 +277,20 @@ R3
 r1
 !s85 0
 31
-R12
+Z12 !s108 1532295482.000000
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/float_to_double.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/float_to_double.v|
 !i113 1
 R5
 R6
 vfpu
-R13
+!s110 1532914561
 !i10b 1
-!s100 oZeDiQRH_9ad4lX:JDjI^3
-IVZE[4J=N]CkY0nI0CQ=Ie0
+!s100 6<^bNNnNIB^CQV@kYNF=h1
+I_hcKeS1oGZ4j70A]nccQM2
 R1
 R2
-Z17 w1231531300
+w1532914281
 8D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_double.v
 FD:/WORKING_FOLDER/echo_cancelation/A_code/fpu_double.v
 L0 51
@@ -298,125 +298,125 @@ R3
 r1
 !s85 0
 31
-R14
+!s108 1532914561.000000
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_double.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_double.v|
 !i113 1
 R5
 R6
 vfpu_add
-R15
+!s110 1532914384
 !i10b 1
-!s100 S=eIH4NAlQF2lbGzj<fMj3
-IZDUi[m>?>`d]D^kBPNZ3Z2
+!s100 mPUkb>SMHIXI9DY10M2EJ3
+I_bG4zbA0dM?`G6IViUXzW1
 R1
 R2
-R17
+w1532914378
 8D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_add.v
 FD:/WORKING_FOLDER/echo_cancelation/A_code/fpu_add.v
-Z18 L0 37
+Z13 L0 37
 R3
 r1
 !s85 0
 31
-R16
+!s108 1532914384.000000
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_add.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_add.v|
 !i113 1
 R5
 R6
 vfpu_div
-R13
+!s110 1532914324
 !i10b 1
-!s100 MkQCC5HT1R^oz]8:K948]2
-I:b559ln_eC>fd<4[]K>ma3
+!s100 [Gmo76b;S4B7Wd2:@ibiR2
+ICEG0>o2=QVNS8S33ka@;<0
 R1
 R2
-Z19 w1235348280
+w1532914323
 8D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_div.v
 FD:/WORKING_FOLDER/echo_cancelation/A_code/fpu_div.v
-Z20 L0 38
+Z14 L0 38
 R3
 r1
 !s85 0
 31
-R16
+!s108 1532914324.000000
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_div.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_div.v|
 !i113 1
 R5
 R6
 vfpu_exceptions
-R13
+!s110 1532914314
 !i10b 1
-!s100 9OmEJ9`j9U]OX2;>d1K_T0
-IP=aPD9GT>]1G]gKk1Jl@]3
+!s100 E5Jb_DMhW@7VRLZ4MO]G51
+I1GO>a@9Rgo]gCaQKCTW:D1
 R1
 R2
-R17
+w1532914312
 8D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_exceptions.v
 FD:/WORKING_FOLDER/echo_cancelation/A_code/fpu_exceptions.v
-R20
+R14
 R3
 r1
 !s85 0
 31
-R14
+!s108 1532914314.000000
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_exceptions.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_exceptions.v|
 !i113 1
 R5
 R6
 vfpu_mul
-R13
+!s110 1532914364
 !i10b 1
-!s100 dbGd1?XE=791P?o7Y6igA3
-Ifl<=>@RmXJ9cTCo@iZ8YN2
+!s100 o_h^K6d4YPXzl;07BK>?41
+IPKEFONBij7kz9MkbA801?3
 R1
 R2
-R19
+w1532914362
 8D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_mul.v
 FD:/WORKING_FOLDER/echo_cancelation/A_code/fpu_mul.v
-R20
+R14
 R3
 r1
 !s85 0
 31
-R14
+!s108 1532914364.000000
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_mul.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_mul.v|
 !i113 1
 R5
 R6
 vfpu_round
-R13
+!s110 1532914339
 !i10b 1
-!s100 JiU^G6_kOL0V1gL0KON9m2
-INVzBlPo^SZPnSzmbZAmo;2
+!s100 Y<c;RiS:0DG3^[APOQHFm3
+IBA6cBXiTeON^:Na`k[9R>2
 R1
 R2
-R17
+w1532914337
 8D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_round.v
 FD:/WORKING_FOLDER/echo_cancelation/A_code/fpu_round.v
-R20
+R14
 R3
 r1
 !s85 0
 31
-R14
+!s108 1532914339.000000
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_round.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_round.v|
 !i113 1
 R5
 R6
 vfpu_sub
-R13
+!s110 1532914301
 !i10b 1
-!s100 `8g2@L54Z^mbBY?>egF>l2
-IR=GJzG<V8Bhm`UOF`3cM`0
+!s100 ifH>?TTGd?1Q2z8cHXkdl1
+IId=JiBe:Zm7J_kzdj]EWS0
 R1
 R2
-R19
+w1532914299
 8D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_sub.v
 FD:/WORKING_FOLDER/echo_cancelation/A_code/fpu_sub.v
 L0 39
@@ -424,35 +424,35 @@ R3
 r1
 !s85 0
 31
-R14
+!s108 1532914301.000000
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_sub.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_sub.v|
 !i113 1
 R5
 R6
 vfpu_tb
-!s110 1532377314
+!s110 1533065567
 !i10b 1
-!s100 IW1CkaRgFo=Id5=@3aQJ;2
-I?jM@2Mb^<c3VXbm2Ozc:e3
+!s100 cN`U<S>C2o?9h`nSznEA>3
+IPeld=kmL?3YBW9IigJ6J?2
 R1
 R2
-w1532377309
+w1533062597
 8D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_TB.v
 FD:/WORKING_FOLDER/echo_cancelation/A_code/fpu_TB.v
-R18
+R13
 R3
 r1
 !s85 0
 31
-!s108 1532377312.000000
+!s108 1533065567.000000
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_TB.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_TB.v|
 !i113 1
 R5
 R6
 vlag_generator
-R15
+!s110 1532295480
 !i10b 1
 !s100 YCoTKJPjKcMPhbU=G5b4V1
 I3m;=H>a8d?cWc?ik9lS]R2
@@ -466,20 +466,20 @@ R3
 r1
 !s85 0
 31
-Z21 !s108 1532295479.000000
+Z15 !s108 1532295479.000000
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/lag_generator.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/lag_generator.v|
 !i113 1
 R5
 R6
 vqdiv
-Z22 !s110 1531513277
+Z16 !s110 1531513277
 !i10b 1
 !s100 VlZf?7iKPnQ_YBQl;MEUU2
 IIh2g[?Hl_lF@g_A0[3MTH1
 R1
 R2
-Z23 w1531511612
+Z17 w1531511612
 8D:/WORKING_FOLDER/echo_cancelation/A_code/qdiv.v
 FD:/WORKING_FOLDER/echo_cancelation/A_code/qdiv.v
 L0 26
@@ -487,20 +487,20 @@ R3
 r1
 !s85 0
 31
-Z24 !s108 1531513277.000000
+Z18 !s108 1531513277.000000
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/qdiv.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/qdiv.v|
 !i113 1
 R5
 R6
 vqmults
-R22
+R16
 !i10b 1
 !s100 GOTzDH;^FX>Q]j93kWn=h3
 IfkT=NTHR:Ii^:_[MCcH`Y2
 R1
 R2
-R23
+R17
 8D:/WORKING_FOLDER/echo_cancelation/A_code/qmults.v
 FD:/WORKING_FOLDER/echo_cancelation/A_code/qmults.v
 L0 21
@@ -508,7 +508,7 @@ R3
 r1
 !s85 0
 31
-R24
+R18
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/qmults.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/qmults.v|
 !i113 1
@@ -536,7 +536,7 @@ R12
 R5
 R6
 vsignal_generator
-Z25 !s110 1532295479
+Z19 !s110 1532295479
 !i10b 1
 !s100 m@CK1O68OUBPX[n0i[4X]0
 I>z4B<>=4z:TNQmU9ibaWn0
@@ -550,7 +550,7 @@ R3
 r1
 !s85 0
 31
-R21
+R15
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/signal_generator.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/signal_generator.v|
 !i113 1
@@ -578,13 +578,13 @@ r1
 R5
 R6
 vSTACKMODULE_TEST
-!s110 1532557529
+!s110 1532913297
 !i10b 1
-!s100 T23^_;5SPQSNNHgE_:[Ca2
-IV:5;O3a>QRzGD=ZjZK78?1
+!s100 aV9_8Y`HRN6WVkn_`ak?11
+I;X`Cz0;6njWcR=KG<_@DU2
 R1
 R2
-w1532557525
+w1532912775
 8D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v
 FD:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v
 L0 2
@@ -592,7 +592,7 @@ R3
 r1
 !s85 0
 31
-!s108 1532557529.000000
+!s108 1532913297.000000
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/STACKMODULE_TEST.v|
 !i113 1
@@ -600,7 +600,7 @@ R5
 R6
 n@s@t@a@c@k@m@o@d@u@l@e_@t@e@s@t
 vtb_all
-R25
+R19
 !i10b 1
 !s100 _4=nPnJmZO2Zhb513<PNg2
 I<nRVe`z>J__56W6ALo]4f2
@@ -614,7 +614,7 @@ R3
 r1
 !s85 0
 31
-R21
+R15
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v|
 !i113 1
@@ -663,21 +663,21 @@ r1
 R5
 R6
 vTestDiv
-R22
+R16
 !i10b 1
 !s100 RcQ3^d064n944;A5WMHRS0
 I[T=ngB52FH2?YQG3UeW9>2
 R1
 R2
-R23
+R17
 8D:/WORKING_FOLDER/echo_cancelation/A_Examples/verilog_fixed_point_math_library-master/verilog_fixed_point_math_library-master/TestDiv.v
 FD:/WORKING_FOLDER/echo_cancelation/A_Examples/verilog_fixed_point_math_library-master/verilog_fixed_point_math_library-master/TestDiv.v
-Z26 L0 25
+Z20 L0 25
 R3
 r1
 !s85 0
 31
-R24
+R18
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_Examples/verilog_fixed_point_math_library-master/verilog_fixed_point_math_library-master/TestDiv.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_Examples/verilog_fixed_point_math_library-master/verilog_fixed_point_math_library-master/TestDiv.v|
 !i113 1
@@ -685,45 +685,67 @@ R5
 R6
 n@test@div
 vTestMultS
-R22
+R16
 !i10b 1
 !s100 6VB7[>:_3d;XC<1aQZ7JL1
 IBO^^@91ZMEPX;h]>l4k]>3
 R1
 R2
-R23
+R17
 8D:/WORKING_FOLDER/echo_cancelation/A_code/TestMultS.v
 FD:/WORKING_FOLDER/echo_cancelation/A_code/TestMultS.v
-R26
+R20
 R3
 r1
 !s85 0
 31
-R24
+R18
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/TestMultS.v|
 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/TestMultS.v|
 !i113 1
 R5
 R6
 n@test@mult@s
-vZZZ_TB_4_TEST
-!s110 1532650958
+vTFclarification
+!s110 1533063775
 !i10b 1
-!s100 N31o=E6<CB:aE>;nH^aY`0
-IYdUS?g0T[1RTU4B<9?J=z1
+!s100 Nz=3:WhBDacPBY=hA1G3D1
+IP^SGBDcFP6OEh=7OBFjBQ2
 R1
 R2
-w1532650957
-8D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v
-FD:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v
+w1533063771
+Z21 8D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v
+Z22 FD:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v
+L0 65
+R3
+r1
+!s85 0
+31
+!s108 1533063775.000000
+!s107 D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v|
+Z23 !s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v|
+!i113 1
+R5
+R6
+n@t@fclarification
+vZZZ_TB_4_TEST
+!s110 1533065918
+!i10b 1
+!s100 oSlZ?1TjVTBeN=8`K<X4c1
+I=XaTYH4V=RYZ9JB6W<n393
+R1
+R2
+w1533065916
+R21
+R22
 L0 2
 R3
 r1
 !s85 0
 31
-!s108 1532650958.000000
+!s108 1533065918.000000
 !s107 D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v|
-!s90 -##implicit##push_minusfile_path##|D:/WORKING_FOLDER/echo_cancelation/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|-stats=none|D:/WORKING_FOLDER/echo_cancelation/A_code/ZZZ_TB_4_TEST.v|
+R23
 !i113 1
 R5
 R6
