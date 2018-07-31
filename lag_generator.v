@@ -39,6 +39,8 @@ lag_1 <= lag_0;
 lag_0 <= signal;
 end
 end
+
+
 always@(lag_0 or lag_1 or lag_2) signal_lag_sum = $realtobits((lag_2 * 0.2 + lag_1 * 0.3 + lag_0 * 0.5)/ (0.2+0.3+0.5));
 //always@(lag_1 or lag_2 or lag_3) tt = (lag_3 * 0.2 + lag_2 * 0.3 + lag_1 * 0.5) / (0.2+0.3+0.5);
 

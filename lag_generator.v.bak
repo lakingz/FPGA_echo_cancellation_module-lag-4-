@@ -16,7 +16,7 @@ output [15:0] signal_lag;
 reg clk;
 integer count;
 reg [15:0] lag_0,lag_1,lag_2;
-reg [19:0] signal_lag_sum;
+reg [15:0] signal_lag_sum;
 //real tt;
 
 initial begin

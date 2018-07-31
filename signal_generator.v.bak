@@ -4,7 +4,7 @@
 ***                            Author :   LAK                           ***  
 **************************************************************************/
 
-`timescale 125us / 125us
+`timescale 1us / 1us
 module signal_generator (signal_random);
 
 reg clk;
@@ -14,7 +14,7 @@ integer count;
 initial begin
 count = -1;
 clk = 1;
-forever #5 clk = ~clk;
+forever #125 clk = ~clk;
 end	
 
 always@(posedge clk) begin
