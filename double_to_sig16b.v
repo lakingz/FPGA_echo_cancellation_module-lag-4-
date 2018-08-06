@@ -1,11 +1,12 @@
 module double_to_sig16b(
-	clk,
+	clk_samplying,
 	rst,
 	sig16b,
-	double
+	double,
+	enable
 );
 
-input clk,rst;
+input clk_samplying,rst,enable;
 input [64-1:0] double;
 output [16-1:0] sig16b;
 
@@ -15,21 +16,28 @@ wire [52:0] double_amp_shift;
 reg [52:0] double_amp_unshift;
 reg [9:0] double_exponent;
 
-always @(posedge clk) begin
-   sig16b_sign <= double[63];
-   if (double[62:52] < 1023) begin
-      double_amp_unshift <= 0;   //negative exponent, rounding to 0.
+always @(posedge clk_samplying) begin
+   if (rst) begin
+      double_amp_unshift <= 0;
       double_exponent <= 0;
-   end 
-   else begin
-      double_exponent <= double[61:52] + 10'b0000000001;
-      if (double_exponent > 14) begin
-         double_amp_unshift[52:38] <= 15'b111111111111111;   // !!!!over 15 digit, rounding to 15'b1111111111111111.
-	 double_exponent <= 14;
-      end
-      else begin 
-         double_amp_unshift[52] <= 1;
-	 double_amp_unshift[51:0] <= double[51:0];       
+      sig16b_sign <= 0;
+   end
+   else if (enable) begin 
+      sig16b_sign <= double[63];
+      if (double[62:52] < 1023) begin
+         double_amp_unshift <= 0;   //negative exponent, rounding to 0.
+         double_exponent <= 0;
+      end 
+      else begin
+         double_exponent <= double[61:52] + 10'b0000000001;
+         if (double_exponent > 14) begin
+            double_amp_unshift[52:38] <= 15'b111111111111111;   // !!!!over 15 digit, rounding to 15'b1111111111111111.
+	    double_exponent <= 14;
+         end
+         else begin 
+            double_amp_unshift[52] <= 1;
+     	    double_amp_unshift[51:0] <= double[51:0];       
+         end
       end
    end
 end

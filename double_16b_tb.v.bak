@@ -1,84 +1,50 @@
 `timescale 1us / 1us
 module double_16b_tb();
 
-reg [15:0] sig_in;
-reg clk,rst;
+reg [15:0] sig16b_in;
+reg clk_samplying,rst,clk_operation;
+reg enable_MUT,enable_MUTT;
 wire [63:0] double;
 wire stop;
-wire [15:0] sig_out;
-
-reg enable;
-reg [1:0]rmode;
-reg [2:0]fpu_op;
-reg [63:0]opa;
-reg [63:0]opb;
-wire [63:0]out;
-wire ready;
-wire underflow;
-wire overflow;
-wire inexact;
-wire exception;
-wire invalid;  
-
-reg [6:0] count;
+wire [15:0] sig16b_out;
 
 
-fpu UUT (
-	.clk(clk),
-	.rst(rst),
-	.enable(enable),
-	.rmode(rmode),
-	.fpu_op(fpu_op),
-	.opa(opa),
-	.opb(opb),
-		.out(out),
-		.ready(ready),
-		.underflow(underflow),
-		.overflow(overflow),
-		.inexact(inexact),
-		.exception(exception),
-		.invalid(invalid));
-
-initial
-begin : STIMUL 
-	#0			  
-	count = 0;
-	rst = 1'b1;
-	#500;
-	rst = 1'b0;	   // paste after this
-//inputA:1.6999999999e-314
-//inputB:4.0000000000e-300
-enable = 1'b1;
-opa = 64'b0000000000000000000000000000000011001101000101110000011010100010;
-opb = 64'b0000000111000101011011100001111111000010111110001111001101011001;
-fpu_op = 3'b011;//fpu_op (operation code, 3 bits, 000 = add, 001 = subtract,010 = multiply, 011 = divide, others are not used)
-rmode = 2'b00;
-#500;
-enable = 1'b0;//enable (set high to start operation)
-#20000;
-//Output:4.249999999722977e-015
-end
-
-always #125 clk = ~clk;
+always #200 clk_samplying = ~clk_samplying;
+always #1 clk_operation = ~clk_operation;
 
 initial begin
-	clk = 1;
+	rst = 1;
+	#10
+	rst = 0;
+	clk_samplying = 0;
+	clk_operation = 0;
+	enable_MUTT = 1;
 end
 
-/*sig16b_to_double MUT (
-	.clk(clk),
+sig16b_to_double MUT (
+	.clk_operation(clk_operation),
 	.rst(rst),
-	.sig16b(sig_in),
+	.sig16b(sig16b_in),
 	.double(double),
-	.stop(stop)
+	.ready(ready),
+	.enable(enable_MUT)
 );
 
-double_to_sig16b MUTT (
-	.clk(clk),
+double_to_sig16b MUTT(
+	.clk_samplying(clk_samplying),
 	.rst(rst),
-	.sig16b(sig_out),
-	.double(double)
+	.sig16b(sig16b_out),
+	.double(double),
+	.enable(enable_MUTT)
 );
-always @(stop) rst <= 0;*/
+
+always @(posedge clk_samplying) begin
+	sig16b_in <= $urandom;
+	enble_MUT <= 1;
+	#10
+	enable_MUT <= 0;
+end
+
+
 
 endmodule //double_16b_tb
