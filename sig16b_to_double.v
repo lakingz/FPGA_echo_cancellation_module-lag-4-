@@ -3,10 +3,10 @@
 module sig16b_to_double(
 	clk_operation,
 	rst,
-	sig16b,
+	sig16b,	
+	enable,
 	double,
-	ready,
-	enable
+	ready
 );
 
 input clk_operation,rst;
@@ -23,14 +23,16 @@ reg [3:0] i;
 
 always @(posedge clk_operation) begin
    if (rst) begin
-      double_sign <= sig16b[15];
-      sig16b_amp <= sig16b[14:0];
-      double_exponent <= 0;
+      double_sign <= 0;
+      double_exponent <= -1023;
+      sig16b_amp <= 0;
       ready <= 0;
    end
    else begin 
       if (enable) begin
-         i <= 15;
+         double_sign <= sig16b[15];
+         sig16b_amp <= sig16b[14:0];
+	 i <= 15;
          enable_internal <= 1;
 	 ready <= 0;
       end

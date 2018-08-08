@@ -5,7 +5,6 @@ reg [15:0] sig16b_in;
 reg clk_samplying,rst,clk_operation;
 reg enable_MUT,enable_MUTT;
 wire [63:0] double;
-wire stop;
 wire [15:0] sig16b_out;
 
 
@@ -31,7 +30,7 @@ sig16b_to_double MUT (
 );
 
 double_to_sig16b MUTT(
-	.clk_samplying(clk_samplying),
+	.clk_samplying(clk_operation),
 	.rst(rst),
 	.sig16b(sig16b_out),
 	.double(double),
@@ -40,7 +39,7 @@ double_to_sig16b MUTT(
 
 always @(posedge clk_samplying) begin
 	sig16b_in <= $urandom;
-	enble_MUT <= 1;
+	enable_MUT <= 1;
 	#10
 	enable_MUT <= 0;
 end

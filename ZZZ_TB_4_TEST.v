@@ -59,6 +59,7 @@ if (ready) begin
 	opa <= $urandom;
 	opb <= out;
 	fpu_op <= $urandom;
+	rmode = 2'b00;
 	enable <= 1'b1;
 	#4;
 	enable <= 1'b0;
