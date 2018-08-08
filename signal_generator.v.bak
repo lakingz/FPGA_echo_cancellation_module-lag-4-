@@ -10,11 +10,6 @@ module signal_generator (clk_samplying,signal);
 input clk_samplying;
 output reg [15:0] signal;
 
-initial begin
-clk_samplying = 1;
-forever #200 clk_samplying = ~clk_samplying;
-end	
-
 always@(posedge clk_samplying) begin
 signal <= $urandom;
 end

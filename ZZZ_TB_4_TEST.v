@@ -1,7 +1,7 @@
 `timescale 1us / 1us
 module ZZZ_TB_4_TEST();
 
-reg clk_samplying,clk_operation,rst;
+reg clk_sampling,clk_operation,rst;
 reg enable;
 reg [1:0]rmode;
 reg [2:0]fpu_op;
@@ -16,10 +16,10 @@ wire exception;
 wire invalid;  
 
 initial begin
-clk_samplying = 0;
+clk_sampling = 0;
 clk_operation = 0;
 end
-always #200 clk_samplying = ~clk_samplying;
+always #200 clk_sampling = ~clk_sampling;
 always #1 clk_operation = ~clk_operation;
 
 fpu UUT (
@@ -54,7 +54,7 @@ begin
 	#160;	
 end
 
-always @(posedge clk_samplying) begin
+always @(posedge clk_sampling) begin
 if (ready) begin
 	opa <= $urandom;
 	opb <= out;
@@ -67,4 +67,15 @@ end
 end
 endmodule //ZZZ_TB_4_TEST
 
+module TEST();
+reg [3:0] k,b;
+reg clk;
 
+initial clk =0;
+always #125 clk <= ~clk;
+
+always @(posedge clk) begin
+k <= $urandom;
+b <= k;
+end
+endmodule//TEST

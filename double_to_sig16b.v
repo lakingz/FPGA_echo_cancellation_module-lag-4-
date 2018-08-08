@@ -1,12 +1,12 @@
 module double_to_sig16b(
-	clk_samplying,
+	clk_sampling,
 	rst,
 	sig16b,
 	double,
 	enable
 );
 
-input clk_samplying,rst,enable;
+input clk_sampling,rst,enable;
 input [64-1:0] double;
 output [16-1:0] sig16b;
 
@@ -16,7 +16,7 @@ wire [52:0] double_amp_shift;
 reg [52:0] double_amp_unshift;
 reg [9:0] double_exponent;
 
-always @(posedge clk_samplying) begin
+always @(posedge clk_sampling) begin
    if (rst) begin
       double_amp_unshift <= 0;
       double_exponent <= 0;

@@ -2,10 +2,11 @@ module double_to_sig16b(
 	clk_samplying,
 	rst,
 	sig16b,
-	double
+	double,
+	enable
 );
 
-input clk_samplying,rst;
+input clk_samplying,rst,enable;
 input [64-1:0] double;
 output [16-1:0] sig16b;
 
@@ -21,7 +22,7 @@ always @(posedge clk_samplying) begin
       double_exponent <= 0;
       sig16b_sign <= 0;
    end
-   else   begin 
+   else if (enable) begin 
       sig16b_sign <= double[63];
       if (double[62:52] < 1023) begin
          double_amp_unshift <= 0;   //negative exponent, rounding to 0.

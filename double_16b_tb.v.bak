@@ -13,10 +13,10 @@ always #1 clk_operation = ~clk_operation;
 
 initial begin
 	rst = 1;
-	#10
+	#200
 	rst = 0;
-	clk_samplying = 0;
-	clk_operation = 0;
+	clk_samplying = 1;
+	clk_operation = 1;
 	enable_MUTT = 1;
 end
 

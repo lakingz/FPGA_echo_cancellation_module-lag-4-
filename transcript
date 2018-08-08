@@ -884,3 +884,590 @@ quit -sim
 # Compile of tb_all.v was successful.
 # Compile of lag_generator.v was successful.
 # 2 compiles, 0 failed with no errors.
+# Compile of lag_generator.v failed with 1 errors.
+# Compile of tb_all.v was successful.
+# Compile of lag_generator.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of tb_all.v was successful.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 16:44:20 on Aug 08,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftzv480s".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftzv480s
+add wave -position insertpoint sim:/tb_all/MUTTT/*
+run
+run
+run
+quit -sim
+# End time: 16:45:25 on Aug 08,2018, Elapsed time: 0:01:05
+# Errors: 0, Warnings: 2
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 16:45:41 on Aug 08,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftyb7x9z".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftyb7x9z
+add wave -position insertpoint sim:/tb_all/MUTTT/*
+run
+run
+run
+quit -sim
+# End time: 16:49:13 on Aug 08,2018, Elapsed time: 0:03:32
+# Errors: 0, Warnings: 2
+# Compile of lag_generator.v was successful.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 16:51:21 on Aug 08,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlft2qd79s".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft2qd79s
+add wave -position insertpoint sim:/tb_all/MUTTT/*
+run
+run
+quit -sim
+# End time: 16:52:54 on Aug 08,2018, Elapsed time: 0:01:33
+# Errors: 0, Warnings: 2
+# Compile of tb_all.v was successful.
+# Compile of lag_generator.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 16:55:27 on Aug 08,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftfg491j".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftfg491j
+add wave -position insertpoint sim:/tb_all/#INITIAL#16/*
+add wave -position insertpoint sim:/tb_all/MUTTT/*
+run
+run
+quit -sim
+# End time: 16:56:20 on Aug 08,2018, Elapsed time: 0:00:53
+# Errors: 0, Warnings: 2
+# Compile of lag_generator.v failed with 2 errors.
+# Compile of lag_generator.v failed with 2 errors.
+# Compile of lag_generator.v was successful.
+# Compile of tb_all.v was successful.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 17:00:18 on Aug 08,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftwbh7mk".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftwbh7mk
+add wave -position insertpoint sim:/tb_all/MUTTT/*
+run
+quit -sim
+# End time: 17:03:13 on Aug 08,2018, Elapsed time: 0:02:55
+# Errors: 0, Warnings: 2
+# Compile of tb_all.v was successful.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 17:03:55 on Aug 08,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+quit -sim
+# End time: 17:04:05 on Aug 08,2018, Elapsed time: 0:00:10
+# Errors: 0, Warnings: 0
+# Compile of lag_generator.v was successful.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 17:04:17 on Aug 08,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlft7ckmw6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft7ckmw6
+add wave -position insertpoint sim:/tb_all/#INITIAL#16/*
+add wave -position insertpoint sim:/tb_all/MUTTT/*
+run
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+quit -sim
+# End time: 17:08:08 on Aug 08,2018, Elapsed time: 0:03:51
+# Errors: 2, Warnings: 3
+# Compile of lag_generator.v was successful.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 17:08:53 on Aug 08,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlfth3590m".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfth3590m
+add wave -position insertpoint sim:/tb_all/MUTTT/*
+run
+quit -sim
+# End time: 17:12:45 on Aug 08,2018, Elapsed time: 0:03:52
+# Errors: 0, Warnings: 2
+# Compile of lag_generator.v failed with 2 errors.
+# Compile of lag_generator.v was successful.
+# Compile of signal_generator.v was successful.
+# Compile of tb_all.v was successful.
+# Compile of lag_generator.v failed with 3 errors.
+# Compile of ZZZ_TB_4_TEST.v was successful.
+# Compile of double_to_sig16b.v was successful.
+# Compile of double_16b_tb.v was successful.
+# 6 compiles, 1 failed with 3 errors.
+# Compile of lag_generator.v was successful.
+# Load canceled
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 17:21:14 on Aug 08,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+# ** Error: (vsim-3063) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(42): Port 'clk_samplying' not found in the connected module (3rd connection).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUTTT File: D:/WORKING_FOLDER/echo_cancelation/A_code/lag_generator.v
+# Error loading design
+# End time: 17:21:15 on Aug 08,2018, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Compile of tb_all.v was successful.
+vsim -gui work.double_16b_tb
+# vsim -gui work.double_16b_tb 
+# Start time: 17:21:45 on Aug 08,2018
+# Loading work.double_16b_tb
+# Loading work.sig16b_to_double
+# Loading work.double_to_sig16b
+add wave -position insertpoint sim:/double_16b_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftrc075b".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftrc075b
+run
+quit -sim
+# End time: 17:22:04 on Aug 08,2018, Elapsed time: 0:00:19
+# Errors: 0, Warnings: 2
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 17:22:10 on Aug 08,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlft0hsv7v".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft0hsv7v
+add wave -position insertpoint sim:/tb_all/MUTTT/*
+run
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+quit -sim
+# End time: 17:25:11 on Aug 08,2018, Elapsed time: 0:03:01
+# Errors: 3, Warnings: 3
+# Compile of tb_all.v was successful.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 17:25:26 on Aug 08,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftb739fy".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftb739fy
+add wave -position insertpoint sim:/tb_all/MUTTT/*
+run
+quit -sim
+# End time: 17:27:41 on Aug 08,2018, Elapsed time: 0:02:15
+# Errors: 0, Warnings: 2
+# Compile of tb_all.v was successful.
+# Load canceled
+# Compile of ZZZ_TB_4_TEST.v failed with 1 errors.
+# Compile of ZZZ_TB_4_TEST.v failed with 1 errors.
+# Compile of ZZZ_TB_4_TEST.v was successful.
+vsim -gui work.TEST
+# vsim -gui work.TEST 
+# Start time: 17:46:53 on Aug 08,2018
+# Loading work.TEST
+add wave -position insertpoint sim:/TEST/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftdiaxdb".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftdiaxdb
+run
+quit -sim
+# End time: 17:47:40 on Aug 08,2018, Elapsed time: 0:00:47
+# Errors: 0, Warnings: 2
+# Compile of lag_generator.v was successful.
+# Compile of lag_generator.v was successful.
+# Compile of ZZZ_TB_4_TEST.v was successful.
+# Compile of echo_approx.v failed with 17 errors.
+# Compile of lag_generator.v was successful.
+# Compile of echo_approx.v failed with 10 errors.
+# 2 compiles, 1 failed with 10 errors.
+# Compile of ZZZ_TB_4_TEST.v was successful.
+vsim -gui work.TEST
+# vsim -gui work.TEST 
+# Start time: 18:54:26 on Aug 08,2018
+# Loading work.TEST
+add wave -position insertpoint sim:/TEST/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftz71q46".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftz71q46
+run
+quit -sim
+# End time: 18:54:42 on Aug 08,2018, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 2
+# Compile of ZZZ_TB_4_TEST.v was successful.
+vsim -gui work.TEST
+# vsim -gui work.TEST 
+# Start time: 18:54:55 on Aug 08,2018
+# Loading work.TEST
+add wave -position insertpoint sim:/TEST/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlfttq1xs5".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfttq1xs5
+run
+quit -sim
+# End time: 18:55:35 on Aug 08,2018, Elapsed time: 0:00:40
+# Errors: 0, Warnings: 2
+# Compile of echo_approx.v failed with 5 errors.
+# Compile of echo_approx.v failed with 8 errors.
+# Compile of echo_approx.v was successful.
+# Compile of tb_all.v failed with 2 errors.
+# Compile of lag_generator.v was successful.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of tb_all.v failed with 2 errors.
+# Compile of tb_all.v was successful.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 19:09:21 on Aug 08,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+# Loading work.echo_approx
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftmknxby".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftmknxby
+run
+restart
+add wave -position insertpoint sim:/tb_all/MUT2/*
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+quit -sim
+# End time: 19:13:00 on Aug 08,2018, Elapsed time: 0:03:39
+# Errors: 0, Warnings: 2
+# Compile of signal_generator.v was successful.
+# Compile of tb_all.v was successful.
+# Compile of lag_generator.v was successful.
+# Compile of echo_approx.v was successful.
+# Compile of fpu_TB.v was successful.
+# Compile of fpu_add.v was successful.
+# Compile of fpu_div.v was successful.
+# Compile of fpu_double.v was successful.
+# Compile of fpu_exceptions.v was successful.
+# Compile of fpu_mul.v was successful.
+# Compile of fpu_round.v was successful.
+# Compile of fpu_sub.v was successful.
+# Compile of ZZZ_TB_4_TEST.v was successful.
+# Compile of sig16b_to_double.v was successful.
+# Compile of double_to_sig16b.v was successful.
+# Compile of double_16b_tb.v was successful.
+# Compile of STACKMODULE_TEST.v was successful.
+# 17 compiles, 0 failed with no errors.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 19:14:08 on Aug 08,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+# Loading work.echo_approx
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftgymsk6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftgymsk6
+run
+restart
+add wave -position insertpoint sim:/tb_all/MUT2/*
+run
+quit -sim
+# End time: 19:18:00 on Aug 08,2018, Elapsed time: 0:03:52
+# Errors: 0, Warnings: 2
+# Compile of tb_all.v was successful.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 19:18:40 on Aug 08,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+# Loading work.echo_approx
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlfthzij9i".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthzij9i
+add wave -position insertpoint sim:/tb_all/MUT2/*
+run
+run
+run
+run
+run
+restart
+add wave -position insertpoint sim:/tb_all/*
+add wave -position insertpoint sim:/tb_all/#INITIAL#17/*
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+restart
+add wave -position insertpoint sim:/tb_all/MUT3/*
+add wave -position insertpoint sim:/tb_all/*
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+run
+quit -sim
+# End time: 19:28:58 on Aug 08,2018, Elapsed time: 0:10:18
+# Errors: 0, Warnings: 2
+# Compile of tb_all.v was successful.
+# Compile of tb_all.v was successful.
+# Compile of lag_generator.v failed with 4 errors.
+# Compile of echo_approx.v was successful.
+# 3 compiles, 1 failed with 4 errors.
+# Compile of lag_generator.v was successful.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 19:35:13 on Aug 08,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+# Loading work.echo_approx
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftgfjqr2".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftgfjqr2
+run
+run
+run
+run
+run
+quit -sim
+# End time: 19:37:15 on Aug 08,2018, Elapsed time: 0:02:02
+# Errors: 0, Warnings: 2
+# Compile of tb_all.v was successful.
+# Compile of echo_approx.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 19:38:29 on Aug 08,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+# Loading work.echo_approx
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftktfhfz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftktfhfz
+run
+run
+run
+run
+run
+run
+restart
+add wave -position insertpoint sim:/tb_all/MUT3/*
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+run
+quit -sim
+# End time: 19:43:53 on Aug 08,2018, Elapsed time: 0:05:24
+# Errors: 0, Warnings: 2

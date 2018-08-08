@@ -5,12 +5,12 @@
 **************************************************************************/
 
 `timescale 1us / 1us
-module signal_generator (clk_samplying,signal);
+module signal_generator (clk_sampling,signal);
 
-input clk_samplying;
+input clk_sampling;
 output reg [15:0] signal;
 
-always@(posedge clk_samplying) begin
+always@(posedge clk_sampling) begin
 signal <= $urandom;
 end
 
