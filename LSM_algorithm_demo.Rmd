@@ -1,0 +1,276 @@
+---
+title: "NLMS Algorithm on echo cancelation"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+-------------------------
+
+Creat random signal generator
+```{r}
+sig_sam <- function(n) {
+
+  stopifnot(length(n)== 1, class(n) == "numeric")
+  stopifnot(n > 0)
+  n <- ceiling(n)
+  
+  data <- data.frame()
+  for (i in c(1:n)){
+    sig <- sample(c(-1,1), 1, replace = TRUE)
+    amp <- c(sample(c(1:9), 1, replace = TRUE), sample(c(0:9), 14, replace = TRUE))
+    newsample <- sig * sum(amp * 10^c(14:0))
+    data <- rbind(data, newsample) 
+  }
+  colnames(data) <- "sig_far"
+  return(data)
+}
+```
+--------------------------
+
+Generating  "sig_close", "echo" (some combination of L delay of "sig_close + Noise")
+
+We have (n + L) sample points with delay (L)
+We will use the rest n_test sample for corss validation
+```{r}
+n <- 1000
+L <- 50
+n_test <- 3000
+
+sig_far <- sig_sam(n + L + n_test)
+par <- rnorm(L + 1)
+echo <- data.frame(par[1] * sig_far)
+for (i in c(1:L)) {
+  echo <- cbind(echo, par[i + 1] * c(rep(NA,i), 
+                      sig_far[-((n + L + n_test - i + 1):(n + L + n_test)),]) + rnorm(1))
+}
+colnames(echo) <- par
+echo_sum <- rowSums(echo[,(1:(L + 1))])
+data <- data.frame(sig_far, echo, echo_sum)
+train_data <- data[1:(n + L),]
+```
+The first column is sig_far (original signal)
+
+followed by echo with different lag, with parameter (generated normal distribution) shown in the heading
+
+The last column is sig_close (recieveing signal original + echo)
+
+Imoritant!!: the "par" is the parameter of corresponding lag. It is the actual object we want to predict.
+
+We will use above mini-data to test the echo-cancelation algorithm.
+
+-------------------------
+
+We apply echo-cancelation algorighm started at the (L+1) step
+
+Our goal is to use sig_far to predict parameters of echos
+```{r}
+x <- train_data[,1]
+y <- train_data[,length(train_data[1,])]
+
+mu <- 1
+gamma <- 0.01
+h <- rep(0, L + 1)
+p <- rep(0, L)
+g <- rep(0, L)
+e <- rep(0, L)
+amp_h <- rep(0,L)
+for (i in c((L + 1):(n + L))) {
+  p[i] <- sum(x[(i):(i - L)] * x[(i):(i - L)])
+  g[i] <- sum(h * x[(i):(i - L)])
+  e[i] <- y[i] - g[i]
+  dh <- (1 * mu / (gamma + p[i])) * e[i] * x[(i):(i - L)]
+  h <- h + dh
+  amp_h[i] <- sum(dh * dh)
+}
+sol <- list("p" = p, "g" = g, "e" = e, "amp_h" = amp_h, "h" = h)
+sol$h
+par
+plot((sol$h-par) / abs(par), type = "b", ylab = "parameter_error (%)",xlab = "lag")
+```
+We can see "sol$h" predict "par" very actuarily. That means our training is pretty succesful.
+```{r}
+plot(sol$e, type = "l", ylab = "error", xlab = "step")
+plot(sol$amp_h, type = "l", ylab = "amplitude of dh", xlab = "step")
+```
+We can see the error of predicton converge to 0.
+
+also the amplitude of parameter correction also converge to 0.
+
+We we can test our result
+------------------------------
+```{r}
+test_data <- data[-(1:(n + L)),]
+x <- test_data[,1]
+y <- test_data[,length(test_data[1,])]
+
+pred <- rep(0,L)
+for (i in c((L + 1):(n_test))) {
+  pred[i] <- sum(sol$h * x[(i):(i - L)])
+}
+real <- y 
+
+plot(pred,type = "l",col = "red")
+lines(real,type = "l", col = "yellow")
+error <- ((pred-real)/real * 100)[-(1:L)]
+plot(error, type = "l", xlab = "step", ylab = "real error (%)")
+sd(error)
+mean(error)
+table((error <= 10^(-2)))
+```
+standard deviation and mean of error
+
+Over 99% of prediction are only 0.01% off.
+
+We now show the algorithm step by step on a mini data
+-------------------------------
+creat mini data
+```{r}
+n <- 10
+L <- 2
+n_test <- 0
+
+sig_far <- sig_sam(n + L + n_test)
+par <- rnorm(L + 1)
+echo <- data.frame(par[1] * sig_far)
+for (i in c(1:L)) {
+  echo <- cbind(echo, par[i + 1] * c(rep(NA,i), 
+                      sig_far[-((n + L + n_test - i + 1):(n + L + n_test)),]) + rnorm(1) * 10^15)
+}
+colnames(echo) <- par
+echo_sum <- rowSums(echo[,(1:(L + 1))])
+data <- data.frame(sig_far, echo, echo_sum)
+train_data <- data[1:(n + L),]
+x <- train_data[,1]
+y <- train_data[,length(train_data[1,])]
+
+print(x)
+print(y)
+```
+Inertiallize parameters (all set to 0)
+```{r}
+
+a <- 1
+h <- rep(0, L + 1)
+dh <- rep(0, L + 1)
+p <- rep(0, L)
+g <- rep(0, L)
+e <- rep(0, L)
+amp_h <- rep(0,L)
+```
+----------------------------
+We started at step 3 (since it is lag 2 model)
+
+$p[3] = x[3 - 0]^2 + x[3 - 1]^2 + x[3 - 2]^2$
+```{r echo=FALSE}
+p[3] <- x[3 - 0]^2 + x[3 - 1]^2 + x[3 - 2]^2
+print(c("p[3]=",p[3]))
+```
+$g[3] = h_3[0] * x[3 - 0] + h_3[1] * x[3 - 1] + h_3[2] * x[3 - 2]$
+```{r echo=FALSE}
+g[3] <- h[1] * x[3 - 0] + h[2] * x[3 - 1] + h[3] * x[3 - 2]
+print(c("g[3]=",g[3]))
+```
+$e[3] = y[3] - g[3]$
+```{r echo=FALSE}
+e[3] <- y[3] - g[3]
+print(c("e[3]=",e[3]))
+```
+$\Delta h_3[0] = 1 * a / p[3] * e[3] * x[3 - 0]$
+
+$\Delta h_3[1] = 1 * a / p[3] * e[3] * x[3 - 1]$
+
+$\Delta h_3[2] = 1 * a / p[3] * e[3] * x[3 - 2]$
+```{r echo=FALSE}
+dh[1] = 1 * a / p[3] * e[3] * x[3 - 0]
+dh[2] = 1 * a / p[3] * e[3] * x[3 - 1]
+dh[3] = 1 * a / p[3] * e[3] * x[3 - 2]
+print(c("dh_3[0]=",dh[1]))
+print(c("dh_3[1]=",dh[2]))
+print(c("dh_3[2]=",dh[3]))
+```
+$h_4[1] = h_3[0] + \Delta h_3[0]$
+
+$h_4[1] = h_3[1] + \Delta h_3[1]$
+
+$h_4[2] = h_3[2] + \Delta h_3[2]$
+```{r echo=FALSE}
+h[1] = h[1] + dh[1]
+h[2] = h[2] + dh[2]
+h[3] = h[3] + dh[3]
+print(c("h_4[0]=",h[1]))
+print(c("h_4[1]=",h[2]))
+print(c("h_4[2]=",h[3]))
+```
+------------------------------
+------------------------------
+We do one more step. We are now at step 4
+$p[4] = x[4 - 0]^2 + x[4 - 1]^2 + x[4 - 2]^2$
+```{r echo=FALSE}
+p[4] <- x[4 - 0]^2 + x[4 - 1]^2 + x[4 - 2]^2
+print(c("p[4]=",p[4]))
+```
+$g[4] = h_4[0] * x[4 - 0] + h_4[1] * x[4 - 1] + h_4[2] * x[4 - 2]$
+```{r echo=FALSE}
+g[4] <- h[1] * x[4 - 0] + h[2] * x[4 - 1] + h[3] * x[4 - 2]
+print(c("g[4]=",g[4]))
+```
+$e[4] = y[4] - g[4]$
+```{r echo=FALSE}
+e[4] <- y[4] - g[4]
+print(c("e[4]=",e[4]))
+```
+$\Delta h_4[0] = 1 * a / p[4] * e[4] * x[4 - 0]$
+
+$\Delta h_4[1] = 1 * a / p[4] * e[4] * x[4 - 1]$
+
+$\Delta h_4[2] = 1 * a / p[4] * e[4] * x[4 - 2]$
+```{r echo=FALSE}
+dh[1] = 1 * a / p[4] * e[4] * x[4 - 0]
+dh[2] = 1 * a / p[4] * e[4] * x[4 - 1]
+dh[3] = 1 * a / p[4] * e[4] * x[4 - 2]
+print(c("dh_4[0]=",dh[1]))
+print(c("dh_4[1]=",dh[2]))
+print(c("dh_4[2]=",dh[3]))
+```
+$h_5[1] = h_4[0] + \Delta h_4[0]$
+
+$h_5[1] = h_4[1] + \Delta h_4[1]$
+
+$h_5[2] = h_4[2] + \Delta h_4[2]$
+```{r echo=FALSE}
+h[1] = h[1] + dh[1]
+h[2] = h[2] + dh[2]
+h[3] = h[3] + dh[3]
+print(c("h_5[0]=",h[1]))
+print(c("h_5[1]=",h[2]))
+print(c("h_5[2]=",h[3]))
+```
+--------------------------------
+The complete calculation
+```{r echo=FALSE}
+a <- 1
+h <- rep(0, L + 1)
+dh <- rep(0, L + 1)
+p <- rep(0, L)
+g <- rep(0, L)
+e <- rep(0, L)
+amp_dh <- rep(0,L)
+past_h <- data.frame("3" = h)
+
+for (i in c((L + 1):(n + L))) {
+  p[i] <- sum(x[(i):(i - L)] * x[(i):(i - L)])
+  g[i] <- sum(h * x[(i):(i - L)])
+  e[i] <- y[i] - g[i]
+  dh <- (1 * a / p[i]) * e[i] * x[(i):(i - L)]
+  h <- h + dh
+  amp_h[i] <- sum(dh * dh)
+  past_h <- cbind(past_h, h)
+  colnames(past_h)[length(past_h[1,])] <- as.character(i + 1)
+}
+sol <- list("p" = p, "g" = g, "e" = e, "amp_dh" = amp_dh, "h" = past_h)
+sol
+```
