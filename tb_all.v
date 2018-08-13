@@ -117,6 +117,9 @@ always @(posedge clk_sampling) begin
 		enable_MUT2 <= 1;
 		#4 
 		enable_MUT2 <= 0;
+$display(
+"##iteration: %d", iteration
+);
 	end
 	#1200
 	if (ready_MUT2) begin
