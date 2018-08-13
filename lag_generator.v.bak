@@ -10,6 +10,7 @@
 `timescale 1us/1us
 module lag_generator(
 rst,
+enable_sampling,
 enable,
 clk_sampling,
 clk_operation,
@@ -26,7 +27,9 @@ para_3,
 input [63:0] signal;
 output reg [63:0] signal_lag,signal_align;
 output reg ready;
-input clk_sampling,clk_operation,rst,enable;
+input clk_sampling,clk_operation,rst,enable,enable_sampling;
+input [63:0] para_0,para_1,para_2,para_3;
+
 reg enable_internal;
 reg enable_U0,enable_U1,enable_U2,enable_U3;
 reg [1:0]rmode_U0,rmode_U1,rmode_U2,rmode_U3;
@@ -43,7 +46,6 @@ wire invalid;
 
 reg [2:0] count_sampling,count_operation;
 reg [63:0] lag_0,lag_1,lag_2,lag_3;
-reg [63:0] para_0,para_1,para_2,para_3;
 
 always @(posedge clk_operation) begin
 	if (rst) begin 
@@ -65,10 +67,10 @@ always @(posedge clk_operation) begin
 	end
 end
 
-//initialize sampling
+//the sampling is enabled even the module is not.
 always @(posedge clk_sampling) begin
 	if (~rst) begin	
-	if (enable_internal) begin 
+	if (enable_sampling) begin
 		case (count_sampling)
 		0: begin
 			lag_0 <= signal;
@@ -95,6 +97,13 @@ always @(posedge clk_sampling) begin
 			lag_0 <= signal;
 			count_operation <= 0;
 			signal_align <= signal; //we delay samply to align with the lag.
+$display(
+"##lag_3: %b", lag_3,
+"##lag_2: %b", lag_2,
+"##lag_1: %b", lag_1,
+"##lag_0: %b", lag_0,
+"##signal_align: %b", signal_align
+);
 		end		
 		endcase
 	end
@@ -105,6 +114,7 @@ end
 always @(posedge clk_operation) begin
 	if (~rst) begin	
 	if (enable_internal) begin 
+
 		case (count_operation)
 		0: begin
 			opa_U0 <= lag_0;
@@ -136,8 +146,13 @@ always @(posedge clk_operation) begin
 			enable_U1 <= 1'b0;
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
-		
-			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) count_operation <= 1;
+			
+			#160;
+
+			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
+				count_operation <= 1;
+			end
+
 		end
 		1: begin
 			opa_U0 <= out_U0;
@@ -169,8 +184,12 @@ always @(posedge clk_operation) begin
 			enable_U1 <= 1'b0;
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
+			
+			#160;
 		
-			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) count_operation <= 2;
+			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
+				count_operation <= 2;			
+			end
 		end	
 		2: begin
 			opa_U0 <= out_U0;
@@ -188,6 +207,8 @@ always @(posedge clk_operation) begin
 			#4;
 			enable_U0 <= 1'b0;
 			enable_U1 <= 1'b0;
+			
+			#160;
 		
 			if (ready_U0&ready_U1 == 1) count_operation <= 3;
 		end
@@ -201,11 +222,23 @@ always @(posedge clk_operation) begin
 			#4;
 			enable_U3 <= 1'b0;
 			
+			#160;
+			
 			if (ready_U3 == 1) begin
 				signal_lag <= out_U0; 
 				count_operation <= 4;	
 				enable_internal <= 0;
 				ready <= 1;
+/*$display(
+//" ##count_sampling:",count_sampling,
+" ##count_operation:",count_operation,
+" ##lag_0: %b", lag_0[63:52],
+" ##lag_1: %b", lag_1[63:52],
+" ##lag_2: %b", lag_2[63:52],
+" ##lag_3: %b", lag_3[63:52],
+" ##top: %b", out_U0[63:52],
+" ##down: %b", out_U1[63:52]
+);*/
 			end
 		end
 		4: begin

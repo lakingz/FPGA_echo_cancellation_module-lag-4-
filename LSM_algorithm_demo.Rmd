@@ -21,8 +21,8 @@ sig_sam <- function(n) {
   data <- data.frame()
   for (i in c(1:n)){
     sig <- sample(c(-1,1), 1, replace = TRUE)
-    amp <- c(sample(c(1:9), 1, replace = TRUE), sample(c(0:9), 14, replace = TRUE))
-    newsample <- sig * sum(amp * 10^c(14:0))
+    amp <- c(sample(c(0:1), 1, replace = TRUE), sample(c(0:1), 14, replace = TRUE))
+    newsample <- sig * sum(amp * 2^c(14:0))
     data <- rbind(data, newsample) 
   }
   colnames(data) <- "sig_far"
@@ -36,16 +36,16 @@ Generating  "sig_close", "echo" (some combination of L delay of "sig_close + Noi
 We have (n + L) sample points with delay (L)
 We will use the rest n_test sample for corss validation
 ```{r}
-n <- 1000
-L <- 50
-n_test <- 3000
+n <- 125                ##training data
+L <- 25                 ##lags
+n_test <- 3000          ##testing data
 
 sig_far <- sig_sam(n + L + n_test)
 par <- rnorm(L + 1)
 echo <- data.frame(par[1] * sig_far)
 for (i in c(1:L)) {
   echo <- cbind(echo, par[i + 1] * c(rep(NA,i), 
-                      sig_far[-((n + L + n_test - i + 1):(n + L + n_test)),]) + rnorm(1))
+                      sig_far[-((n + L + n_test - i + 1):(n + L + n_test)),]) + (rnorm(1)))
 }
 colnames(echo) <- par
 echo_sum <- rowSums(echo[,(1:(L + 1))])
@@ -73,7 +73,7 @@ y <- train_data[,length(train_data[1,])]
 
 mu <- 1
 gamma <- 0.01
-h <- rep(0, L + 1)
+h <- rep(1, L + 1)
 p <- rep(0, L)
 g <- rep(0, L)
 e <- rep(0, L)

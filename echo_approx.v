@@ -10,6 +10,7 @@ module echo_approx(
 rst,
 clk_sampling,
 clk_operation,
+enable_sampling,
 enable,
 signal, 
 signal_lag,
@@ -19,15 +20,18 @@ mu,	 //default 64'b0 01111111111 00000000000000000000000000000000000000000000000
 	para_1, 
 	para_2,
 	para_3,
+	e_exp,
+	normalize_amp_exp,
 	ready
 );
 
 input [63:0] signal,signal_lag;
-input clk_sampling,clk_operation,rst,enable;
+input clk_sampling,clk_operation,rst,enable,enable_sampling;
 input [63:0] gamma;
 input [63:0] mu;
 output reg [63:0] para_0,para_1,para_2,para_3;
 output reg ready;
+output reg [10:0] e_exp,normalize_amp_exp;
 
 reg enable_internal;
 reg enable_U0,enable_U1,enable_U2,enable_U3;
@@ -68,10 +72,10 @@ always @(posedge clk_operation) begin
 	end
 end
 
-//initialize sampling
+//the sampling is enabled even the module is not. 
 always @(posedge clk_sampling) begin
 	if (~rst) begin	
-	if (enable_internal) begin 
+	if (enable_sampling) begin
 		case (count_sampling)
 		0: begin
 			lag_0 <= signal;
@@ -98,6 +102,13 @@ always @(posedge clk_sampling) begin
 			lag_0 <= signal;
 			count_operation <= 0;
 			signal_lag_align <= signal_lag;
+/*$display(
+"##lag_3: %b", lag_3,
+"##lag_2: %b", lag_2,
+"##lag_1: %b", lag_1,
+"##lag_0: %b", lag_0,
+"##signal_lag_align: %b", signal_lag_align
+);*/
 		end		
 		endcase
 	end
@@ -107,6 +118,7 @@ end
 always @(posedge clk_operation) begin
 	if (~rst) begin	
 	if (enable_internal) begin 
+
 		case (count_operation)
 		0: begin
 			opa_U0 <= lag_0;
@@ -139,6 +151,8 @@ always @(posedge clk_operation) begin
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
 	
+			#160
+
 			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) count_operation <= 1;
 		end
 
@@ -172,8 +186,27 @@ always @(posedge clk_operation) begin
 			enable_U1 <= 1'b0;
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
-	
-			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) count_operation <= 2;
+		
+			#160
+
+			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
+				count_operation <= 2;
+/*$display(
+//" ##count_sampling:",count_sampling,
+" ##lag_0: %b", lag_0[63:52],
+" ##para_0: %b", para_0[63:52],
+" ##lag_0*para_0: %b", out_U0[63:52],
+" ##lag_1: %b", lag_1[63:52],
+" ##para_1: %b", para_1[63:52],
+" ##lag_1*para_1: %b", out_U1[63:52],
+" ##lag_2: %b", lag_2[63:52],
+" ##para_2: %b", para_2[63:52],
+" ##lag_2*para_2: %b", out_U2[63:52],
+" ##lag_3: %b", lag_3[63:52],
+" ##para_3: %b", para_3[63:52],
+" ##lag_3*para_3: %b", out_U3[63:52]
+);*/
+			end
 		end
 
 		2: begin
@@ -206,14 +239,17 @@ always @(posedge clk_operation) begin
 			enable_U1 <= 1'b0;
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
-	
-			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) count_operation <= 3;
+		
+			#160
+
+			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
+				count_operation <= 3;
+			end
 		end
 
 
 		3: begin
-			out_tamp[63] <= ~out_U0[63]; 
-			out_tamp[62:0] <= out_U0[62:0]; //out_tamp = -(lag_0*para_0+lag_1*para_1+lag_2*para_2+lag_3*para_3)
+			out_tamp <= out_U0;
 	
 			opa_U0 <= out_U1;
 			opb_U0 <= out_U2;
@@ -244,8 +280,12 @@ always @(posedge clk_operation) begin
 			enable_U1 <= 1'b0;
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
-	
-			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) count_operation <= 4;
+		
+			#160
+
+			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
+				count_operation <= 4;
+			end
 		end
 
 		4: begin
@@ -254,7 +294,7 @@ always @(posedge clk_operation) begin
 			
 			opa_U0 <= signal_lag_align;
 			opb_U0 <= out_tamp;
-			fpu_op_U0 <= 3'b000; //out = e = signal_lag-(lag_0*para_0+lag_1*para_1+lag_2*para_2+lag_3*para_3)
+			fpu_op_U0 <= 3'b001; //out = e = signal_lag-(lag_0*para_0+lag_1*para_1+lag_2*para_2+lag_3*para_3)
 			rmode_U0 = 2'b00;
 			enable_U0 <= 1'b1;
 
@@ -281,14 +321,21 @@ always @(posedge clk_operation) begin
 			enable_U1 <= 1'b0;
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
-	
-			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) count_operation <= 5;
+		
+			#160
+
+			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
+				count_operation <= 5;
+
+			end
 		end
 
 		5: begin
-			e <= out_U0; //enable for error	
+			e <= out_U0; // unbais error of prediction	
 			normalize_amp <= out_U1;		
-			
+			e_exp <= out_U0[62:52] - 1023;	
+			normalize_amp_exp <= out_U1[62:52] - 1023;
+
 			opa_U0 <= out_U0;
 			opb_U0 <= mu_lag_0;
 			fpu_op_U0 <= 3'b010; //out = e*mu*lag_0
@@ -303,7 +350,7 @@ always @(posedge clk_operation) begin
 
 			opa_U2 <= out_U0;
 			opb_U2 <= out_U2;
-			fpu_op_U2 <= 3'b010; //out =  e*mu*lag_2
+			fpu_op_U2 <= 3'b010; //out = e*mu*lag_2
 			rmode_U2 = 2'b00;
 			enable_U2 <= 1'b1;
 
@@ -318,7 +365,9 @@ always @(posedge clk_operation) begin
 			enable_U1 <= 1'b0;
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
-	
+		
+			#160
+
 			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) count_operation <= 6;
 		end
 
@@ -337,7 +386,7 @@ always @(posedge clk_operation) begin
 
 			opa_U2 <= out_U2;
 			opb_U2 <= normalize_amp;
-			fpu_op_U2 <= 3'b011; //out =  e*mu*lag_2/(gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_2*lag_2)
+			fpu_op_U2 <= 3'b011; //out = e*mu*lag_2/(gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_2*lag_2)
 			rmode_U2 = 2'b00;
 			enable_U2 <= 1'b1;
 
@@ -352,7 +401,9 @@ always @(posedge clk_operation) begin
 			enable_U1 <= 1'b0;
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
-	
+		
+			#160
+
 			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) count_operation <= 7;
 		end
 
@@ -371,7 +422,7 @@ always @(posedge clk_operation) begin
 
 			opa_U2 <= para_2;
 			opb_U2 <= out_U2;
-			fpu_op_U2 <= 3'b000; //out =  para_2 + e*mu*lag_2/(gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_2*lag_2)
+			fpu_op_U2 <= 3'b000; //out = para_2 + e*mu*lag_2/(gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_2*lag_2)
 			rmode_U2 = 2'b00;
 			enable_U2 <= 1'b1;
 
@@ -386,7 +437,9 @@ always @(posedge clk_operation) begin
 			enable_U1 <= 1'b0;
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
-	
+		
+			#160
+
 			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
 				para_0 <= out_U0;
 				para_1 <= out_U1;

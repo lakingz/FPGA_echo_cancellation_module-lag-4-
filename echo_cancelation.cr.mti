@@ -77,27 +77,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	fpu
 
-} {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module tb_all
-
-Top level modules:
-	tb_all
-
-} {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module echo_approx
-
-Top level modules:
-	echo_approx
-
-} {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_TB.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_TB.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module fpu_tb
-
-Top level modules:
-	fpu_tb
-
 } {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_mul.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_mul.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module fpu_mul
@@ -105,12 +84,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	fpu_mul
 
-} {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/lag_generator.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/lag_generator.v
+} {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_TB.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_TB.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module lag_generator
+-- Compiling module fpu_tb
 
 Top level modules:
-	lag_generator
+	fpu_tb
 
 } {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_add.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_add.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
