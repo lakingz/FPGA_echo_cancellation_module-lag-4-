@@ -58,10 +58,10 @@ always @(posedge clk_operation) begin
 		//lag_2 <= 0;
 		//lag_1 <= 0;
 		//lag_0 <= 0;	
-		para_0 <= 0;
-		para_1 <= 0;
-		para_2 <= 0;
-		para_3 <= 0;
+		para_0 <= 64'b0000000000010000000000000000000000000000000000000000000000000000 ;
+		para_1 <= 64'b0000000000010000000000000000000000000000000000000000000000000000;
+		para_2 <= 64'b0000000000010000000000000000000000000000000000000000000000000000;
+		para_3 <= 64'b0000000000010000000000000000000000000000000000000000000000000000;
 		count_sampling <= 0;
 		enable_internal <= 0;
 	end
@@ -191,21 +191,21 @@ always @(posedge clk_operation) begin
 
 			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
 				count_operation <= 2;
-/*$display(
-//" ##count_sampling:",count_sampling,
-" ##lag_0: %b", lag_0[63:52],
-" ##para_0: %b", para_0[63:52],
-" ##lag_0*para_0: %b", out_U0[63:52],
-" ##lag_1: %b", lag_1[63:52],
-" ##para_1: %b", para_1[63:52],
-" ##lag_1*para_1: %b", out_U1[63:52],
-" ##lag_2: %b", lag_2[63:52],
-" ##para_2: %b", para_2[63:52],
-" ##lag_2*para_2: %b", out_U2[63:52],
-" ##lag_3: %b", lag_3[63:52],
-" ##para_3: %b", para_3[63:52],
-" ##lag_3*para_3: %b", out_U3[63:52]
-);*/
+$display(
+" ##count_operation:", count_operation,
+" ##lag_0: %b", lag_0[63:52] - 12'b001111111111,
+" ##para_0: %b", para_0[63:52] - 12'b001111111111,
+" ##lag_0*para_0: %b", out_U0[63:52] - 12'b001111111111,
+" ##lag_1: %b", lag_1[63:52] - 12'b001111111111,
+" ##para_1: %b", para_1[63:52] - 12'b001111111111,
+" ##lag_1*para_1: %b", out_U1[63:52] - 12'b001111111111,
+" ##lag_2: %b", lag_2[63:52] - 12'b001111111111,
+" ##para_2: %b", para_2[63:52] - 12'b001111111111,
+" ##lag_2*para_2: %b", out_U2[63:52] - 12'b001111111111,
+" ##lag_3: %b", lag_3[63:52] - 12'b001111111111,
+" ##para_3: %b", para_3[63:52] - 12'b001111111111,
+" ##lag_3*para_3: %b", out_U3[63:52] - 12'b001111111111
+);
 			end
 		end
 
@@ -350,7 +350,7 @@ always @(posedge clk_operation) begin
 
 			opa_U2 <= out_U0;
 			opb_U2 <= out_U2;
-			fpu_op_U2 <= 3'b010; //out =  e*mu*lag_2
+			fpu_op_U2 <= 3'b010; //out = e*mu*lag_2
 			rmode_U2 = 2'b00;
 			enable_U2 <= 1'b1;
 
@@ -386,7 +386,7 @@ always @(posedge clk_operation) begin
 
 			opa_U2 <= out_U2;
 			opb_U2 <= normalize_amp;
-			fpu_op_U2 <= 3'b011; //out =  e*mu*lag_2/(gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_2*lag_2)
+			fpu_op_U2 <= 3'b011; //out = e*mu*lag_2/(gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_2*lag_2)
 			rmode_U2 = 2'b00;
 			enable_U2 <= 1'b1;
 
@@ -422,7 +422,7 @@ always @(posedge clk_operation) begin
 
 			opa_U2 <= para_2;
 			opb_U2 <= out_U2;
-			fpu_op_U2 <= 3'b000; //out =  para_2 + e*mu*lag_2/(gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_2*lag_2)
+			fpu_op_U2 <= 3'b000; //out = para_2 + e*mu*lag_2/(gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_2*lag_2)
 			rmode_U2 = 2'b00;
 			enable_U2 <= 1'b1;
 
