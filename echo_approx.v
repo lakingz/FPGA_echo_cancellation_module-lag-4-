@@ -72,7 +72,7 @@ always @(posedge clk_operation) begin
 	end
 end
 
-//the sampling is enabled even the module is not. 
+//the sampling and alignment. 
 always @(posedge clk_sampling) begin
 	if (~rst) begin	
 	if (enable_sampling) begin
