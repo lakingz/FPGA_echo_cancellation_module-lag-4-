@@ -97,13 +97,13 @@ always @(posedge clk_sampling) begin
 			lag_0 <= signal;
 			count_operation <= 0;
 			signal_align <= signal; //we delay samply to align with the lag.
-$display(
+/*$display(
 "##lag_3: %b", lag_3,
 "##lag_2: %b", lag_2,
 "##lag_1: %b", lag_1,
 "##lag_0: %b", lag_0,
 "##signal_align: %b", signal_align
-);
+);*/
 		end		
 		endcase
 	end
@@ -247,6 +247,7 @@ always @(posedge clk_operation) begin
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
 		end
+		default:;
 		endcase
 	end
 	end

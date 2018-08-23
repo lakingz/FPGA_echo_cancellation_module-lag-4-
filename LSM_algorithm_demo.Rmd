@@ -90,6 +90,8 @@ sol <- list("p" = p, "g" = g, "e" = e, "amp_h" = amp_h, "h" = h)
 sol$h
 par
 plot((sol$h-par) / abs(par), type = "b", ylab = "parameter_error (%)",xlab = "lag")
+plot(e,type = "l", ylab = "e", xlab = "step")
+plot(log(abs(e)),type = "l", ylab = "log(|e|)", xlab = "step")
 ```
 We can see "sol$h" predict "par" very actuarily. That means our training is pretty succesful.
 ```{r}

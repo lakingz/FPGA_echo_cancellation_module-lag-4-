@@ -104,7 +104,8 @@ always @(posedge clk_sampling) begin
 "##lag_0: %b", lag_0,
 "##signal_align: %b", signal_align
 );*/
-		end		
+		end	
+		default:;	
 		endcase
 	end
 	end
@@ -247,6 +248,7 @@ always @(posedge clk_operation) begin
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
 		end
+		default:;
 		endcase
 	end
 	end

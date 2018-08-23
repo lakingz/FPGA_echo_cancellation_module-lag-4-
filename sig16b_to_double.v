@@ -57,6 +57,7 @@ always @(posedge clk_operation) begin
 	       ready <= 1;
             end
          end
+	 default:;
          endcase
       end
    end

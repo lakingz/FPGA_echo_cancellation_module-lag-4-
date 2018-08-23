@@ -24,7 +24,7 @@ reg [3:0] i;
 always @(posedge clk_operation) begin
    if (rst) begin
       double_sign <= 0;
-      double_exponent <= 0;
+      double_exponent <= -1023;
       sig16b_amp <= 0;
       ready <= 0;
    end
@@ -57,6 +57,7 @@ always @(posedge clk_operation) begin
 	       ready <= 1;
             end
          end
+	 defult:;
          endcase
       end
    end
