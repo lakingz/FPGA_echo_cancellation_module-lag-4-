@@ -27,7 +27,8 @@ para_3,
 input [63:0] signal;
 output reg [63:0] signal_lag,signal_align;
 output reg ready;
-input sampling_cycle_counter,clk_operation,rst,enable,enable_sampling;
+input [12:0] sampling_cycle_counter;
+input clk_operation,rst,enable,enable_sampling;
 input [63:0] para_0,para_1,para_2,para_3;
 
 reg enable_internal;

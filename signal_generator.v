@@ -7,7 +7,8 @@
 `timescale 1us / 1us
 module signal_generator (sampling_cycle_counter,clk_operation,signal);
 
-input sampling_cycle_counter,clk_operation;
+input [12:0] sampling_cycle_counter;
+input clk_operation;
 output reg [15:0] signal;
 
 always @(posedge clk_operation) begin

@@ -20,18 +20,21 @@ mu,	 //default 64'b0 01111111111 00000000000000000000000000000000000000000000000
 	para_1, 
 	para_2,
 	para_3,
+	e,
 	e_exp,
 	normalize_amp_exp,
 	ready
 );
 
 input [63:0] signal,signal_lag;
-input sampling_cycle_counter,clk_operation,rst,enable,enable_sampling;
+input [12:0] sampling_cycle_counter;
+input clk_operation,rst,enable,enable_sampling;
 input [63:0] gamma;
 input [63:0] mu;
 output reg [63:0] para_0,para_1,para_2,para_3;
 output reg ready;
 output reg [10:0] e_exp,normalize_amp_exp;
+output reg [63:0] e;
 
 reg enable_internal;
 reg enable_U0,enable_U1,enable_U2,enable_U3;
@@ -56,7 +59,7 @@ reg [63:0] lp_0,lp_1,lp_2,lp_3;						//count_operation == 0
 reg [63:0] lp_01,lp_23,ll_0,ll_1;					//count_operation == 1
 reg [63:0] lp_0123,ll_2,ll_3,ll_01;					//count_operation == 2
 reg [63:0] ll_23,gamma_ll_01,mu_lag_0,mu_lag_1;				//count_operation == 3
-reg [63:0] e,normalize_amp,mu_lag_2,mu_lag_3;				//count_operation == 4
+reg [63:0] normalize_amp,mu_lag_2,mu_lag_3;				//count_operation == 4
 reg [63:0] e_mu_lag_0,e_mu_lag_1,e_mu_lag_2,e_mu_lag_3;			//count_operation == 5
 reg [63:0] D_para_0,D_para_1,D_para_2,D_para_3;				//count_operation == 6
 

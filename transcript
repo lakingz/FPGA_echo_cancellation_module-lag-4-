@@ -810,3 +810,1137 @@ run
 quit -sim
 # End time: 22:35:42 on Aug 23,2018, Elapsed time: 0:05:58
 # Errors: 0, Warnings: 5
+# Compile of tb_all.v was successful.
+# Compile of echo_approx.v failed with 5 errors.
+# Compile of para_approx.v was successful.
+# 3 compiles, 1 failed with 5 errors.
+# Compile of echo_approx.v failed with 8 errors.
+# Compile of echo_approx.v failed with 6 errors.
+# Compile of echo_approx.v failed with 4 errors.
+# Compile of echo_approx.v was successful.
+# Compile of double_to_sig16b.v failed with 3 errors.
+# Compile of tb_all.v failed with 1 errors.
+# Compile of double_to_sig16b.v failed with 3 errors.
+# 2 compiles, 2 failed with 4 errors.
+# Compile of tb_all.v failed with 1 errors.
+# Compile of double_to_sig16b.v was successful.
+# 2 compiles, 1 failed with 1 error.
+# Compile of tb_all.v failed with 6 errors.
+# Compile of echo_approx.v failed with 1 errors.
+# 2 compiles, 2 failed with 7 errors.
+# Compile of tb_all.v failed with 6 errors.
+# Compile of echo_approx.v failed with 3 errors.
+# 2 compiles, 2 failed with 9 errors.
+# Compile of tb_all.v failed with 6 errors.
+# Compile of echo_approx.v failed with 3 errors.
+# 2 compiles, 2 failed with 9 errors.
+# Compile of echo_approx.v was successful.
+# Compile of tb_all.v failed with 8 errors.
+# Compile of para_approx.v was successful.
+# 2 compiles, 1 failed with 8 errors.
+# Compile of tb_all.v was successful.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 09:26:39 on Aug 24,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+# Loading work.para_approx
+# Loading work.echo_cancelation
+# Loading work.double_to_sig16b
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(70): [PCDPC] - Port size (1) does not match connection size (13) for port 'sampling_cycle_counter'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/signal_generator.v(8).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT0 File: D:/WORKING_FOLDER/echo_cancelation/A_code/signal_generator.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(85): [PCDPC] - Port size (1) does not match connection size (13) for port 'sampling_cycle_counter'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/lag_generator.v(15).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT2 File: D:/WORKING_FOLDER/echo_cancelation/A_code/lag_generator.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(101): [PCDPC] - Port size (1) does not match connection size (13) for port 'sampling_cycle_counter'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/para_approx.v(11).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT3 File: D:/WORKING_FOLDER/echo_cancelation/A_code/para_approx.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (13) for port 'sampling_cycle_counter'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v(11).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (64) for port 'para_0'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v(17).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (64) for port 'para_1'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v(18).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (64) for port 'para_2'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v(19).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (64) for port 'para_3'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v(20).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_approx.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(139): [PCDPC] - Port size (1) does not match connection size (13) for port 'sampling_cycle_counter'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/double_to_sig16b.v(2).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT5 File: D:/WORKING_FOLDER/echo_cancelation/A_code/double_to_sig16b.v
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(139): Illegal output or inout port connection for port 'sig16b'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT5 File: D:/WORKING_FOLDER/echo_cancelation/A_code/double_to_sig16b.v
+# Error loading design
+# End time: 09:26:40 on Aug 24,2018, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 9
+# Compile of signal_generator.v was successful.
+# Compile of lag_generator.v was successful.
+# Compile of double_to_sig16b.v was successful.
+# Compile of para_approx.v was successful.
+# Compile of echo_cancelation.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 09:36:02 on Aug 24,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+# Loading work.para_approx
+# Loading work.echo_cancelation
+# Loading work.double_to_sig16b
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(70): [PCDPC] - Port size (1) does not match connection size (13) for port 'sampling_cycle_counter'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/signal_generator.v(8).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT0 File: D:/WORKING_FOLDER/echo_cancelation/A_code/signal_generator.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(85): [PCDPC] - Port size (1) does not match connection size (13) for port 'sampling_cycle_counter'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/lag_generator.v(15).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT2 File: D:/WORKING_FOLDER/echo_cancelation/A_code/lag_generator.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(101): [PCDPC] - Port size (1) does not match connection size (13) for port 'sampling_cycle_counter'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/para_approx.v(11).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT3 File: D:/WORKING_FOLDER/echo_cancelation/A_code/para_approx.v
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): Illegal output or inout port connection for port 'rst'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (13) for port 'sampling_cycle_counter'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v(11).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): Illegal output or inout port connection for port 'clk_operation'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): Illegal output or inout port connection for port 'enable_sampling'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): Illegal output or inout port connection for port 'enable'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (64) for port 'para_0'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v(17).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (64) for port 'para_1'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v(18).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (64) for port 'para_2'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v(19).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (64) for port 'para_3'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v(20).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(139): [PCDPC] - Port size (1) does not match connection size (13) for port 'sampling_cycle_counter'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/double_to_sig16b.v(2).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT5 File: D:/WORKING_FOLDER/echo_cancelation/A_code/double_to_sig16b.v
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(139): Illegal output or inout port connection for port 'sig16b'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT5 File: D:/WORKING_FOLDER/echo_cancelation/A_code/double_to_sig16b.v
+# Error loading design
+# End time: 09:36:02 on Aug 24,2018, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 9
+# Compile of signal_generator.v was successful.
+# Compile of lag_generator.v was successful.
+# Compile of double_to_sig16b.v was successful.
+# Compile of para_approx.v was successful.
+# Compile of echo_cancelation.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 09:39:32 on Aug 24,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+# Loading work.para_approx
+# Loading work.echo_cancelation
+# Loading work.double_to_sig16b
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): Illegal output or inout port connection for port 'rst'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): Illegal output or inout port connection for port 'clk_operation'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): Illegal output or inout port connection for port 'enable_sampling'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): Illegal output or inout port connection for port 'enable'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (64) for port 'para_0'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v(17).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (64) for port 'para_1'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v(18).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (64) for port 'para_2'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v(19).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (64) for port 'para_3'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v(20).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(139): Illegal output or inout port connection for port 'sig16b'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT5 File: D:/WORKING_FOLDER/echo_cancelation/A_code/double_to_sig16b.v
+# Error loading design
+# End time: 09:39:32 on Aug 24,2018, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 4
+# Compile of double_to_sig16b.v was successful.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 09:42:44 on Aug 24,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+# Loading work.para_approx
+# Loading work.echo_cancelation
+# Loading work.double_to_sig16b
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): Illegal output or inout port connection for port 'rst'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): Illegal output or inout port connection for port 'clk_operation'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): Illegal output or inout port connection for port 'enable_sampling'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): Illegal output or inout port connection for port 'enable'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (64) for port 'para_0'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v(17).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (64) for port 'para_1'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v(18).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (64) for port 'para_2'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v(19).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Warning: (vsim-3015) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): [PCDPC] - Port size (1) does not match connection size (64) for port 'para_3'. The port definition is at: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v(20).
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(139): Illegal output or inout port connection for port 'sig16b'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT5 File: D:/WORKING_FOLDER/echo_cancelation/A_code/double_to_sig16b.v
+# Error loading design
+# End time: 09:42:44 on Aug 24,2018, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 4
+# Compile of tb_all.v was successful.
+# Compile of echo_cancelation.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 09:44:46 on Aug 24,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+# Loading work.para_approx
+# Loading work.echo_cancelation
+# Loading work.double_to_sig16b
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): Illegal output or inout port connection for port 'rst'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): Illegal output or inout port connection for port 'clk_operation'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): Illegal output or inout port connection for port 'enable_sampling'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# ** Error (suppressible): (vsim-3053) D:/WORKING_FOLDER/echo_cancelation/A_code/tb_all.v(123): Illegal output or inout port connection for port 'enable'.
+#    Time: 0 us  Iteration: 0  Instance: /tb_all/MUT4 File: D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation.v
+# Error loading design
+# End time: 09:44:46 on Aug 24,2018, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+# Compile of echo_cancelation.v was successful.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 09:46:53 on Aug 24,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+# Loading work.para_approx
+# Loading work.echo_cancelation
+# Loading work.double_to_sig16b
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftnna15e".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftnna15e
+run
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##e: 1100000010110110011000000111111000010000001101111101000011010111##e_exp:   12##normalize_amp: 0100000111011011001101000111101100000010010100000000000000000000##normalize_amp:  4745444335289368576
+##iteration:           1
+##e: 1100000011000011100101010111110101110010001111001011011001111001##e_exp:   13##normalize_amp: 0100000111000010111100100000001000001010101000000000000000000000##normalize_amp:  4738615848529297408
+##iteration:           2
+##e: 1100000011010101110000001010100011101101100100110001111010101001##e_exp:   14##normalize_amp: 0100000111011101101111111111111101100000100100000000000000000000##normalize_amp:  4746160685875986432
+##iteration:           3
+##e: 1100000011100000011101011100001001000011011010110110011000111110##e_exp:   15##normalize_amp: 0100000111010111011111011011000011001011010100000000000000000000##normalize_amp:  4744398930736840704
+##iteration:           4
+##e: 1100000011001101101110110101001111000001101101010111111000111011##e_exp:   13##normalize_amp: 0100000111010101100001100011111011010011010100000000000000000000##normalize_amp:  4743845386896015360
+##iteration:           5
+##e: 1100000011001100100000010100010001000101101011011100101110110011##e_exp:   13##normalize_amp: 0100000111010010111100011111100001010000010100000000000000000000##normalize_amp:  4743119406376157184
+##iteration:           6
+##e: 0100000010100001101011100001000100011110011000101100001100010100##e_exp:   11##normalize_amp: 0100000111011000011111010110100011000010110100000000000000000000##normalize_amp:  4744680096333299712
+##iteration:           7
+##e: 1100000010110000101011011011011000110111100011010010100010101000##e_exp:   12##normalize_amp: 0100000111000111101110000111101000001101101000000000000000000000##normalize_amp:  4739959967184846848
+##iteration:           8
+##e: 0100000010111010010110100111111110101100110010101010000111011100##e_exp:   12##normalize_amp: 0100000111010101110001001010110101110110110100000000000000000000##normalize_amp:  4743914031806414848
+##iteration:           9
+##e: 0100000011001000010101000100111000111010000111101011111000101011##e_exp:   13##normalize_amp: 0100000111011001001010110101011000100010110100000000000000000000##normalize_amp:  4744871331362766848
+##iteration:          10
+##e: 1100000010110001001001001101101010000000100000111000001110101000##e_exp:   12##normalize_amp: 0100000111010101001011111011111010110011100100000000000000000000##normalize_amp:  4743750278607536128
+##iteration:          11
+##e: 0100000001101111110101011110111001000100001110000010011000000000##e_exp:    7##normalize_amp: 0100000111011001110000001101000001010110010100000000000000000000##normalize_amp:  4745035683445342208
+##iteration:          12
+##e: 1100000010010000001010000111101001010110010101001000011010000000##e_exp:   10##normalize_amp: 0100000110111010100000100100010111000010010000000000000000000000##normalize_amp:  4736241194256826368
+run
+##iteration:          13
+##e: 1100000001100010001011101111101001001110101000110010001010000000##e_exp:    7##normalize_amp: 0100000111010101000011110111001101100000010100000000000000000000##normalize_amp:  4743714770716196864
+##iteration:          14
+##e: 0100000010010111011110100011010010010000000000111111010001100100##e_exp:   10##normalize_amp: 0100000111000010100010100110011001100000101000000000000000000000##normalize_amp:  4738501930259578880
+##iteration:          15
+##e: 0100000010010010001101111010000010011000001101001001100001001000##e_exp:   10##normalize_amp: 0100000110110000101101010101100110011001010000000000000000000000##normalize_amp:  4733482604794216448
+##iteration:          16
+##e: 1100000010100010101100110000010010000000011011101011000000110110##e_exp:   11##normalize_amp: 0100000111001110011101100011100100101111101000000000000000000000##normalize_amp:  4741857445651939328
+##iteration:          17
+##e: 0100000010011101101101011111000001111010010000000010111101010100##e_exp:   10##normalize_amp: 0100000111001000111011111111100011000001001000000000000000000000##normalize_amp:  4740302459478474752
+##iteration:          18
+##e: 0100000001100101111101110100101110011010010111101111001110000000##e_exp:    7##normalize_amp: 0100000111001000111000101010110110011001001000000000000000000000##normalize_amp:  4740287843033677824
+##iteration:          19
+##e: 1100000010001100111100001101001000001011111001110101111101010000##e_exp:    9##normalize_amp: 0100000111010011110111111000011001110011100100000000000000000000##normalize_amp:  4743380601108692992
+##iteration:          20
+##e: 0100000010000101111100111110111110010110110101011111001111100000##e_exp:    9##normalize_amp: 0100000111011011001001100000000001001101010100000000000000000000##normalize_amp:  4745428415103893504
+##iteration:          21
+##e: 0100000010001100001100000001101010110011111010110011000110010000##e_exp:    9##normalize_amp: 0100000111001110111011000111111101001101101000000000000000000000##normalize_amp:  4741987489175044096
+##iteration:          22
+##e: 0100000010011110101010110101011011101011001100010110110001010000##e_exp:   10##normalize_amp: 0100000111011000000101111110110001100101100100000000000000000000##normalize_amp:  4744568511518474240
+##iteration:          23
+##e: 1100000001010001101010100010010000100110100001011101100010000000##e_exp:    6##normalize_amp: 0100000111010000000100001110110010100000110100000000000000000000##normalize_amp:  4742309016117444608
+##iteration:          24
+##e: 0100000001110100011000000010101100001000001011000111011111000000##e_exp:    8##normalize_amp: 0100000111011011001000011011100010110101110100000000000000000000##normalize_amp:  4745423709572956160
+##iteration:          25
+##e: 1100000001110110111100001100100000010101111000011010111010000000##e_exp:    8##normalize_amp: 0100000111001100000110100100000000001101101000000000000000000000##normalize_amp:  4741193370123108352
+##iteration:          26
+##e: 1100000001011101000010110010011100111010111001111001100110000000##e_exp:    6##normalize_amp: 0100000111010110011000110101111010001000110100000000000000000000##normalize_amp:  4744088515154804736
+##iteration:          27
+##e: 1100000001010110001011111110001100110111111100010010110010000000##e_exp:    6##normalize_amp: 0100000111001001111101111010011101110010101000000000000000000000##normalize_amp:  4740592381338845184
+##iteration:          28
+##e: 0100000001100000010100000000110000000110111100100001111111000000##e_exp:    7##normalize_amp: 0100000111001010010011011111010010111110001000000000000000000000##normalize_amp:  4740687271317995520
+##iteration:          29
+##e: 1100000001100110011100011100001000100101011011001100101110000000##e_exp:    7##normalize_amp: 0100000111010010101010100101001101110011000100000000000000000000##normalize_amp:  4743040632963989504
+##iteration:          30
+##e: 0100000001101001011001001001101010111000111100001100010111000000##e_exp:    7##normalize_amp: 0100000110111100000001101101101001100101010000000000000000000000##normalize_amp:  4736668443158249472
+##iteration:          31
+##e: 0100000000000100101001101001110100100010101110111111100000000000##e_exp:    1##normalize_amp: 0100000111000010001110111111000110010100101000000000000000000000##normalize_amp:  4738415666713853952
+##iteration:          32
+##e: 0100000001010000100101110111101101010011011101111101010010000000##e_exp:    6##normalize_amp: 0100000110111110100100110100101000101011010000000000000000000000##normalize_amp:  4737385804802818048
+run
+##iteration:          33
+##e: 1100000001010110011110101111001000101000101111101000001001000000##e_exp:    6##normalize_amp: 0100000110100111110101001001111110100100100000000000000000000000##normalize_amp:  4730983715700736000
+##iteration:          34
+##e: 1100000000100111111110111010111001111111010000101001100000000000##e_exp:    3##normalize_amp: 0100000111000100100110001000010000010011101000000000000000000000##normalize_amp:  4739080400932962304
+##iteration:          35
+##e: 1100000001001111011100100000010110101010011011001111000000000000##e_exp:    5##normalize_amp: 0100000111000111001100110010101001100011101000000000000000000000##normalize_amp:  4739813389983809536
+##iteration:          36
+##e: 1100000000000101100010110001000010110011110000100010000000000000##e_exp:    1##normalize_amp: 0100000111000000001110110000110010011111101000000000000000000000##normalize_amp:  4737851733397471232
+##iteration:          37
+##e: 1100000001011111111011011101001110100101010011100100011010000000##e_exp:    6##normalize_amp: 0100000111010110001010110011001110111111000100000000000000000000##normalize_amp:  4744026758730219520
+##iteration:          38
+##e: 0100000001001010011100011010110100010000101010111011100000000000##e_exp:    5##normalize_amp: 0100000111001110001101111011000110000001001000000000000000000000##normalize_amp:  4741788693182808064
+##iteration:          39
+##e: 0100000001010001000110110111011010010110010110010011100010000000##e_exp:    6##normalize_amp: 0100000110110011010100010111101100010010010000000000000000000000##normalize_amp:  4734217222325534720
+##iteration:          40
+##e: 1100000001000101011101001011100001101010000011001000101000000000##e_exp:    5##normalize_amp: 0100000111010110110101110111010101100001010100000000000000000000##normalize_amp:  4744216156625174528
+##iteration:          41
+##e: 1100000001011111001110010110110100001000001111110111100000000000##e_exp:    6##normalize_amp: 0100000111011010010111101111100110010011010100000000000000000000##normalize_amp:  4745209583399600128
+##iteration:          42
+##e: 1100000000111010101010111010011001011000100110010101100000000000##e_exp:    4##normalize_amp: 0100000111010111110011001101111100111011010100000000000000000000##normalize_amp:  4744485991602978816
+##iteration:          43
+##e: 1100000001011111000111000001000111010100011010101111000100000000##e_exp:    6##normalize_amp: 0100000111010111001101001001100001101011110100000000000000000000##normalize_amp:  4744318561706573824
+##iteration:          44
+##e: 0100000001010011111010110101101001010011001111111101110010000000##e_exp:    6##normalize_amp: 0100000111011001010001001001101100011010110100000000000000000000##normalize_amp:  4744899115371986944
+##iteration:          45
+##e: 0100000001001010110100111000111010001010110111010111001000000000##e_exp:    5##normalize_amp: 0100000111010011000100001101101001001001110100000000000000000000##normalize_amp:  4743153362278547456
+##iteration:          46
+##e: 1100000001010111000010100001010000111100100011111110011000000000##e_exp:    6##normalize_amp: 0100000111010001110011011111000010101010000100000000000000000000##normalize_amp:  4742798316126863360
+##iteration:          47
+##e: 1100000001010000010011010100001111000100111010110110101010000000##e_exp:    6##normalize_amp: 0100000111010001111001010000000111001000110100000000000000000000##normalize_amp:  4742823678424645632
+##iteration:          48
+##e: 1100000001000010111110111000111010111001000000101010000110000000##e_exp:    5##normalize_amp: 0100000111010100011101100001011000011111000100000000000000000000##normalize_amp:  4743546144910475264
+##iteration:          49
+##e: 0100000001001100001001110010101010100011111011000101111000000000##e_exp:    5##normalize_amp: 0100000110101101101010001001110111010000100000000000000000000000##normalize_amp:  4732624179197640704
+##iteration:          50
+##e: 1100000001010000010100011001111101010111101111110000110100000000##e_exp:    6##normalize_amp: 0100000111011001000111000001101010010011000100000000000000000000##normalize_amp:  4744854582873554944
+##iteration:          51
+##e: 1100000000000011011111011100111001011010100000000110000000000000##e_exp:    1##normalize_amp: 0100000111001100110011110001111110011001101000000000000000000000##normalize_amp:  4741392242342625280
+##iteration:          52
+##e: 1100000001100101110110111010101100110000001001111010001010000000##e_exp:    7##normalize_amp: 0100000111001001110000100011001010101110001000000000000000000000##normalize_amp:  4740533605709643776
+run
+##iteration:          53
+##e: 0100000001000000100001000011100111000101000110100000110100000000##e_exp:    5##normalize_amp: 0100000111010110111110001000001000110001010100000000000000000000##normalize_amp:  4744252495538159616
+##iteration:          54
+##e: 1100000001100011101101010111110100111011011100100100011010000000##e_exp:    7##normalize_amp: 0100000111000110011101010111000111000010001000000000000000000000##normalize_amp:  4739604789302657024
+##iteration:          55
+##e: 0100000001001010011011111001100010110101111100010111101100000000##e_exp:    5##normalize_amp: 0100000111011110000100001011101101110110110100000000000000000000##normalize_amp:  4746249454633353216
+##iteration:          56
+##e: 1100000001100011000001011010011110010000111111010010011100000000##e_exp:    7##normalize_amp: 0100000111010101110000110011011011010100010100000000000000000000##normalize_amp:  4743912422762348544
+##iteration:          57
+##e: 0100000000110101011011101011111001100000101011000110100000000000##e_exp:    4##normalize_amp: 0100000111011100101000001111000001001000010100000000000000000000##normalize_amp:  4745845061207457792
+##iteration:          58
+##e: 1100000001011011010100110010110110010100100111000100010000000000##e_exp:    6##normalize_amp: 0100000111010111110011011010001110011000100100000000000000000000##normalize_amp:  4744486834981044224
+##iteration:          59
+##e: 1100000001001100101001011011101101011101111111000101011000000000##e_exp:    5##normalize_amp: 0100000111010011100100001110100100010111000100000000000000000000##normalize_amp:  4743294163339968512
+##iteration:          60
+##e: 0100000001000101011001101100101011000001100100110001100110000000##e_exp:    5##normalize_amp: 0100000111000011101010011100011100000010101000000000000000000000##normalize_amp:  4738817905131520000
+##iteration:          61
+##e: 0100000000111010011001001101010111011011110101011010000100000000##e_exp:    4##normalize_amp: 0100000110110111111000111100110001000100010000000000000000000000##normalize_amp:  4735503999661244416
+##iteration:          62
+##e: 1100000000110011101011101101010011110101000110110001101000000000##e_exp:    4##normalize_amp: 0100000111001101001010000010110000100010001000000000000000000000##normalize_amp:  4741490152707194880
+##iteration:          63
+##e: 1100000001010000111010011100101011101111000110111001000100000000##e_exp:    6##normalize_amp: 0100000111011011101101101001110010011111110100000000000000000000##normalize_amp:  4745587416177311744
+##iteration:          64
+##e: 1100000001001001010011111101000010010101101001101110101000000000##e_exp:    5##normalize_amp: 0100000111001110110110001110000000101011101000000000000000000000##normalize_amp:  4741965914983890944
+##iteration:          65
+##e: 1100000001000110100101001100100100011010101001011101011000000000##e_exp:    5##normalize_amp: 0100000111010000111111001000111001000101110100000000000000000000##normalize_amp:  4742568095607947264
+##iteration:          66
+##e: 1100000000111010100111011011011000000101101000001111100000000000##e_exp:    4##normalize_amp: 0100000111010110010001000101111011111001100100000000000000000000##normalize_amp:  4744054432185974784
+##iteration:          67
+##e: 1100000000101110100011100011100010111001011101111111001000000000##e_exp:    3##normalize_amp: 0100000110100110001111100101001100011100100000000000000000000000##normalize_amp:  4730536985280643072
+##iteration:          68
+##e: 1100000000101100000010000101011001100010110011100011110000000000##e_exp:    3##normalize_amp: 0100000111010001011011000111100100111110110100000000000000000000##normalize_amp:  4742691150598504448
+##iteration:          69
+##e: 1100000001000111001010011100101001101101111110010001110000000000##e_exp:    5##normalize_amp: 0100000111010100101000111000111011110111110100000000000000000000##normalize_amp:  4743596141966262272
+##iteration:          70
+##e: 1100000000011111100100010010001110001101111101010101000000000000##e_exp:    2##normalize_amp: 0100000111001000010000101000001011000111001000000000000000000000##normalize_amp:  4740111737261391872
+##iteration:          71
+##e: 1100000000110101001101101010100100100110000011110110101000000000##e_exp:    4##normalize_amp: 0100000111011111001001111111101001100101010100000000000000000000##normalize_amp:  4746556488666841088
+##iteration:          72
+##e: 0100000000111111101001011110001111101110110100001011000000000000##e_exp:    4##normalize_amp: 0100000111010010100000110110010010011111110100000000000000000000##normalize_amp:  4742997825775730688
+quit -sim
+# End time: 09:51:50 on Aug 24,2018, Elapsed time: 0:04:57
+# Errors: 0, Warnings: 2
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 09:52:53 on Aug 24,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+# Loading work.para_approx
+# Loading work.echo_cancelation
+# Loading work.double_to_sig16b
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlft23ztm4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft23ztm4
+run
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##e: 1100000010110110011000000111111000010000001101111101000011010111##e_exp:   12##normalize_amp: 0100000111011011001101000111101100000010010100000000000000000000##normalize_amp:  4745444335289368576
+##iteration:           1
+##e: 1100000011000011100101010111110101110010001111001011011001111001##e_exp:   13##normalize_amp: 0100000111000010111100100000001000001010101000000000000000000000##normalize_amp:  4738615848529297408
+##iteration:           2
+##e: 1100000011010101110000001010100011101101100100110001111010101001##e_exp:   14##normalize_amp: 0100000111011101101111111111111101100000100100000000000000000000##normalize_amp:  4746160685875986432
+##iteration:           3
+##e: 1100000011100000011101011100001001000011011010110110011000111110##e_exp:   15##normalize_amp: 0100000111010111011111011011000011001011010100000000000000000000##normalize_amp:  4744398930736840704
+##iteration:           4
+##e: 1100000011001101101110110101001111000001101101010111111000111011##e_exp:   13##normalize_amp: 0100000111010101100001100011111011010011010100000000000000000000##normalize_amp:  4743845386896015360
+##iteration:           5
+##e: 1100000011001100100000010100010001000101101011011100101110110011##e_exp:   13##normalize_amp: 0100000111010010111100011111100001010000010100000000000000000000##normalize_amp:  4743119406376157184
+##iteration:           6
+##e: 0100000010100001101011100001000100011110011000101100001100010100##e_exp:   11##normalize_amp: 0100000111011000011111010110100011000010110100000000000000000000##normalize_amp:  4744680096333299712
+##iteration:           7
+##e: 1100000010110000101011011011011000110111100011010010100010101000##e_exp:   12##normalize_amp: 0100000111000111101110000111101000001101101000000000000000000000##normalize_amp:  4739959967184846848
+##iteration:           8
+##e: 0100000010111010010110100111111110101100110010101010000111011100##e_exp:   12##normalize_amp: 0100000111010101110001001010110101110110110100000000000000000000##normalize_amp:  4743914031806414848
+##iteration:           9
+##e: 0100000011001000010101000100111000111010000111101011111000101011##e_exp:   13##normalize_amp: 0100000111011001001010110101011000100010110100000000000000000000##normalize_amp:  4744871331362766848
+##iteration:          10
+##e: 1100000010110001001001001101101010000000100000111000001110101000##e_exp:   12##normalize_amp: 0100000111010101001011111011111010110011100100000000000000000000##normalize_amp:  4743750278607536128
+##iteration:          11
+##e: 0100000001101111110101011110111001000100001110000010011000000000##e_exp:    7##normalize_amp: 0100000111011001110000001101000001010110010100000000000000000000##normalize_amp:  4745035683445342208
+##iteration:          12
+##e: 1100000010010000001010000111101001010110010101001000011010000000##e_exp:   10##normalize_amp: 0100000110111010100000100100010111000010010000000000000000000000##normalize_amp:  4736241194256826368
+run
+##iteration:          13
+##e: 1100000001100010001011101111101001001110101000110010001010000000##e_exp:    7##normalize_amp: 0100000111010101000011110111001101100000010100000000000000000000##normalize_amp:  4743714770716196864
+##iteration:          14
+##e: 0100000010010111011110100011010010010000000000111111010001100100##e_exp:   10##normalize_amp: 0100000111000010100010100110011001100000101000000000000000000000##normalize_amp:  4738501930259578880
+##iteration:          15
+##e: 0100000010010010001101111010000010011000001101001001100001001000##e_exp:   10##normalize_amp: 0100000110110000101101010101100110011001010000000000000000000000##normalize_amp:  4733482604794216448
+##iteration:          16
+##e: 1100000010100010101100110000010010000000011011101011000000110110##e_exp:   11##normalize_amp: 0100000111001110011101100011100100101111101000000000000000000000##normalize_amp:  4741857445651939328
+##iteration:          17
+##e: 0100000010011101101101011111000001111010010000000010111101010100##e_exp:   10##normalize_amp: 0100000111001000111011111111100011000001001000000000000000000000##normalize_amp:  4740302459478474752
+##iteration:          18
+##e: 0100000001100101111101110100101110011010010111101111001110000000##e_exp:    7##normalize_amp: 0100000111001000111000101010110110011001001000000000000000000000##normalize_amp:  4740287843033677824
+##iteration:          19
+##e: 1100000010001100111100001101001000001011111001110101111101010000##e_exp:    9##normalize_amp: 0100000111010011110111111000011001110011100100000000000000000000##normalize_amp:  4743380601108692992
+##iteration:          20
+##e: 0100000010000101111100111110111110010110110101011111001111100000##e_exp:    9##normalize_amp: 0100000111011011001001100000000001001101010100000000000000000000##normalize_amp:  4745428415103893504
+##iteration:          21
+##e: 0100000010001100001100000001101010110011111010110011000110010000##e_exp:    9##normalize_amp: 0100000111001110111011000111111101001101101000000000000000000000##normalize_amp:  4741987489175044096
+##iteration:          22
+##e: 0100000010011110101010110101011011101011001100010110110001010000##e_exp:   10##normalize_amp: 0100000111011000000101111110110001100101100100000000000000000000##normalize_amp:  4744568511518474240
+##iteration:          23
+##e: 1100000001010001101010100010010000100110100001011101100010000000##e_exp:    6##normalize_amp: 0100000111010000000100001110110010100000110100000000000000000000##normalize_amp:  4742309016117444608
+##iteration:          24
+##e: 0100000001110100011000000010101100001000001011000111011111000000##e_exp:    8##normalize_amp: 0100000111011011001000011011100010110101110100000000000000000000##normalize_amp:  4745423709572956160
+##iteration:          25
+##e: 1100000001110110111100001100100000010101111000011010111010000000##e_exp:    8##normalize_amp: 0100000111001100000110100100000000001101101000000000000000000000##normalize_amp:  4741193370123108352
+##iteration:          26
+##e: 1100000001011101000010110010011100111010111001111001100110000000##e_exp:    6##normalize_amp: 0100000111010110011000110101111010001000110100000000000000000000##normalize_amp:  4744088515154804736
+##iteration:          27
+##e: 1100000001010110001011111110001100110111111100010010110010000000##e_exp:    6##normalize_amp: 0100000111001001111101111010011101110010101000000000000000000000##normalize_amp:  4740592381338845184
+##iteration:          28
+##e: 0100000001100000010100000000110000000110111100100001111111000000##e_exp:    7##normalize_amp: 0100000111001010010011011111010010111110001000000000000000000000##normalize_amp:  4740687271317995520
+##iteration:          29
+##e: 1100000001100110011100011100001000100101011011001100101110000000##e_exp:    7##normalize_amp: 0100000111010010101010100101001101110011000100000000000000000000##normalize_amp:  4743040632963989504
+##iteration:          30
+##e: 0100000001101001011001001001101010111000111100001100010111000000##e_exp:    7##normalize_amp: 0100000110111100000001101101101001100101010000000000000000000000##normalize_amp:  4736668443158249472
+##iteration:          31
+##e: 0100000000000100101001101001110100100010101110111111100000000000##e_exp:    1##normalize_amp: 0100000111000010001110111111000110010100101000000000000000000000##normalize_amp:  4738415666713853952
+##iteration:          32
+##e: 0100000001010000100101110111101101010011011101111101010010000000##e_exp:    6##normalize_amp: 0100000110111110100100110100101000101011010000000000000000000000##normalize_amp:  4737385804802818048
+run
+##iteration:          33
+##e: 1100000001010110011110101111001000101000101111101000001001000000##e_exp:    6##normalize_amp: 0100000110100111110101001001111110100100100000000000000000000000##normalize_amp:  4730983715700736000
+##iteration:          34
+##e: 1100000000100111111110111010111001111111010000101001100000000000##e_exp:    3##normalize_amp: 0100000111000100100110001000010000010011101000000000000000000000##normalize_amp:  4739080400932962304
+##iteration:          35
+##e: 1100000001001111011100100000010110101010011011001111000000000000##e_exp:    5##normalize_amp: 0100000111000111001100110010101001100011101000000000000000000000##normalize_amp:  4739813389983809536
+##iteration:          36
+##e: 1100000000000101100010110001000010110011110000100010000000000000##e_exp:    1##normalize_amp: 0100000111000000001110110000110010011111101000000000000000000000##normalize_amp:  4737851733397471232
+##iteration:          37
+##e: 1100000001011111111011011101001110100101010011100100011010000000##e_exp:    6##normalize_amp: 0100000111010110001010110011001110111111000100000000000000000000##normalize_amp:  4744026758730219520
+##iteration:          38
+##e: 0100000001001010011100011010110100010000101010111011100000000000##e_exp:    5##normalize_amp: 0100000111001110001101111011000110000001001000000000000000000000##normalize_amp:  4741788693182808064
+##iteration:          39
+##e: 0100000001010001000110110111011010010110010110010011100010000000##e_exp:    6##normalize_amp: 0100000110110011010100010111101100010010010000000000000000000000##normalize_amp:  4734217222325534720
+##iteration:          40
+##e: 1100000001000101011101001011100001101010000011001000101000000000##e_exp:    5##normalize_amp: 0100000111010110110101110111010101100001010100000000000000000000##normalize_amp:  4744216156625174528
+##iteration:          41
+##e: 1100000001011111001110010110110100001000001111110111100000000000##e_exp:    6##normalize_amp: 0100000111011010010111101111100110010011010100000000000000000000##normalize_amp:  4745209583399600128
+##iteration:          42
+##e: 1100000000111010101010111010011001011000100110010101100000000000##e_exp:    4##normalize_amp: 0100000111010111110011001101111100111011010100000000000000000000##normalize_amp:  4744485991602978816
+##iteration:          43
+##e: 1100000001011111000111000001000111010100011010101111000100000000##e_exp:    6##normalize_amp: 0100000111010111001101001001100001101011110100000000000000000000##normalize_amp:  4744318561706573824
+##iteration:          44
+##e: 0100000001010011111010110101101001010011001111111101110010000000##e_exp:    6##normalize_amp: 0100000111011001010001001001101100011010110100000000000000000000##normalize_amp:  4744899115371986944
+##iteration:          45
+##e: 0100000001001010110100111000111010001010110111010111001000000000##e_exp:    5##normalize_amp: 0100000111010011000100001101101001001001110100000000000000000000##normalize_amp:  4743153362278547456
+##iteration:          46
+##e: 1100000001010111000010100001010000111100100011111110011000000000##e_exp:    6##normalize_amp: 0100000111010001110011011111000010101010000100000000000000000000##normalize_amp:  4742798316126863360
+##iteration:          47
+##e: 1100000001010000010011010100001111000100111010110110101010000000##e_exp:    6##normalize_amp: 0100000111010001111001010000000111001000110100000000000000000000##normalize_amp:  4742823678424645632
+##iteration:          48
+##e: 1100000001000010111110111000111010111001000000101010000110000000##e_exp:    5##normalize_amp: 0100000111010100011101100001011000011111000100000000000000000000##normalize_amp:  4743546144910475264
+##iteration:          49
+##e: 0100000001001100001001110010101010100011111011000101111000000000##e_exp:    5##normalize_amp: 0100000110101101101010001001110111010000100000000000000000000000##normalize_amp:  4732624179197640704
+##iteration:          50
+##e: 1100000001010000010100011001111101010111101111110000110100000000##e_exp:    6##normalize_amp: 0100000111011001000111000001101010010011000100000000000000000000##normalize_amp:  4744854582873554944
+##iteration:          51
+##e: 1100000000000011011111011100111001011010100000000110000000000000##e_exp:    1##normalize_amp: 0100000111001100110011110001111110011001101000000000000000000000##normalize_amp:  4741392242342625280
+##iteration:          52
+##e: 1100000001100101110110111010101100110000001001111010001010000000##e_exp:    7##normalize_amp: 0100000111001001110000100011001010101110001000000000000000000000##normalize_amp:  4740533605709643776
+run
+##iteration:          53
+##e: 0100000001000000100001000011100111000101000110100000110100000000##e_exp:    5##normalize_amp: 0100000111010110111110001000001000110001010100000000000000000000##normalize_amp:  4744252495538159616
+##iteration:          54
+##e: 1100000001100011101101010111110100111011011100100100011010000000##e_exp:    7##normalize_amp: 0100000111000110011101010111000111000010001000000000000000000000##normalize_amp:  4739604789302657024
+##iteration:          55
+##e: 0100000001001010011011111001100010110101111100010111101100000000##e_exp:    5##normalize_amp: 0100000111011110000100001011101101110110110100000000000000000000##normalize_amp:  4746249454633353216
+##iteration:          56
+##e: 1100000001100011000001011010011110010000111111010010011100000000##e_exp:    7##normalize_amp: 0100000111010101110000110011011011010100010100000000000000000000##normalize_amp:  4743912422762348544
+##iteration:          57
+##e: 0100000000110101011011101011111001100000101011000110100000000000##e_exp:    4##normalize_amp: 0100000111011100101000001111000001001000010100000000000000000000##normalize_amp:  4745845061207457792
+##iteration:          58
+##e: 1100000001011011010100110010110110010100100111000100010000000000##e_exp:    6##normalize_amp: 0100000111010111110011011010001110011000100100000000000000000000##normalize_amp:  4744486834981044224
+##iteration:          59
+##e: 1100000001001100101001011011101101011101111111000101011000000000##e_exp:    5##normalize_amp: 0100000111010011100100001110100100010111000100000000000000000000##normalize_amp:  4743294163339968512
+##iteration:          60
+##e: 0100000001000101011001101100101011000001100100110001100110000000##e_exp:    5##normalize_amp: 0100000111000011101010011100011100000010101000000000000000000000##normalize_amp:  4738817905131520000
+##iteration:          61
+##e: 0100000000111010011001001101010111011011110101011010000100000000##e_exp:    4##normalize_amp: 0100000110110111111000111100110001000100010000000000000000000000##normalize_amp:  4735503999661244416
+##iteration:          62
+##e: 1100000000110011101011101101010011110101000110110001101000000000##e_exp:    4##normalize_amp: 0100000111001101001010000010110000100010001000000000000000000000##normalize_amp:  4741490152707194880
+##iteration:          63
+##e: 1100000001010000111010011100101011101111000110111001000100000000##e_exp:    6##normalize_amp: 0100000111011011101101101001110010011111110100000000000000000000##normalize_amp:  4745587416177311744
+##iteration:          64
+##e: 1100000001001001010011111101000010010101101001101110101000000000##e_exp:    5##normalize_amp: 0100000111001110110110001110000000101011101000000000000000000000##normalize_amp:  4741965914983890944
+##iteration:          65
+##e: 1100000001000110100101001100100100011010101001011101011000000000##e_exp:    5##normalize_amp: 0100000111010000111111001000111001000101110100000000000000000000##normalize_amp:  4742568095607947264
+##iteration:          66
+##e: 1100000000111010100111011011011000000101101000001111100000000000##e_exp:    4##normalize_amp: 0100000111010110010001000101111011111001100100000000000000000000##normalize_amp:  4744054432185974784
+##iteration:          67
+##e: 1100000000101110100011100011100010111001011101111111001000000000##e_exp:    3##normalize_amp: 0100000110100110001111100101001100011100100000000000000000000000##normalize_amp:  4730536985280643072
+##iteration:          68
+##e: 1100000000101100000010000101011001100010110011100011110000000000##e_exp:    3##normalize_amp: 0100000111010001011011000111100100111110110100000000000000000000##normalize_amp:  4742691150598504448
+##iteration:          69
+##e: 1100000001000111001010011100101001101101111110010001110000000000##e_exp:    5##normalize_amp: 0100000111010100101000111000111011110111110100000000000000000000##normalize_amp:  4743596141966262272
+##iteration:          70
+##e: 1100000000011111100100010010001110001101111101010101000000000000##e_exp:    2##normalize_amp: 0100000111001000010000101000001011000111001000000000000000000000##normalize_amp:  4740111737261391872
+##iteration:          71
+##e: 1100000000110101001101101010100100100110000011110110101000000000##e_exp:    4##normalize_amp: 0100000111011111001001111111101001100101010100000000000000000000##normalize_amp:  4746556488666841088
+##iteration:          72
+##e: 0100000000111111101001011110001111101110110100001011000000000000##e_exp:    4##normalize_amp: 0100000111010010100000110110010010011111110100000000000000000000##normalize_amp:  4742997825775730688
+run
+##iteration:          73
+##e: 0100000000001101111111100111000010001100000101011001000000000000##e_exp:    1##normalize_amp: 0100000111010010011010100110001011001100110100000000000000000000##normalize_amp:  4742970330150076416
+##iteration:          74
+##e: 1100000000100010011101001101000110000010010110110000000000000000##e_exp:    3##normalize_amp: 0100000111011001101011100110011111010000110100000000000000000000##normalize_amp:  4745015443319685120
+##iteration:          75
+##e: 1100000000100101011101100011001100101101001000101001110000000000##e_exp:    3##normalize_amp: 0100000110101110010101111110010000000110100000000000000000000000##normalize_amp:  4732816895286181888
+##iteration:          76
+##e: 0100000000111111111011110011001001111100101011011101000000000000##e_exp:    4##normalize_amp: 0100000111011101011100100010001110111101100100000000000000000000##normalize_amp:  4746075080148123648
+##iteration:          77
+##e: 1100000001000110111011011000100100111110000000101111010110000000##e_exp:    5##normalize_amp: 0100000111010110000100100110101110110011100100000000000000000000##normalize_amp:  4743999511264755712
+##iteration:          78
+##e: 0011111111100000001100010010110101110110100000100100000000000000##e_exp: 2047##normalize_amp: 0100000110111011000011000001001010011100010000000000000000000000##normalize_amp:  4736392707180593152
+##iteration:          79
+##e: 0100000000101001101110011011000110011100000010011011101000000000##e_exp:    3##normalize_amp: 0100000111010000001010011001001111110110000100000000000000000000##normalize_amp:  4742336123086307328
+##iteration:          80
+##e: 1011111111111100011010110101100001010111000100100110000000000000##e_exp:    0##normalize_amp: 0100000110111000000000110101111101000100010000000000000000000000##normalize_amp:  4735538715881897984
+##iteration:          81
+##e: 0011111111111000001111011101011101111110111000011011100000000000##e_exp:    0##normalize_amp: 0100000110010010001101111100011010101101000000000000000000000000##normalize_amp:  4724900285510582272
+##iteration:          82
+##e: 1100000000000110110100100001011100111110110111101100000000000000##e_exp:    1##normalize_amp: 0100000110100111001101110110001011100000100000000000000000000000##normalize_amp:  4730810831388803072
+##iteration:          83
+##e: 1100000000010111111110110000000010100100101101001010000000000000##e_exp:    2##normalize_amp: 0100000110111011010010001100100111010100010000000000000000000000##normalize_amp:  4736459464796798976
+##iteration:          84
+##e: 1100000000011100010101000011101001011111101001100111000000000000##e_exp:    2##normalize_amp: 0100000111001101101101110111100110000010001000000000000000000000##normalize_amp:  4741647715193061376
+##iteration:          85
+##e: 1100000000011110010000000100011110101101001101111100000000000000##e_exp:    2##normalize_amp: 0100000111001100001010001001001000011111101000000000000000000000##normalize_amp:  4741209115775205376
+##iteration:          86
+##e: 0100000000011110010110001011111001111100111001100011100000000000##e_exp:    2##normalize_amp: 0100000110110100110010010010000001000011010000000000000000000000##normalize_amp:  4734630248677638144
+##iteration:          87
+##e: 0100000000100111010000111001010010011111101100001111100000000000##e_exp:    3##normalize_amp: 0100000111011010001111010100100111110110000100000000000000000000##normalize_amp:  4745172545258389504
+##iteration:          88
+##e: 1100000000000010011101010110001011101000101110000101000000000000##e_exp:    1##normalize_amp: 0100000111011011101011000111001101011001110100000000000000000000##normalize_amp:  4745576243792969728
+##iteration:          89
+##e: 0100000000110001010111101101010110110100010101110010100000000000##e_exp:    4##normalize_amp: 0100000111011000001011110111001110001000110100000000000000000000##normalize_amp:  4744594380697894912
+##iteration:          90
+##e: 1100000000100010001011110001000011011100000010010011001000000000##e_exp:    3##normalize_amp: 0100000111011000000110111101001010001000000100000000000000000000##normalize_amp:  4744572798474649600
+##iteration:          91
+##e: 0100000000010101001110111011010111111001111000101001000000000000##e_exp:    2##normalize_amp: 0100000111100000100001100010100011111100010010000000000000000000##normalize_amp:  4746941517837893632
+##iteration:          92
+##e: 1100000000000010110010100101101101110110001010010110100000000000##e_exp:    1##normalize_amp: 0100000111011010001100111011001001001101110100000000000000000000##normalize_amp:  4745161998290911232
+run
+##iteration:          93
+##e: 0011111111100010100110111111011101010000011101010000000000000000##e_exp: 2047##normalize_amp: 0100000111000100011100001001100010111111001000000000000000000000##normalize_amp:  4739036509244489728
+##iteration:          94
+##e: 0100000000100101111111000001011110001011011011110011000000000000##e_exp:    3##normalize_amp: 0100000111011011001011010000001001010000110100000000000000000000##normalize_amp:  4745436120333942784
+##iteration:          95
+##e: 0100000000010110010010100111000011011000111011001111100000000000##e_exp:    2##normalize_amp: 0100000111010000100100110111101001111110110100000000000000000000##normalize_amp:  4742452561943986176
+##iteration:          96
+##e: 0011111111001110011101100000111100111011011100100000000000000000##e_exp: 2045##normalize_amp: 0100000111001100100011100000000011100101101000000000000000000000##normalize_amp:  4741320642217902080
+##iteration:          97
+##e: 0011111111111110010111010000101111111101110101000000000000000000##e_exp:    0##normalize_amp: 0100000111010111101111011011100101001111000100000000000000000000##normalize_amp:  4744469336051154944
+##iteration:          98
+##e: 0011111110111000011110100000011111000000000101110000000000000000##e_exp: 2044##normalize_amp: 0100000111000010101110100100001011111101101000000000000000000000##normalize_amp:  4738554554832912384
+##iteration:          99
+##e: 0011111111111111110001110001110101011100101110010010000000000000##e_exp:    0##normalize_amp: 0100000111001001100101101111100101101111101000000000000000000000##normalize_amp:  4740486080847937536
+##iteration:         100
+##e: 1011111111001010001110100110000001001100001000110000000000000000##e_exp: 2045##normalize_amp: 0100000110111001011101000001101110111100010000000000000000000000##normalize_amp:  4735944145628037120
+##iteration:         101
+##e: 0011111111011101100101000101111010110111110101010000000000000000##e_exp: 2046##normalize_amp: 0100000110110110101000110101111010111111010000000000000000000000##normalize_amp:  4735151685557551104
+##iteration:         102
+##e: 1011111111100000011010110011010000001011011011111000000000000000##e_exp: 2047##normalize_amp: 0100000110001001111110001100000011111010000000000000000000000000##normalize_amp:  4722579191986388992
+##iteration:         103
+##e: 1011111111010111010111101111110010000001011100110000000000000000##e_exp: 2046##normalize_amp: 0100000111000011000101101010110111110111101000000000000000000000##normalize_amp:  4738656169363505152
+##iteration:         104
+##e: 0011111111110110111011101110111110001000000101101010000000000000##e_exp:    0##normalize_amp: 0100000111000000001101010111011111101000101000000000000000000000##normalize_amp:  4737845597113942016
+##iteration:         105
+##e: 1011111111110111011001011100100101000100010000101100000000000000##e_exp:    0##normalize_amp: 0100000101110001100101001100100111000100000000000000000000000000##normalize_amp:  4715713879131291648
+##iteration:         106
+##e: 1100000000100000100010100111010001010011010101000101110000000000##e_exp:    3##normalize_amp: 0100000110111110110011001100111110101001010000000000000000000000##normalize_amp:  4737449050310180864
+##iteration:         107
+##e: 0100000000011110100110101000000000110001001101001010100000000000##e_exp:    2##normalize_amp: 0100000110111000001011010000101001101010010000000000000000000000##normalize_amp:  4735584530935578624
+##iteration:         108
+##e: 0100000000001101110010011000000000001111000000110100100000000000##e_exp:    1##normalize_amp: 0100000111010011100110000000000010110011000100000000000000000000##normalize_amp:  4743301961322856448
+##iteration:         109
+##e: 0100000001000101010111011101111000011011010000011010011100000000##e_exp:    5##normalize_amp: 0100000111010010010100000111100011001110000100000000000000000000##normalize_amp:  4742941837358006272
+##iteration:         110
+##e: 1100000000111001110001001000011110100110000011101100000000000000##e_exp:    4##normalize_amp: 0100000111001110111101010101110111111010001000000000000000000000##normalize_amp:  4741997241644875776
+##iteration:         111
+##e: 1100000001000010101100100101111110011110001110000010111000000000##e_exp:    5##normalize_amp: 0100000111011001010011100011001100110110110100000000000000000000##normalize_amp:  4744909664281427968
+##iteration:         112
+##e: 1100000000110110110010000010001110010011101110100000100000000000##e_exp:    4##normalize_amp: 0100000111000110001111110100000100111111101000000000000000000000##normalize_amp:  4739545207326900224
+quit -sim
+# End time: 09:58:25 on Aug 24,2018, Elapsed time: 0:05:32
+# Errors: 0, Warnings: 2
+# Compile of tb_all.v was successful.
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 09:58:43 on Aug 24,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+# Loading work.para_approx
+# Loading work.echo_cancelation
+# Loading work.double_to_sig16b
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftth6giy".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftth6giy
+run
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##e: 1100000010110110011000000111111000010000001101111101000011010111##e_exp:   12##normalize_amp: 0100000111011011001101000111101100000010010100000000000000000000##normalize_amp:  4745444335289368576
+##iteration:           1
+##e: 1100000011000011100101010111110101110010001111001011011001111001##e_exp:   13##normalize_amp: 0100000111000010111100100000001000001010101000000000000000000000##normalize_amp:  4738615848529297408
+##iteration:           2
+##e: 1100000011010101110000001010100011101101100100110001111010101001##e_exp:   14##normalize_amp: 0100000111011101101111111111111101100000100100000000000000000000##normalize_amp:  4746160685875986432
+##iteration:           3
+##e: 1100000011100000011101011100001001000011011010110110011000111110##e_exp:   15##normalize_amp: 0100000111010111011111011011000011001011010100000000000000000000##normalize_amp:  4744398930736840704
+##iteration:           4
+##e: 1100000011001101101110110101001111000001101101010111111000111011##e_exp:   13##normalize_amp: 0100000111010101100001100011111011010011010100000000000000000000##normalize_amp:  4743845386896015360
+##iteration:           5
+##e: 1100000011001100100000010100010001000101101011011100101110110011##e_exp:   13##normalize_amp: 0100000111010010111100011111100001010000010100000000000000000000##normalize_amp:  4743119406376157184
+##iteration:           6
+##e: 0100000010100001101011100001000100011110011000101100001100010100##e_exp:   11##normalize_amp: 0100000111011000011111010110100011000010110100000000000000000000##normalize_amp:  4744680096333299712
+##iteration:           7
+##e: 1100000010110000101011011011011000110111100011010010100010101000##e_exp:   12##normalize_amp: 0100000111000111101110000111101000001101101000000000000000000000##normalize_amp:  4739959967184846848
+##iteration:           8
+##e: 0100000010111010010110100111111110101100110010101010000111011100##e_exp:   12##normalize_amp: 0100000111010101110001001010110101110110110100000000000000000000##normalize_amp:  4743914031806414848
+##iteration:           9
+##e: 0100000011001000010101000100111000111010000111101011111000101011##e_exp:   13##normalize_amp: 0100000111011001001010110101011000100010110100000000000000000000##normalize_amp:  4744871331362766848
+##iteration:          10
+##e: 1100000010110001001001001101101010000000100000111000001110101000##e_exp:   12##normalize_amp: 0100000111010101001011111011111010110011100100000000000000000000##normalize_amp:  4743750278607536128
+##iteration:          11
+##e: 0100000001101111110101011110111001000100001110000010011000000000##e_exp:    7##normalize_amp: 0100000111011001110000001101000001010110010100000000000000000000##normalize_amp:  4745035683445342208
+##iteration:          12
+##e: 1100000010010000001010000111101001010110010101001000011010000000##e_exp:   10##normalize_amp: 0100000110111010100000100100010111000010010000000000000000000000##normalize_amp:  4736241194256826368
+run
+##iteration:          13
+##e: 1100000001100010001011101111101001001110101000110010001010000000##e_exp:    7##normalize_amp: 0100000111010101000011110111001101100000010100000000000000000000##normalize_amp:  4743714770716196864
+##iteration:          14
+##e: 0100000010010111011110100011010010010000000000111111010001100100##e_exp:   10##normalize_amp: 0100000111000010100010100110011001100000101000000000000000000000##normalize_amp:  4738501930259578880
+##iteration:          15
+##e: 0100000010010010001101111010000010011000001101001001100001001000##e_exp:   10##normalize_amp: 0100000110110000101101010101100110011001010000000000000000000000##normalize_amp:  4733482604794216448
+##iteration:          16
+##e: 1100000010100010101100110000010010000000011011101011000000110110##e_exp:   11##normalize_amp: 0100000111001110011101100011100100101111101000000000000000000000##normalize_amp:  4741857445651939328
+##iteration:          17
+##e: 0100000010011101101101011111000001111010010000000010111101010100##e_exp:   10##normalize_amp: 0100000111001000111011111111100011000001001000000000000000000000##normalize_amp:  4740302459478474752
+##iteration:          18
+##e: 0100000001100101111101110100101110011010010111101111001110000000##e_exp:    7##normalize_amp: 0100000111001000111000101010110110011001001000000000000000000000##normalize_amp:  4740287843033677824
+##iteration:          19
+##e: 1100000010001100111100001101001000001011111001110101111101010000##e_exp:    9##normalize_amp: 0100000111010011110111111000011001110011100100000000000000000000##normalize_amp:  4743380601108692992
+##iteration:          20
+##e: 0100000010000101111100111110111110010110110101011111001111100000##e_exp:    9##normalize_amp: 0100000111011011001001100000000001001101010100000000000000000000##normalize_amp:  4745428415103893504
+##iteration:          21
+##e: 0100000010001100001100000001101010110011111010110011000110010000##e_exp:    9##normalize_amp: 0100000111001110111011000111111101001101101000000000000000000000##normalize_amp:  4741987489175044096
+##iteration:          22
+##e: 0100000010011110101010110101011011101011001100010110110001010000##e_exp:   10##normalize_amp: 0100000111011000000101111110110001100101100100000000000000000000##normalize_amp:  4744568511518474240
+##iteration:          23
+##e: 1100000001010001101010100010010000100110100001011101100010000000##e_exp:    6##normalize_amp: 0100000111010000000100001110110010100000110100000000000000000000##normalize_amp:  4742309016117444608
+##iteration:          24
+##e: 0100000001110100011000000010101100001000001011000111011111000000##e_exp:    8##normalize_amp: 0100000111011011001000011011100010110101110100000000000000000000##normalize_amp:  4745423709572956160
+##iteration:          25
+##e: 1100000001110110111100001100100000010101111000011010111010000000##e_exp:    8##normalize_amp: 0100000111001100000110100100000000001101101000000000000000000000##normalize_amp:  4741193370123108352
+##iteration:          26
+##e: 1100000001011101000010110010011100111010111001111001100110000000##e_exp:    6##normalize_amp: 0100000111010110011000110101111010001000110100000000000000000000##normalize_amp:  4744088515154804736
+##iteration:          27
+##e: 1100000001010110001011111110001100110111111100010010110010000000##e_exp:    6##normalize_amp: 0100000111001001111101111010011101110010101000000000000000000000##normalize_amp:  4740592381338845184
+##iteration:          28
+##e: 0100000001100000010100000000110000000110111100100001111111000000##e_exp:    7##normalize_amp: 0100000111001010010011011111010010111110001000000000000000000000##normalize_amp:  4740687271317995520
+##iteration:          29
+##e: 1100000001100110011100011100001000100101011011001100101110000000##e_exp:    7##normalize_amp: 0100000111010010101010100101001101110011000100000000000000000000##normalize_amp:  4743040632963989504
+##iteration:          30
+##e: 0100000001101001011001001001101010111000111100001100010111000000##e_exp:    7##normalize_amp: 0100000110111100000001101101101001100101010000000000000000000000##normalize_amp:  4736668443158249472
+##iteration:          31
+##e: 0100000000000100101001101001110100100010101110111111100000000000##e_exp:    1##normalize_amp: 0100000111000010001110111111000110010100101000000000000000000000##normalize_amp:  4738415666713853952
+##iteration:          32
+##e: 0100000001010000100101110111101101010011011101111101010010000000##e_exp:    6##normalize_amp: 0100000110111110100100110100101000101011010000000000000000000000##normalize_amp:  4737385804802818048
+run
+##iteration:          33
+##e: 1100000001010110011110101111001000101000101111101000001001000000##e_exp:    6##normalize_amp: 0100000110100111110101001001111110100100100000000000000000000000##normalize_amp:  4730983715700736000
+##iteration:          34
+##e: 1100000000100111111110111010111001111111010000101001100000000000##e_exp:    3##normalize_amp: 0100000111000100100110001000010000010011101000000000000000000000##normalize_amp:  4739080400932962304
+##iteration:          35
+##e: 1100000001001111011100100000010110101010011011001111000000000000##e_exp:    5##normalize_amp: 0100000111000111001100110010101001100011101000000000000000000000##normalize_amp:  4739813389983809536
+##iteration:          36
+##e: 1100000000000101100010110001000010110011110000100010000000000000##e_exp:    1##normalize_amp: 0100000111000000001110110000110010011111101000000000000000000000##normalize_amp:  4737851733397471232
+##iteration:          37
+##e: 1100000001011111111011011101001110100101010011100100011010000000##e_exp:    6##normalize_amp: 0100000111010110001010110011001110111111000100000000000000000000##normalize_amp:  4744026758730219520
+##iteration:          38
+##e: 0100000001001010011100011010110100010000101010111011100000000000##e_exp:    5##normalize_amp: 0100000111001110001101111011000110000001001000000000000000000000##normalize_amp:  4741788693182808064
+##iteration:          39
+##e: 0100000001010001000110110111011010010110010110010011100010000000##e_exp:    6##normalize_amp: 0100000110110011010100010111101100010010010000000000000000000000##normalize_amp:  4734217222325534720
+##iteration:          40
+##e: 1100000001000101011101001011100001101010000011001000101000000000##e_exp:    5##normalize_amp: 0100000111010110110101110111010101100001010100000000000000000000##normalize_amp:  4744216156625174528
+##iteration:          41
+##e: 1100000001011111001110010110110100001000001111110111100000000000##e_exp:    6##normalize_amp: 0100000111011010010111101111100110010011010100000000000000000000##normalize_amp:  4745209583399600128
+##iteration:          42
+##e: 1100000000111010101010111010011001011000100110010101100000000000##e_exp:    4##normalize_amp: 0100000111010111110011001101111100111011010100000000000000000000##normalize_amp:  4744485991602978816
+##iteration:          43
+##e: 1100000001011111000111000001000111010100011010101111000100000000##e_exp:    6##normalize_amp: 0100000111010111001101001001100001101011110100000000000000000000##normalize_amp:  4744318561706573824
+##iteration:          44
+##e: 0100000001010011111010110101101001010011001111111101110010000000##e_exp:    6##normalize_amp: 0100000111011001010001001001101100011010110100000000000000000000##normalize_amp:  4744899115371986944
+##iteration:          45
+##e: 0100000001001010110100111000111010001010110111010111001000000000##e_exp:    5##normalize_amp: 0100000111010011000100001101101001001001110100000000000000000000##normalize_amp:  4743153362278547456
+##iteration:          46
+##e: 1100000001010111000010100001010000111100100011111110011000000000##e_exp:    6##normalize_amp: 0100000111010001110011011111000010101010000100000000000000000000##normalize_amp:  4742798316126863360
+##iteration:          47
+##e: 1100000001010000010011010100001111000100111010110110101010000000##e_exp:    6##normalize_amp: 0100000111010001111001010000000111001000110100000000000000000000##normalize_amp:  4742823678424645632
+##iteration:          48
+##e: 1100000001000010111110111000111010111001000000101010000110000000##e_exp:    5##normalize_amp: 0100000111010100011101100001011000011111000100000000000000000000##normalize_amp:  4743546144910475264
+##iteration:          49
+##e: 0100000001001100001001110010101010100011111011000101111000000000##e_exp:    5##normalize_amp: 0100000110101101101010001001110111010000100000000000000000000000##normalize_amp:  4732624179197640704
+##iteration:          50
+##e: 1100000001010000010100011001111101010111101111110000110100000000##e_exp:    6##normalize_amp: 0100000111011001000111000001101010010011000100000000000000000000##normalize_amp:  4744854582873554944
+##iteration:          51
+##e: 1100000000000011011111011100111001011010100000000110000000000000##e_exp:    1##normalize_amp: 0100000111001100110011110001111110011001101000000000000000000000##normalize_amp:  4741392242342625280
+##iteration:          52
+##e: 1100000001100101110110111010101100110000001001111010001010000000##e_exp:    7##normalize_amp: 0100000111001001110000100011001010101110001000000000000000000000##normalize_amp:  4740533605709643776
+run
+##iteration:          53
+##e: 0100000001000000100001000011100111000101000110100000110100000000##e_exp:    5##normalize_amp: 0100000111010110111110001000001000110001010100000000000000000000##normalize_amp:  4744252495538159616
+##iteration:          54
+##e: 1100000001100011101101010111110100111011011100100100011010000000##e_exp:    7##normalize_amp: 0100000111000110011101010111000111000010001000000000000000000000##normalize_amp:  4739604789302657024
+##iteration:          55
+##e: 0100000001001010011011111001100010110101111100010111101100000000##e_exp:    5##normalize_amp: 0100000111011110000100001011101101110110110100000000000000000000##normalize_amp:  4746249454633353216
+##iteration:          56
+##e: 1100000001100011000001011010011110010000111111010010011100000000##e_exp:    7##normalize_amp: 0100000111010101110000110011011011010100010100000000000000000000##normalize_amp:  4743912422762348544
+##iteration:          57
+##e: 0100000000110101011011101011111001100000101011000110100000000000##e_exp:    4##normalize_amp: 0100000111011100101000001111000001001000010100000000000000000000##normalize_amp:  4745845061207457792
+##iteration:          58
+##e: 1100000001011011010100110010110110010100100111000100010000000000##e_exp:    6##normalize_amp: 0100000111010111110011011010001110011000100100000000000000000000##normalize_amp:  4744486834981044224
+##iteration:          59
+##e: 1100000001001100101001011011101101011101111111000101011000000000##e_exp:    5##normalize_amp: 0100000111010011100100001110100100010111000100000000000000000000##normalize_amp:  4743294163339968512
+##iteration:          60
+##e: 0100000001000101011001101100101011000001100100110001100110000000##e_exp:    5##normalize_amp: 0100000111000011101010011100011100000010101000000000000000000000##normalize_amp:  4738817905131520000
+##iteration:          61
+##e: 0100000000111010011001001101010111011011110101011010000100000000##e_exp:    4##normalize_amp: 0100000110110111111000111100110001000100010000000000000000000000##normalize_amp:  4735503999661244416
+##iteration:          62
+##e: 1100000000110011101011101101010011110101000110110001101000000000##e_exp:    4##normalize_amp: 0100000111001101001010000010110000100010001000000000000000000000##normalize_amp:  4741490152707194880
+##iteration:          63
+##e: 1100000001010000111010011100101011101111000110111001000100000000##e_exp:    6##normalize_amp: 0100000111011011101101101001110010011111110100000000000000000000##normalize_amp:  4745587416177311744
+##iteration:          64
+##e: 1100000001001001010011111101000010010101101001101110101000000000##e_exp:    5##normalize_amp: 0100000111001110110110001110000000101011101000000000000000000000##normalize_amp:  4741965914983890944
+##iteration:          65
+##e: 1100000001000110100101001100100100011010101001011101011000000000##e_exp:    5##normalize_amp: 0100000111010000111111001000111001000101110100000000000000000000##normalize_amp:  4742568095607947264
+##iteration:          66
+##e: 1100000000111010100111011011011000000101101000001111100000000000##e_exp:    4##normalize_amp: 0100000111010110010001000101111011111001100100000000000000000000##normalize_amp:  4744054432185974784
+##iteration:          67
+##e: 1100000000101110100011100011100010111001011101111111001000000000##e_exp:    3##normalize_amp: 0100000110100110001111100101001100011100100000000000000000000000##normalize_amp:  4730536985280643072
+##iteration:          68
+##e: 1100000000101100000010000101011001100010110011100011110000000000##e_exp:    3##normalize_amp: 0100000111010001011011000111100100111110110100000000000000000000##normalize_amp:  4742691150598504448
+##iteration:          69
+##e: 1100000001000111001010011100101001101101111110010001110000000000##e_exp:    5##normalize_amp: 0100000111010100101000111000111011110111110100000000000000000000##normalize_amp:  4743596141966262272
+##iteration:          70
+##e: 1100000000011111100100010010001110001101111101010101000000000000##e_exp:    2##normalize_amp: 0100000111001000010000101000001011000111001000000000000000000000##normalize_amp:  4740111737261391872
+##iteration:          71
+##e: 1100000000110101001101101010100100100110000011110110101000000000##e_exp:    4##normalize_amp: 0100000111011111001001111111101001100101010100000000000000000000##normalize_amp:  4746556488666841088
+##iteration:          72
+##e: 0100000000111111101001011110001111101110110100001011000000000000##e_exp:    4##normalize_amp: 0100000111010010100000110110010010011111110100000000000000000000##normalize_amp:  4742997825775730688
+run
+##iteration:          73
+##e: 0100000000001101111111100111000010001100000101011001000000000000##e_exp:    1##normalize_amp: 0100000111010010011010100110001011001100110100000000000000000000##normalize_amp:  4742970330150076416
+##iteration:          74
+##e: 1100000000100010011101001101000110000010010110110000000000000000##e_exp:    3##normalize_amp: 0100000111011001101011100110011111010000110100000000000000000000##normalize_amp:  4745015443319685120
+##iteration:          75
+##e: 1100000000100101011101100011001100101101001000101001110000000000##e_exp:    3##normalize_amp: 0100000110101110010101111110010000000110100000000000000000000000##normalize_amp:  4732816895286181888
+##iteration:          76
+##e: 0100000000111111111011110011001001111100101011011101000000000000##e_exp:    4##normalize_amp: 0100000111011101011100100010001110111101100100000000000000000000##normalize_amp:  4746075080148123648
+##iteration:          77
+##e: 1100000001000110111011011000100100111110000000101111010110000000##e_exp:    5##normalize_amp: 0100000111010110000100100110101110110011100100000000000000000000##normalize_amp:  4743999511264755712
+##iteration:          78
+##e: 0011111111100000001100010010110101110110100000100100000000000000##e_exp: 2047##normalize_amp: 0100000110111011000011000001001010011100010000000000000000000000##normalize_amp:  4736392707180593152
+##iteration:          79
+##e: 0100000000101001101110011011000110011100000010011011101000000000##e_exp:    3##normalize_amp: 0100000111010000001010011001001111110110000100000000000000000000##normalize_amp:  4742336123086307328
+##iteration:          80
+##e: 1011111111111100011010110101100001010111000100100110000000000000##e_exp:    0##normalize_amp: 0100000110111000000000110101111101000100010000000000000000000000##normalize_amp:  4735538715881897984
+##iteration:          81
+##e: 0011111111111000001111011101011101111110111000011011100000000000##e_exp:    0##normalize_amp: 0100000110010010001101111100011010101101000000000000000000000000##normalize_amp:  4724900285510582272
+##iteration:          82
+##e: 1100000000000110110100100001011100111110110111101100000000000000##e_exp:    1##normalize_amp: 0100000110100111001101110110001011100000100000000000000000000000##normalize_amp:  4730810831388803072
+##iteration:          83
+##e: 1100000000010111111110110000000010100100101101001010000000000000##e_exp:    2##normalize_amp: 0100000110111011010010001100100111010100010000000000000000000000##normalize_amp:  4736459464796798976
+##iteration:          84
+##e: 1100000000011100010101000011101001011111101001100111000000000000##e_exp:    2##normalize_amp: 0100000111001101101101110111100110000010001000000000000000000000##normalize_amp:  4741647715193061376
+##iteration:          85
+##e: 1100000000011110010000000100011110101101001101111100000000000000##e_exp:    2##normalize_amp: 0100000111001100001010001001001000011111101000000000000000000000##normalize_amp:  4741209115775205376
+##iteration:          86
+##e: 0100000000011110010110001011111001111100111001100011100000000000##e_exp:    2##normalize_amp: 0100000110110100110010010010000001000011010000000000000000000000##normalize_amp:  4734630248677638144
+##iteration:          87
+##e: 0100000000100111010000111001010010011111101100001111100000000000##e_exp:    3##normalize_amp: 0100000111011010001111010100100111110110000100000000000000000000##normalize_amp:  4745172545258389504
+##iteration:          88
+##e: 1100000000000010011101010110001011101000101110000101000000000000##e_exp:    1##normalize_amp: 0100000111011011101011000111001101011001110100000000000000000000##normalize_amp:  4745576243792969728
+##iteration:          89
+##e: 0100000000110001010111101101010110110100010101110010100000000000##e_exp:    4##normalize_amp: 0100000111011000001011110111001110001000110100000000000000000000##normalize_amp:  4744594380697894912
+##iteration:          90
+##e: 1100000000100010001011110001000011011100000010010011001000000000##e_exp:    3##normalize_amp: 0100000111011000000110111101001010001000000100000000000000000000##normalize_amp:  4744572798474649600
+##iteration:          91
+##e: 0100000000010101001110111011010111111001111000101001000000000000##e_exp:    2##normalize_amp: 0100000111100000100001100010100011111100010010000000000000000000##normalize_amp:  4746941517837893632
+##iteration:          92
+##e: 1100000000000010110010100101101101110110001010010110100000000000##e_exp:    1##normalize_amp: 0100000111011010001100111011001001001101110100000000000000000000##normalize_amp:  4745161998290911232
+run
+##iteration:          93
+##e: 0011111111100010100110111111011101010000011101010000000000000000##e_exp: 2047##normalize_amp: 0100000111000100011100001001100010111111001000000000000000000000##normalize_amp:  4739036509244489728
+run
+quit -sim
+# End time: 10:04:04 on Aug 24,2018, Elapsed time: 0:05:21
+# Errors: 0, Warnings: 2
+vsim -gui work.tb_all
+# vsim -gui work.tb_all 
+# Start time: 10:04:28 on Aug 24,2018
+# Loading work.tb_all
+# Loading work.signal_generator
+# Loading work.sig16b_to_double
+# Loading work.lag_generator
+# Loading work.fpu
+# Loading work.fpu_add
+# Loading work.fpu_sub
+# Loading work.fpu_mul
+# Loading work.fpu_div
+# Loading work.fpu_round
+# Loading work.fpu_exceptions
+# Loading work.para_approx
+# Loading work.echo_cancelation
+# Loading work.double_to_sig16b
+add wave -position insertpoint sim:/tb_all/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ankai  Hostname: LAPTOP-VQG426F9  ProcessID: 7896
+#           Attempting to use alternate WLF file "./wlftnf8vz0".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftnf8vz0
+run
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##iteration:           0
+##e: 1100000010110110011000000111111000010000001101111101000011010111##e_exp:   12##normalize_amp: 0100000111011011001101000111101100000010010100000000000000000000##normalize_amp:  4745444335289368576
+##iteration:           1
+##e: 1100000011000011100101010111110101110010001111001011011001111001##e_exp:   13##normalize_amp: 0100000111000010111100100000001000001010101000000000000000000000##normalize_amp:  4738615848529297408
+##iteration:           2
+##e: 1100000011010101110000001010100011101101100100110001111010101001##e_exp:   14##normalize_amp: 0100000111011101101111111111111101100000100100000000000000000000##normalize_amp:  4746160685875986432
+##iteration:           3
+##e: 1100000011100000011101011100001001000011011010110110011000111110##e_exp:   15##normalize_amp: 0100000111010111011111011011000011001011010100000000000000000000##normalize_amp:  4744398930736840704
+##iteration:           4
+##e: 1100000011001101101110110101001111000001101101010111111000111011##e_exp:   13##normalize_amp: 0100000111010101100001100011111011010011010100000000000000000000##normalize_amp:  4743845386896015360
+##iteration:           5
+##e: 1100000011001100100000010100010001000101101011011100101110110011##e_exp:   13##normalize_amp: 0100000111010010111100011111100001010000010100000000000000000000##normalize_amp:  4743119406376157184
+##iteration:           6
+##e: 0100000010100001101011100001000100011110011000101100001100010100##e_exp:   11##normalize_amp: 0100000111011000011111010110100011000010110100000000000000000000##normalize_amp:  4744680096333299712
+##iteration:           7
+##e: 1100000010110000101011011011011000110111100011010010100010101000##e_exp:   12##normalize_amp: 0100000111000111101110000111101000001101101000000000000000000000##normalize_amp:  4739959967184846848
+##iteration:           8
+##e: 0100000010111010010110100111111110101100110010101010000111011100##e_exp:   12##normalize_amp: 0100000111010101110001001010110101110110110100000000000000000000##normalize_amp:  4743914031806414848
+##iteration:           9
+##e: 0100000011001000010101000100111000111010000111101011111000101011##e_exp:   13##normalize_amp: 0100000111011001001010110101011000100010110100000000000000000000##normalize_amp:  4744871331362766848
+##iteration:          10
+##e: 1100000010110001001001001101101010000000100000111000001110101000##e_exp:   12##normalize_amp: 0100000111010101001011111011111010110011100100000000000000000000##normalize_amp:  4743750278607536128
+##iteration:          11
+##e: 0100000001101111110101011110111001000100001110000010011000000000##e_exp:    7##normalize_amp: 0100000111011001110000001101000001010110010100000000000000000000##normalize_amp:  4745035683445342208
+##iteration:          12
+##e: 1100000010010000001010000111101001010110010101001000011010000000##e_exp:   10##normalize_amp: 0100000110111010100000100100010111000010010000000000000000000000##normalize_amp:  4736241194256826368
+##iteration:          13
+##e: 1100000001100010001011101111101001001110101000110010001010000000##e_exp:    7##normalize_amp: 0100000111010101000011110111001101100000010100000000000000000000##normalize_amp:  4743714770716196864
+##iteration:          14
+##e: 0100000010010111011110100011010010010000000000111111010001100100##e_exp:   10##normalize_amp: 0100000111000010100010100110011001100000101000000000000000000000##normalize_amp:  4738501930259578880
+##iteration:          15
+##e: 0100000010010010001101111010000010011000001101001001100001001000##e_exp:   10##normalize_amp: 0100000110110000101101010101100110011001010000000000000000000000##normalize_amp:  4733482604794216448
+##iteration:          16
+##e: 1100000010100010101100110000010010000000011011101011000000110110##e_exp:   11##normalize_amp: 0100000111001110011101100011100100101111101000000000000000000000##normalize_amp:  4741857445651939328
+##iteration:          17
+##e: 0100000010011101101101011111000001111010010000000010111101010100##e_exp:   10##normalize_amp: 0100000111001000111011111111100011000001001000000000000000000000##normalize_amp:  4740302459478474752
+##iteration:          18
+##e: 0100000001100101111101110100101110011010010111101111001110000000##e_exp:    7##normalize_amp: 0100000111001000111000101010110110011001001000000000000000000000##normalize_amp:  4740287843033677824
+##iteration:          19
+##e: 1100000010001100111100001101001000001011111001110101111101010000##e_exp:    9##normalize_amp: 0100000111010011110111111000011001110011100100000000000000000000##normalize_amp:  4743380601108692992
+##iteration:          20
+##e: 0100000010000101111100111110111110010110110101011111001111100000##e_exp:    9##normalize_amp: 0100000111011011001001100000000001001101010100000000000000000000##normalize_amp:  4745428415103893504
+##iteration:          21
+##e: 0100000010001100001100000001101010110011111010110011000110010000##e_exp:    9##normalize_amp: 0100000111001110111011000111111101001101101000000000000000000000##normalize_amp:  4741987489175044096
+##iteration:          22
+##e: 0100000010011110101010110101011011101011001100010110110001010000##e_exp:   10##normalize_amp: 0100000111011000000101111110110001100101100100000000000000000000##normalize_amp:  4744568511518474240
+##iteration:          23
+##e: 1100000001010001101010100010010000100110100001011101100010000000##e_exp:    6##normalize_amp: 0100000111010000000100001110110010100000110100000000000000000000##normalize_amp:  4742309016117444608
+##iteration:          24
+##e: 0100000001110100011000000010101100001000001011000111011111000000##e_exp:    8##normalize_amp: 0100000111011011001000011011100010110101110100000000000000000000##normalize_amp:  4745423709572956160
+##iteration:          25
+##e: 1100000001110110111100001100100000010101111000011010111010000000##e_exp:    8##normalize_amp: 0100000111001100000110100100000000001101101000000000000000000000##normalize_amp:  4741193370123108352
+##iteration:          26
+##e: 1100000001011101000010110010011100111010111001111001100110000000##e_exp:    6##normalize_amp: 0100000111010110011000110101111010001000110100000000000000000000##normalize_amp:  4744088515154804736
+##iteration:          27
+##e: 1100000001010110001011111110001100110111111100010010110010000000##e_exp:    6##normalize_amp: 0100000111001001111101111010011101110010101000000000000000000000##normalize_amp:  4740592381338845184
+##iteration:          28
+##e: 0100000001100000010100000000110000000110111100100001111111000000##e_exp:    7##normalize_amp: 0100000111001010010011011111010010111110001000000000000000000000##normalize_amp:  4740687271317995520
+##iteration:          29
+##e: 1100000001100110011100011100001000100101011011001100101110000000##e_exp:    7##normalize_amp: 0100000111010010101010100101001101110011000100000000000000000000##normalize_amp:  4743040632963989504
+##iteration:          30
+##e: 0100000001101001011001001001101010111000111100001100010111000000##e_exp:    7##normalize_amp: 0100000110111100000001101101101001100101010000000000000000000000##normalize_amp:  4736668443158249472
+##iteration:          31
+##e: 0100000000000100101001101001110100100010101110111111100000000000##e_exp:    1##normalize_amp: 0100000111000010001110111111000110010100101000000000000000000000##normalize_amp:  4738415666713853952
+##iteration:          32
+##e: 0100000001010000100101110111101101010011011101111101010010000000##e_exp:    6##normalize_amp: 0100000110111110100100110100101000101011010000000000000000000000##normalize_amp:  4737385804802818048
+##iteration:          33
+##e: 1100000001010110011110101111001000101000101111101000001001000000##e_exp:    6##normalize_amp: 0100000110100111110101001001111110100100100000000000000000000000##normalize_amp:  4730983715700736000
+##iteration:          34
+##e: 1100000000100111111110111010111001111111010000101001100000000000##e_exp:    3##normalize_amp: 0100000111000100100110001000010000010011101000000000000000000000##normalize_amp:  4739080400932962304
+##iteration:          35
+##e: 1100000001001111011100100000010110101010011011001111000000000000##e_exp:    5##normalize_amp: 0100000111000111001100110010101001100011101000000000000000000000##normalize_amp:  4739813389983809536
+##iteration:          36
+##e: 1100000000000101100010110001000010110011110000100010000000000000##e_exp:    1##normalize_amp: 0100000111000000001110110000110010011111101000000000000000000000##normalize_amp:  4737851733397471232
+##iteration:          37
+##e: 1100000001011111111011011101001110100101010011100100011010000000##e_exp:    6##normalize_amp: 0100000111010110001010110011001110111111000100000000000000000000##normalize_amp:  4744026758730219520
+##iteration:          38
+##e: 0100000001001010011100011010110100010000101010111011100000000000##e_exp:    5##normalize_amp: 0100000111001110001101111011000110000001001000000000000000000000##normalize_amp:  4741788693182808064
+##iteration:          39
+##e: 0100000001010001000110110111011010010110010110010011100010000000##e_exp:    6##normalize_amp: 0100000110110011010100010111101100010010010000000000000000000000##normalize_amp:  4734217222325534720
+##iteration:          40
+##e: 1100000001000101011101001011100001101010000011001000101000000000##e_exp:    5##normalize_amp: 0100000111010110110101110111010101100001010100000000000000000000##normalize_amp:  4744216156625174528
+##iteration:          41
+##e: 1100000001011111001110010110110100001000001111110111100000000000##e_exp:    6##normalize_amp: 0100000111011010010111101111100110010011010100000000000000000000##normalize_amp:  4745209583399600128
+##iteration:          42
+##e: 1100000000111010101010111010011001011000100110010101100000000000##e_exp:    4##normalize_amp: 0100000111010111110011001101111100111011010100000000000000000000##normalize_amp:  4744485991602978816
+##iteration:          43
+##e: 1100000001011111000111000001000111010100011010101111000100000000##e_exp:    6##normalize_amp: 0100000111010111001101001001100001101011110100000000000000000000##normalize_amp:  4744318561706573824
+##iteration:          44
+##e: 0100000001010011111010110101101001010011001111111101110010000000##e_exp:    6##normalize_amp: 0100000111011001010001001001101100011010110100000000000000000000##normalize_amp:  4744899115371986944
+##iteration:          45
+##e: 0100000001001010110100111000111010001010110111010111001000000000##e_exp:    5##normalize_amp: 0100000111010011000100001101101001001001110100000000000000000000##normalize_amp:  4743153362278547456
+##iteration:          46
+##e: 1100000001010111000010100001010000111100100011111110011000000000##e_exp:    6##normalize_amp: 0100000111010001110011011111000010101010000100000000000000000000##normalize_amp:  4742798316126863360
+##iteration:          47
+##e: 1100000001010000010011010100001111000100111010110110101010000000##e_exp:    6##normalize_amp: 0100000111010001111001010000000111001000110100000000000000000000##normalize_amp:  4742823678424645632
+##iteration:          48
+##e: 1100000001000010111110111000111010111001000000101010000110000000##e_exp:    5##normalize_amp: 0100000111010100011101100001011000011111000100000000000000000000##normalize_amp:  4743546144910475264
+##iteration:          49
+##e: 0100000001001100001001110010101010100011111011000101111000000000##e_exp:    5##normalize_amp: 0100000110101101101010001001110111010000100000000000000000000000##normalize_amp:  4732624179197640704
+##iteration:          50
+##e: 1100000001010000010100011001111101010111101111110000110100000000##e_exp:    6##normalize_amp: 0100000111011001000111000001101010010011000100000000000000000000##normalize_amp:  4744854582873554944
+##iteration:          51
+##e: 1100000000000011011111011100111001011010100000000110000000000000##e_exp:    1##normalize_amp: 0100000111001100110011110001111110011001101000000000000000000000##normalize_amp:  4741392242342625280
+##iteration:          52
+##e: 1100000001100101110110111010101100110000001001111010001010000000##e_exp:    7##normalize_amp: 0100000111001001110000100011001010101110001000000000000000000000##normalize_amp:  4740533605709643776
+##iteration:          53
+##e: 0100000001000000100001000011100111000101000110100000110100000000##e_exp:    5##normalize_amp: 0100000111010110111110001000001000110001010100000000000000000000##normalize_amp:  4744252495538159616
+##iteration:          54
+##e: 1100000001100011101101010111110100111011011100100100011010000000##e_exp:    7##normalize_amp: 0100000111000110011101010111000111000010001000000000000000000000##normalize_amp:  4739604789302657024
+##iteration:          55
+##e: 0100000001001010011011111001100010110101111100010111101100000000##e_exp:    5##normalize_amp: 0100000111011110000100001011101101110110110100000000000000000000##normalize_amp:  4746249454633353216
+##iteration:          56
+##e: 1100000001100011000001011010011110010000111111010010011100000000##e_exp:    7##normalize_amp: 0100000111010101110000110011011011010100010100000000000000000000##normalize_amp:  4743912422762348544
+##iteration:          57
+##e: 0100000000110101011011101011111001100000101011000110100000000000##e_exp:    4##normalize_amp: 0100000111011100101000001111000001001000010100000000000000000000##normalize_amp:  4745845061207457792
+##iteration:          58
+##e: 1100000001011011010100110010110110010100100111000100010000000000##e_exp:    6##normalize_amp: 0100000111010111110011011010001110011000100100000000000000000000##normalize_amp:  4744486834981044224
+##iteration:          59
+##e: 1100000001001100101001011011101101011101111111000101011000000000##e_exp:    5##normalize_amp: 0100000111010011100100001110100100010111000100000000000000000000##normalize_amp:  4743294163339968512
+##iteration:          60
+##e: 0100000001000101011001101100101011000001100100110001100110000000##e_exp:    5##normalize_amp: 0100000111000011101010011100011100000010101000000000000000000000##normalize_amp:  4738817905131520000
+##iteration:          61
+##e: 0100000000111010011001001101010111011011110101011010000100000000##e_exp:    4##normalize_amp: 0100000110110111111000111100110001000100010000000000000000000000##normalize_amp:  4735503999661244416
+##iteration:          62
+##e: 1100000000110011101011101101010011110101000110110001101000000000##e_exp:    4##normalize_amp: 0100000111001101001010000010110000100010001000000000000000000000##normalize_amp:  4741490152707194880
+##iteration:          63
+##e: 1100000001010000111010011100101011101111000110111001000100000000##e_exp:    6##normalize_amp: 0100000111011011101101101001110010011111110100000000000000000000##normalize_amp:  4745587416177311744
+##iteration:          64
+##e: 1100000001001001010011111101000010010101101001101110101000000000##e_exp:    5##normalize_amp: 0100000111001110110110001110000000101011101000000000000000000000##normalize_amp:  4741965914983890944
+##iteration:          65
+##e: 1100000001000110100101001100100100011010101001011101011000000000##e_exp:    5##normalize_amp: 0100000111010000111111001000111001000101110100000000000000000000##normalize_amp:  4742568095607947264
+##iteration:          66
+##e: 1100000000111010100111011011011000000101101000001111100000000000##e_exp:    4##normalize_amp: 0100000111010110010001000101111011111001100100000000000000000000##normalize_amp:  4744054432185974784
+##iteration:          67
+##e: 1100000000101110100011100011100010111001011101111111001000000000##e_exp:    3##normalize_amp: 0100000110100110001111100101001100011100100000000000000000000000##normalize_amp:  4730536985280643072
+##iteration:          68
+##e: 1100000000101100000010000101011001100010110011100011110000000000##e_exp:    3##normalize_amp: 0100000111010001011011000111100100111110110100000000000000000000##normalize_amp:  4742691150598504448
+##iteration:          69
+##e: 1100000001000111001010011100101001101101111110010001110000000000##e_exp:    5##normalize_amp: 0100000111010100101000111000111011110111110100000000000000000000##normalize_amp:  4743596141966262272
+##iteration:          70
+##e: 1100000000011111100100010010001110001101111101010101000000000000##e_exp:    2##normalize_amp: 0100000111001000010000101000001011000111001000000000000000000000##normalize_amp:  4740111737261391872
+##iteration:          71
+##e: 1100000000110101001101101010100100100110000011110110101000000000##e_exp:    4##normalize_amp: 0100000111011111001001111111101001100101010100000000000000000000##normalize_amp:  4746556488666841088
+##iteration:          72
+##e: 0100000000111111101001011110001111101110110100001011000000000000##e_exp:    4##normalize_amp: 0100000111010010100000110110010010011111110100000000000000000000##normalize_amp:  4742997825775730688
+##iteration:          73
+##e: 0100000000001101111111100111000010001100000101011001000000000000##e_exp:    1##normalize_amp: 0100000111010010011010100110001011001100110100000000000000000000##normalize_amp:  4742970330150076416
+##iteration:          74
+##e: 1100000000100010011101001101000110000010010110110000000000000000##e_exp:    3##normalize_amp: 0100000111011001101011100110011111010000110100000000000000000000##normalize_amp:  4745015443319685120
+##iteration:          75
+##e: 1100000000100101011101100011001100101101001000101001110000000000##e_exp:    3##normalize_amp: 0100000110101110010101111110010000000110100000000000000000000000##normalize_amp:  4732816895286181888
+##iteration:          76
+##e: 0100000000111111111011110011001001111100101011011101000000000000##e_exp:    4##normalize_amp: 0100000111011101011100100010001110111101100100000000000000000000##normalize_amp:  4746075080148123648
+##iteration:          77
+##e: 1100000001000110111011011000100100111110000000101111010110000000##e_exp:    5##normalize_amp: 0100000111010110000100100110101110110011100100000000000000000000##normalize_amp:  4743999511264755712
+##iteration:          78
+##e: 0011111111100000001100010010110101110110100000100100000000000000##e_exp: 2047##normalize_amp: 0100000110111011000011000001001010011100010000000000000000000000##normalize_amp:  4736392707180593152
+##iteration:          79
+##e: 0100000000101001101110011011000110011100000010011011101000000000##e_exp:    3##normalize_amp: 0100000111010000001010011001001111110110000100000000000000000000##normalize_amp:  4742336123086307328
+##iteration:          80
+##e: 1011111111111100011010110101100001010111000100100110000000000000##e_exp:    0##normalize_amp: 0100000110111000000000110101111101000100010000000000000000000000##normalize_amp:  4735538715881897984
+##iteration:          81
+##e: 0011111111111000001111011101011101111110111000011011100000000000##e_exp:    0##normalize_amp: 0100000110010010001101111100011010101101000000000000000000000000##normalize_amp:  4724900285510582272
+##iteration:          82
+##e: 1100000000000110110100100001011100111110110111101100000000000000##e_exp:    1##normalize_amp: 0100000110100111001101110110001011100000100000000000000000000000##normalize_amp:  4730810831388803072
+##iteration:          83
+##e: 1100000000010111111110110000000010100100101101001010000000000000##e_exp:    2##normalize_amp: 0100000110111011010010001100100111010100010000000000000000000000##normalize_amp:  4736459464796798976
+##iteration:          84
+##e: 1100000000011100010101000011101001011111101001100111000000000000##e_exp:    2##normalize_amp: 0100000111001101101101110111100110000010001000000000000000000000##normalize_amp:  4741647715193061376
+##iteration:          85
+##e: 1100000000011110010000000100011110101101001101111100000000000000##e_exp:    2##normalize_amp: 0100000111001100001010001001001000011111101000000000000000000000##normalize_amp:  4741209115775205376
+##iteration:          86
+##e: 0100000000011110010110001011111001111100111001100011100000000000##e_exp:    2##normalize_amp: 0100000110110100110010010010000001000011010000000000000000000000##normalize_amp:  4734630248677638144
+##iteration:          87
+##e: 0100000000100111010000111001010010011111101100001111100000000000##e_exp:    3##normalize_amp: 0100000111011010001111010100100111110110000100000000000000000000##normalize_amp:  4745172545258389504
+##iteration:          88
+##e: 1100000000000010011101010110001011101000101110000101000000000000##e_exp:    1##normalize_amp: 0100000111011011101011000111001101011001110100000000000000000000##normalize_amp:  4745576243792969728
+##iteration:          89
+##e: 0100000000110001010111101101010110110100010101110010100000000000##e_exp:    4##normalize_amp: 0100000111011000001011110111001110001000110100000000000000000000##normalize_amp:  4744594380697894912
+##iteration:          90
+##e: 1100000000100010001011110001000011011100000010010011001000000000##e_exp:    3##normalize_amp: 0100000111011000000110111101001010001000000100000000000000000000##normalize_amp:  4744572798474649600
+##iteration:          91
+##e: 0100000000010101001110111011010111111001111000101001000000000000##e_exp:    2##normalize_amp: 0100000111100000100001100010100011111100010010000000000000000000##normalize_amp:  4746941517837893632
+##iteration:          92
+##e: 1100000000000010110010100101101101110110001010010110100000000000##e_exp:    1##normalize_amp: 0100000111011010001100111011001001001101110100000000000000000000##normalize_amp:  4745161998290911232
+run
+##iteration:          93
+##e: 0011111111100010100110111111011101010000011101010000000000000000##e_exp: 2047##normalize_amp: 0100000111000100011100001001100010111111001000000000000000000000##normalize_amp:  4739036509244489728
+quit -sim
+# End time: 10:11:52 on Aug 24,2018, Elapsed time: 0:07:24
+# Errors: 0, Warnings: 2
