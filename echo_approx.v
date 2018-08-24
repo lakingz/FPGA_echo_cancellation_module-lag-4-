@@ -8,25 +8,21 @@
 `timescale 1us/1us
 module echo_approx(
 rst,
-clk_sampling,
+sampling_cycle_counter,
 clk_operation,
 enable_sampling,
 enable,
 signal, 
-signal_lag,
-gamma,   //default 64'b0 01111111101 0000000000000000000000000000000000000000000000000000; //0.01
-mu,	 //default 64'b0 01111111111 0000000000000000000000000000000000000000000000000000; //1
-	para_0, 
-	para_1, 
-	para_2,
-	para_3,
-	e_exp,
-	normalize_amp_exp,
+para_0, 
+para_1, 
+para_2,
+para_3,
+
 	ready
 );
 
 input [63:0] signal,signal_lag;
-input clk_sampling,clk_operation,rst,enable,enable_sampling;
+input sampling_cycle_counter,clk_operation,rst,enable,enable_sampling;
 input [63:0] gamma;
 input [63:0] mu;
 output reg [63:0] para_0,para_1,para_2,para_3;
@@ -84,35 +80,36 @@ always @(posedge clk_operation) begin
 end
 
 //the sampling and alignment. 
-always @(posedge clk_sampling) begin
-	if (~rst) begin	
-	if (enable_sampling) begin
-		case (count_sampling)
-		0: begin
-			lag_0 <= signal;
-			count_sampling <= 1;
-			signal_lag_align <= signal_lag; //signal_lag alignment;
-		end
-		1: begin
-			lag_1 <= lag_0;
-			lag_0 <= signal;
-			count_sampling <= 2;
-			signal_lag_align <= signal_lag;
-		end
-		2: begin
-			lag_2 <= lag_1;
-			lag_1 <= lag_0;
-			lag_0 <= signal;
-			count_sampling <= 3;
-			signal_lag_align <= signal_lag;
-		end
-		3: begin
-			lag_3 <= lag_2;
-			lag_2 <= lag_1;
-			lag_1 <= lag_0;
-			lag_0 <= signal;
-			count_operation <= 0;
-			signal_lag_align <= signal_lag;
+always @(posedge clk_operation) begin
+	if (sampling_cycle_counter == 0) begin
+		if (~rst) begin	
+		if (enable_sampling) begin
+			case (count_sampling)
+			0: begin
+				lag_0 <= signal;
+				count_sampling <= 1;
+				signal_lag_align <= signal_lag; //signal_lag alignment;
+			end
+			1: begin
+				lag_1 <= lag_0;
+				lag_0 <= signal;
+				count_sampling <= 2;
+				signal_lag_align <= signal_lag;
+			end
+			2: begin
+				lag_2 <= lag_1;
+				lag_1 <= lag_0;
+				lag_0 <= signal;
+				count_sampling <= 3;
+				signal_lag_align <= signal_lag;
+			end
+			3: begin
+				lag_3 <= lag_2;
+				lag_2 <= lag_1;
+				lag_1 <= lag_0;
+				lag_0 <= signal;
+				count_operation <= 0;
+				signal_lag_align <= signal_lag;
 /*$display(
 "##lag_3: %b", lag_3,
 "##lag_2: %b", lag_2,
@@ -120,10 +117,11 @@ always @(posedge clk_sampling) begin
 "##lag_0: %b", lag_0,
 "##signal_lag_align: %b", signal_lag_align
 );*/
-		end		
-		default:;
-		endcase
-	end
+			end		
+			default:;
+			endcase
+		end
+		end
 	end
 end
 

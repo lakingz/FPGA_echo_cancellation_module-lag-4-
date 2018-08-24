@@ -1,81 +1,28 @@
 `timescale 1us / 1us
 module ZZZ_TB_4_TEST();
 
-reg clk_sampling,clk_operation,rst;
-reg enable;
-reg [1:0]rmode;
-reg [2:0]fpu_op;
-reg [63:0]opa;
-reg [63:0]opb;
-wire [63:0]out;
-wire ready;
-wire underflow;
-wire overflow;
-wire inexact;
-wire exception;
-wire invalid;  
+reg [4:0] count,cycle;
+reg clk;
+integer sampling_count;
+reg [3:0] random;
 
 initial begin
-clk_sampling = 0;
-clk_operation = 0;
-end
-always #200 clk_sampling = ~clk_sampling;
-always #1 clk_operation = ~clk_operation;
-
-fpu UUT (
-	.clk(clk_operation),
-	.rst(rst),
-	.enable(enable),
-	.rmode(rmode),
-	.fpu_op(fpu_op),
-	.opa(opa),
-	.opb(opb),
-		.out(out),
-		.ready(ready),
-		.underflow(underflow),
-		.overflow(overflow),
-		.inexact(inexact),
-		.exception(exception),
-		.invalid(invalid));
-initial
-begin 
-	#0;
-	rst = 1'b1;
-	#40;
-	rst = 1'b0;
-	enable = 1'b1;//enable (set high to start operation)
-	   // paste after this
-	opa = 64'b0000000000000000000000000000000011001101000101110000011010100010;
-	opb = 64'b0000000111000101011011100001111111000010111110001111001101011001;
-	fpu_op = 3'b011;//fpu_op (operation code, 3 bits, 000 = add, 001 = subtract,010 = multiply, 011 = divide, others are not used)
-	rmode = 2'b00;
-	#4;
-	enable = 1'b0;
-	#160;	
+clk = 1;
+count = 0;
+cycle = 4;
+sampling_count = 0;
 end
 
-always @(posedge clk_sampling) begin
-if (ready) begin
-	opa <= $urandom;
-	opb <= out;
-	fpu_op <= $urandom;
-	rmode = 2'b00;
-	enable <= 1'b1;
-	#4;
-	enable <= 1'b0;
+always #1 begin
+clk <= ~clk;
+count <= count + 1;
+	if (count == cycle - 1) count <= 0;
 end
-end
-endmodule //ZZZ_TB_4_TEST
-
-module TEST();
-reg [3:0] k,b;
-reg clk;
-
-initial clk =0;
-always #125 clk <= ~clk;
 
 always @(posedge clk) begin
-k <= $urandom;
-b <= k;
+	if (count == 0) begin
+		sampling_count = sampling_count + 1;	
+		random <= $random;
+	end
 end
 endmodule//TEST

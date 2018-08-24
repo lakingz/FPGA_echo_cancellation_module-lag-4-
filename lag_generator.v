@@ -12,7 +12,7 @@ module lag_generator(
 rst,
 enable_sampling,
 enable,
-clk_sampling,
+sampling_cycle_counter,
 clk_operation,
 signal, 
 para_0, 
@@ -27,7 +27,7 @@ para_3,
 input [63:0] signal;
 output reg [63:0] signal_lag,signal_align;
 output reg ready;
-input clk_sampling,clk_operation,rst,enable,enable_sampling;
+input sampling_cycle_counter,clk_operation,rst,enable,enable_sampling;
 input [63:0] para_0,para_1,para_2,para_3;
 
 reg enable_internal;
@@ -68,35 +68,36 @@ always @(posedge clk_operation) begin
 end
 
 //the sampling is enabled even the module is not.
-always @(posedge clk_sampling) begin
-	if (~rst) begin	
-	if (enable_sampling) begin
-		case (count_sampling)
-		0: begin
-			lag_0 <= signal;
-			count_sampling <= 1;
-			signal_align <= signal; 
-		end
-		1: begin
-			lag_1 <= lag_0;
-			lag_0 <= signal;
-			count_sampling <= 2;
-			signal_align <= signal; 
-		end
-		2: begin
-			lag_2 <= lag_1;
-			lag_1 <= lag_0;
-			lag_0 <= signal;
-			count_sampling <= 3;
-			signal_align <= signal; 
-		end
-		3: begin
-			lag_3 <= lag_2;
-			lag_2 <= lag_1;
-			lag_1 <= lag_0;
-			lag_0 <= signal;
-			count_operation <= 0;
-			signal_align <= signal; //we delay samply to align with the lag.
+always @(posedge clk_operation) begin
+	if (sampling_cycle_counter == 0) begin
+		if (~rst) begin	
+		if (enable_sampling) begin
+			case (count_sampling)
+			0: begin
+				lag_0 <= signal;
+				count_sampling <= 1;
+				signal_align <= signal; 
+			end
+			1: begin
+				lag_1 <= lag_0;
+				lag_0 <= signal;
+				count_sampling <= 2;
+				signal_align <= signal; 
+			end
+			2: begin
+				lag_2 <= lag_1;
+				lag_1 <= lag_0;
+				lag_0 <= signal;
+				count_sampling <= 3;
+				signal_align <= signal; 
+			end
+			3: begin
+				lag_3 <= lag_2;
+				lag_2 <= lag_1;
+				lag_1 <= lag_0;
+				lag_0 <= signal;
+				count_operation <= 0;
+				signal_align <= signal; //we delay samply to align with the lag.
 /*$display(
 "##lag_3: %b", lag_3,
 "##lag_2: %b", lag_2,
@@ -104,10 +105,11 @@ always @(posedge clk_sampling) begin
 "##lag_0: %b", lag_0,
 "##signal_align: %b", signal_align
 );*/
-		end	
-		default:;	
-		endcase
-	end
+			end	
+			default:;	
+			endcase
+		end
+		end
 	end
 end
 

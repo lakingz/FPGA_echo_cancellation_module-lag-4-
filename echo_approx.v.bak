@@ -8,7 +8,7 @@
 `timescale 1us/1us
 module echo_approx(
 rst,
-clk_sampling,
+sampling_cycle_counter,
 clk_operation,
 enable_sampling,
 enable,
@@ -26,7 +26,7 @@ mu,	 //default 64'b0 01111111111 00000000000000000000000000000000000000000000000
 );
 
 input [63:0] signal,signal_lag;
-input clk_sampling,clk_operation,rst,enable,enable_sampling;
+input sampling_cycle_counter,clk_operation,rst,enable,enable_sampling;
 input [63:0] gamma;
 input [63:0] mu;
 output reg [63:0] para_0,para_1,para_2,para_3;
@@ -84,35 +84,36 @@ always @(posedge clk_operation) begin
 end
 
 //the sampling and alignment. 
-always @(posedge clk_sampling) begin
-	if (~rst) begin	
-	if (enable_sampling) begin
-		case (count_sampling)
-		0: begin
-			lag_0 <= signal;
-			count_sampling <= 1;
-			signal_lag_align <= signal_lag; //signal_lag alignment;
-		end
-		1: begin
-			lag_1 <= lag_0;
-			lag_0 <= signal;
-			count_sampling <= 2;
-			signal_lag_align <= signal_lag;
-		end
-		2: begin
-			lag_2 <= lag_1;
-			lag_1 <= lag_0;
-			lag_0 <= signal;
-			count_sampling <= 3;
-			signal_lag_align <= signal_lag;
-		end
-		3: begin
-			lag_3 <= lag_2;
-			lag_2 <= lag_1;
-			lag_1 <= lag_0;
-			lag_0 <= signal;
-			count_operation <= 0;
-			signal_lag_align <= signal_lag;
+always @(posedge clk_operation) begin
+	if (sampling_cycle_counter == 0) begin
+		if (~rst) begin	
+		if (enable_sampling) begin
+			case (count_sampling)
+			0: begin
+				lag_0 <= signal;
+				count_sampling <= 1;
+				signal_lag_align <= signal_lag; //signal_lag alignment;
+			end
+			1: begin
+				lag_1 <= lag_0;
+				lag_0 <= signal;
+				count_sampling <= 2;
+				signal_lag_align <= signal_lag;
+			end
+			2: begin
+				lag_2 <= lag_1;
+				lag_1 <= lag_0;
+				lag_0 <= signal;
+				count_sampling <= 3;
+				signal_lag_align <= signal_lag;
+			end
+			3: begin
+				lag_3 <= lag_2;
+				lag_2 <= lag_1;
+				lag_1 <= lag_0;
+				lag_0 <= signal;
+				count_operation <= 0;
+				signal_lag_align <= signal_lag;
 /*$display(
 "##lag_3: %b", lag_3,
 "##lag_2: %b", lag_2,
@@ -120,10 +121,11 @@ always @(posedge clk_sampling) begin
 "##lag_0: %b", lag_0,
 "##signal_lag_align: %b", signal_lag_align
 );*/
-		end		
-		default:;
-		endcase
-	end
+			end		
+			default:;
+			endcase
+		end
+		end
 	end
 end
 
@@ -323,7 +325,7 @@ always @(posedge clk_operation) begin
 		4: begin
 			
 			opa_U0 <= signal_lag_align;
-			opb_U0 <= out_tamp;
+			opb_U0 <= lp_0123;
 			fpu_op_U0 <= 3'b001; //out = e = signal_lag-(lag_0*para_0+lag_1*para_1+lag_2*para_2+lag_3*para_3)
 			rmode_U0 = 2'b00;
 			enable_U0 <= 1'b1;
