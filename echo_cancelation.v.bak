@@ -19,15 +19,17 @@ para_1,
 para_2,
 para_3,
 	signal_without_echo,
+	signal_without_echo_exp,
 	ready
 );
 
 input [63:0] signal_send,signal_receive;
 input [12:0] sampling_cycle_counter;
-inout clk_operation,rst,enable,enable_sampling;
+input clk_operation,rst,enable,enable_sampling;
 input [63:0] para_0,para_1,para_2,para_3;
 output reg ready;
 output reg [63:0] signal_without_echo;
+output reg [10:0] signal_without_echo_exp;
 
 reg enable_internal;
 reg enable_U0,enable_U1;
@@ -75,7 +77,7 @@ always @(posedge clk_operation) begin
 			case (count_sampling)
 			0: begin
 				lag_0 <= signal_send;
-				signal_receive_align <= signal_receive; //signal_lag alignment;
+				signal_receive_align <= signal_receive; //signa alignment;
 				count_sampling <= 1;				
 			end
 			1: begin
@@ -237,7 +239,8 @@ always @(posedge clk_operation) begin
 			if (ready_U1 == 1) 
 			begin
 				count_operation <= 5;	
-				signal_without_echo <= out_U0;
+				signal_without_echo <= out_U1;
+				signal_without_echo_exp <= out_U0[62:52] - 1023;
 				enable_internal <= 0;
 				ready <= 1;
 			end

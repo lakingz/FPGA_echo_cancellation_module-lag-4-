@@ -1,5 +1,5 @@
 /**************************************************************************
-***                            Testbench ALL                            ***     
+***                        Testbench for ideal lag                      ***     
 ***                            Author :   LAK                           ***  
 **************************************************************************/
 
@@ -15,6 +15,7 @@ reg rst,enable_MUT1,enable_MUT2,enable_MUT3,enable_MUT4,enable_MUT5;
 wire [15:0] sig16b;
 wire [63:0] sig_double;
 wire [63:0] signal_without_echo;
+wire [10:0] signal_without_echo_exp;
 wire ready_MUT1,ready_MUT2,ready_MUT3;
 wire [63:0] signal_lag,signal_align_MUT2;
 reg [63:0] para_in_0,para_in_1,para_in_2,para_in_3;
@@ -133,6 +134,7 @@ echo_cancelation MUT4(
 	.para_2(para_2),
 	.para_3(para_3),
 		.signal_without_echo(signal_without_echo),
+		.signal_without_echo_exp(signal_without_echo_exp),
 		.ready(ready_MUT4)
 );
 
