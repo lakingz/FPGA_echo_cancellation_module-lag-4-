@@ -14,16 +14,16 @@ module echo_cancelation_full (
 input [12:0] sampling_cycle, sampling_cycle_counter;
 input rst,clk_operation,enable;
 input [15:0] sig16b,sig16b_lag;
-output reg [15:0] sig16b_without_echo;
+output wire [15:0] sig16b_without_echo;
 
 reg sampling_light;
 reg enable_MUT1,enable_MUT2,enable_MUT3,enable_MUT4,enable_MUT5;
-wire [63:0] sig_double;
+wire [63:0] sig_double,sig_lag_double;
 wire [63:0] signal_without_echo;
 wire [10:0] signal_without_echo_exp;
 wire ready_MUT1,ready_MUT2,ready_MUT3;
 wire [63:0] signal_lag,signal_align_MUT2;
-reg [63:0] para_0,para_1,para_2,para_3;
+wire [63:0] para_0,para_1,para_2,para_3;
 wire [10:0] e_exp,normalize_amp_exp;
 wire [63:0] e;
 integer iteration;
@@ -34,13 +34,20 @@ reg [63:0] double_MUT5;
 
 always @(posedge clk_operation) begin
 	if (rst) begin 
-		para_0 <= 64'b0000000000010000000000000000000000000000000000000000000000000000;
-		para_1 <= 64'b0000000000010000000000000000000000000000000000000000000000000000;
-		para_2 <= 64'b0000000000010000000000000000000000000000000000000000000000000000;
-		para_3 <= 64'b0000000000010000000000000000000000000000000000000000000000000000;
-		sig16b_without_echo <= 0;
 		iteration = 0;
 		enable_para_approx <= 1;
+		
+		enable_sampling_MUT2 <= 0;
+		enable_sampling_MUT3 <= 0;
+		enable_sampling_MUT4 <= 0;
+		#8000;	
+		enable_sampling_MUT2 <= 1;
+		enable_sampling_MUT3 <= 0;
+		enable_sampling_MUT4 <= 1;
+		#8000;
+		enable_sampling_MUT2 <= 1;
+		enable_sampling_MUT3 <= 1;
+		enable_sampling_MUT4 <= 1;
 		#400000
 		enable_para_approx <= 0;
 	end
@@ -111,20 +118,6 @@ double_to_sig16b MUT5(
 	.double(double_MUT5),
 		.sig16b(sig16b_without_echo)
 );
-
-initial begin
-	enable_sampling_MUT2 <= 0;
-	enable_sampling_MUT3 <= 0;
-	enable_sampling_MUT4 <= 0;
-	#8000;	
-	enable_sampling_MUT2 <= 1;
-	enable_sampling_MUT3 <= 0;
-	enable_sampling_MUT4 <= 1;
-	#8000;
-	enable_sampling_MUT2 <= 1;
-	enable_sampling_MUT3 <= 1;
-	enable_sampling_MUT4 <= 1;
-end
 
 always @(posedge clk_operation) begin
 	if (enable) begin

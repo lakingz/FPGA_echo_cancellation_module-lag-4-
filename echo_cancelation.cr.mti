@@ -19,11 +19,21 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	fpu_div
 
-} {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation_full_tb.v {0 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation_full_tb.v
+} {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation_full_tb.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation_full_tb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-** Error: (vlog-13069) D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation_full_tb.v(1): near "initial": syntax error, unexpected initial, expecting class.
+-- Compiling module echo_cancelation_full_tb
 
-} {3.0 4.0} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/double_16b_tb.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/double_16b_tb.v
+Top level modules:
+	echo_cancelation_full_tb
+
+} {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/sig16b_to_double.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/sig16b_to_double.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module sig16b_to_double
+
+Top level modules:
+	sig16b_to_double
+
+} {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/double_16b_tb.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/double_16b_tb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module double_16b_tb
 
@@ -37,12 +47,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	double_to_sig16b
 
-} {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/sig16b_to_double.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/sig16b_to_double.v
+} {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation_full.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/echo_cancelation_full.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module sig16b_to_double
+-- Compiling module echo_cancelation_full
 
 Top level modules:
-	sig16b_to_double
+	echo_cancelation_full
 
 } {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_round.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_round.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016

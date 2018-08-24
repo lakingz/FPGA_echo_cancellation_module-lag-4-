@@ -5,8 +5,8 @@ module sig16b_to_double(
 	rst,
 	sig16b,	
 	enable,
-	double,
-	ready
+		double,
+		ready
 );
 
 input clk_operation,rst;
