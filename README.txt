@@ -1,5 +1,5 @@
-Echo Cancelation Module (lag-4) on (cyclone 4 FPGA)
-auther: Anlai Liu (17al76@queens.ca)
+Echo Cancelation Module (lag-4) on (cyclone_4 FPGA)
+Author: Anlai Liu (17al76@queens.ca)
 Date: 2018-08-25
 
 Main file:
@@ -20,8 +20,8 @@ Main file:
 	echo_cancelation_full.v (main module)
 	echo_cancelation_full_tb.v (main module test bunch)
 
-fpu package (doule precision floating point core):
-auther: David Lundgren
+fpu_package (doule precision floating point core):
+author: David Lundgren
 
 	fpu_double.v (main module)
 	fpu_add.v
@@ -35,8 +35,8 @@ auther: David Lundgren
 
 Document:
 	
-	LSM_algorithm_demo.Rmd (R file for testing LSM algorithm preformers)
-	LSM_algorithm_demo.pdf 
+	LSM_algorithm_demo.Rmd 
+	LSM_algorithm_demo.pdf (Testing LSM algorithm preformers)
 	echo_cancelation_module_structure.svg
 	echo_cancelation_module_structure.png
 	Description.pdf (More detailed description)
@@ -52,11 +52,12 @@ Usage:
 	"sig16b_without_echo" is the output we are looking at.
 
 LSM example:
-e = signal_lag - (lag_0 * parat_0 + lag_1 * parat_1 + lag_2 * parat_2);
-parat_0 <= parat_0 + mu / (gamma + lag_0**2 + lag_1**2 + lag_2**2) * lag_0 * e;
-parat_1 <= parat_1 + mu / (gamma + lag_0**2 + lag_1**2 + lag_2**2) * lag_1 * e;
-parat_2 <= parat_2 + mu / (gamma + lag_0**2 + lag_1**2 + lag_2**2) * lag_2 * e;
-parat_3 <= parat_3 + mu / (gamma + lag_0**2 + lag_1**2 + lag_2**2) * lag_3 * e;
+
+	e = signal_lag - (lag_0 * parat_0 + lag_1 * parat_1 + lag_2 * parat_2);
+	parat_0 <= parat_0 + mu / (gamma + lag_0**2 + lag_1**2 + lag_2**2) * lag_0 * e;
+	parat_1 <= parat_1 + mu / (gamma + lag_0**2 + lag_1**2 + lag_2**2) * lag_1 * e;
+	parat_2 <= parat_2 + mu / (gamma + lag_0**2 + lag_1**2 + lag_2**2) * lag_2 * e;
+	parat_3 <= parat_3 + mu / (gamma + lag_0**2 + lag_1**2 + lag_2**2) * lag_3 * e;
 
 
 
