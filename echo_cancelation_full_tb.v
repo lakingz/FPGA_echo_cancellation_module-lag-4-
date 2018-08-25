@@ -51,7 +51,9 @@ always #1 begin
 			sampling_cycle_counter <= 0;
 			sampling_light <= 1;
 		end
-		else sampling_light <= 0;
+		else begin
+			sampling_light <= 0;
+		end
 end
 
 signal_generator MUT0(
@@ -125,7 +127,7 @@ always @(posedge clk_operation) begin
 		enable_MUT1 <= 1;
 		#4            //double operation clk       
 		enable_MUT1 <= 0;
-		#16
+		#50
 		if (ready_MUT1) begin
 			enable_MUT2 <= 1;
 			#4 
@@ -144,26 +146,6 @@ always @(posedge clk_operation) begin
 		end
 		#2500
 		enable_MUT5 <= 1;
-	end
-	else begin
-		if (sampling_cycle_counter == 0) begin
-			enable_MUT1 <= 1;
-			#4            //double operation clk       
-			enable_MUT1 <= 0;
-			#16
-			if (ready_MUT1) begin
-				enable_MUT2 <= 1;
-				#4 
-				enable_MUT2 <= 0;
-/*$display(
-"##iteration: %d", iteration
-);*/
-			end
-			#1200
-			enable_MUT3 <= 1;
-			enable_MUT4 <= 1;
-			enable_MUT5 <= 1;
-		end
 	end
 end
 endmodule //echo_cancelation_full_tb

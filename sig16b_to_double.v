@@ -1,4 +1,4 @@
-//takes at most 17??? operation clks
+//takes NO MORE THAN 50 operation clks
 
 module sig16b_to_double(
 	clk_operation,

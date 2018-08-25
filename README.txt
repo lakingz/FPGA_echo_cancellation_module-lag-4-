@@ -1,21 +1,57 @@
-echo cancelation package on (cyclone 4 FPGA)
-auther:anlai liu
+Echo Cancelation Module (lag-4) on (cyclone 4 FPGA)
+auther: anlai liu (17al76@queens.ca)
+Date: 2018-08-25
 
-file:
-in progess..
+Main file:
+	echo_cancelation.mpf (used to open project)
 
+	double_16b_tb.v (test bunch for data conversion)
+	double_to_sig16b.v
+	sig16b_to_double.v
 
-Run echi_cancelation.mpf to open the package.
-open tb_all.v in modelsim/simulate for simulation. 
+	signal_generator.v
+	lag_generator.v
+	para_approx.v
+	echo_cancelation.v
+	tb_all.v (test bunch for all above module)
+	ZZZ_TB_4_TEST.v
 
+	echo_cancelation_full.v (main module)
+	echo_cancelation_full_tb.v (main module test bunch)
 
-//always@(count) 
-if (count >= 2) e = signal_lag - (lag_0 * parat_0 + lag_1 * parat_1 + lag_2 * parat_2);
-always@(count or e!= 0)
-if (count >= 2) begin
+fpu_package (doule precision floating point core):
+	fpu_double.v (main module)
+	fpu_add.v
+	fpu_div.v
+	fpu_exception.v
+	fpu_mul.v
+	fpu_round.v
+	fpu_sub.v
+	fpu_TB.v
+	Doulbe_FPU.PDF (instructor)
+
+Document:
+	LSM_algorithm_demo.Rmd (R file for testing LSM algorithm preformers)
+	LSM_algorithm_demo.pdf 
+	echo_cancelation_module_structure.svg
+	echo_cancelation_module_structure.png
+	
+Usage:
+	Open "echo_cancelation.mpf" to open the whole package. 
+	tpye in transcript:
+	vsim -gui work.echo_cancelation_full_tb	
+	add wave -position insertpoint sim:/echo_cancelation_full_tb/*
+	run {480 ms}
+	
+	sig16b_without_echo is the output we are looking at.
+
+LSM example:
+e = signal_lag - (lag_0 * parat_0 + lag_1 * parat_1 + lag_2 * parat_2);
 parat_0 <= parat_0 + mu / (gamma + lag_0**2 + lag_1**2 + lag_2**2) * lag_0 * e;
 parat_1 <= parat_1 + mu / (gamma + lag_0**2 + lag_1**2 + lag_2**2) * lag_1 * e;
 parat_2 <= parat_2 + mu / (gamma + lag_0**2 + lag_1**2 + lag_2**2) * lag_2 * e;
-end
+parat_3 <= parat_3 + mu / (gamma + lag_0**2 + lag_1**2 + lag_2**2) * lag_3 * e;
+
+
 
 

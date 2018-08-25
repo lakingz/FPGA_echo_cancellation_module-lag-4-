@@ -195,7 +195,7 @@ always @(posedge clk_operation) begin
 			enable_MUT1 <= 1;
 			#4            //double operation clk       
 			enable_MUT1 <= 0;
-			#16
+			#50
 			if (ready_MUT1) begin
 				enable_MUT2 <= 1;
 				#4 
