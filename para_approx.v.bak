@@ -248,7 +248,7 @@ always @(posedge clk_operation) begin
 
 			opa_U1 <= lag_2;
 			opb_U1 <= lag_2;
-			fpu_op_U1 <= 3'b010; //out = lag_2*lag_2
+			fpu_op_U1 <= 3'b000; //out = lag_2*lag_2
 			rmode_U1 = 2'b00;
 			enable_U1 <= 1'b1;
 

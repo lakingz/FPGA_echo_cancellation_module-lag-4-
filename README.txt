@@ -37,8 +37,6 @@ Document:
 	
 	LSM_algorithm_demo.Rmd 
 	LSM_algorithm_demo.pdf (Testing LSM algorithm preformers)
-	echo_cancelation_module_structure.svg
-	echo_cancelation_module_structure.png
 	Description.pdf (More detailed description)
 	
 Usage:
