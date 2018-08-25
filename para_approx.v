@@ -2,7 +2,7 @@
 ***                          para approximation                         ***                       
 ***                            Author :   LAK                           ***  
 **************************************************************************/
-
+//4 sampling clks 250 operation clks
 
 
 `timescale 1us/1us

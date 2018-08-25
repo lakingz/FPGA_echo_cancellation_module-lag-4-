@@ -2,7 +2,7 @@
 ***                          Echo approximation                         ***                       
 ***                            Author :   LAK                           ***  
 **************************************************************************/
-
+//4 sampling clks 120 operation clks
 
 
 `timescale 1us/1us

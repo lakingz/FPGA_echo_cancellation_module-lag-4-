@@ -3,8 +3,7 @@
 ***                  For testing. We create a lag signal                ***
 ***                            Author :   LAK                           ***  
 **************************************************************************/
-
-//we first look at 3 lag with parameter 1 2 1
+//take 4 sampling clks + 150 operation clks to complete
 
 
 `timescale 1us/1us

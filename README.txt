@@ -49,6 +49,21 @@ Usage:
 	
 	"sig16b_without_echo" is the output we are looking at.
 
+Note:
+	time for task completion
+	fpu package
+	- 1. addition : 		(20 clock cycles) 
+	- 2. subtraction: 		(21 clock cycles) 
+	- 3. multiplication: 		(24 clock cycles) 
+	- 4. division: 			(71 clock cycles)
+	
+	main module
+	- 1. echo_cancelation: 		(4 sampling clks, 120 operation clks)
+	- 2. lag_generator: 		(4 sampling clks, 150 operation clks)
+	- 3. para_approx: 		(4 sampling clks, 250 operation clks)
+	- 4. sig16b_to_double: 		(50 operation clks)
+
+
 LSM example:
 
 	e = signal_lag - (lag_0 * parat_0 + lag_1 * parat_1 + lag_2 * parat_2);
