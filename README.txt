@@ -1,8 +1,9 @@
 Echo Cancelation Module (lag-4) on (cyclone 4 FPGA)
-auther: anlai liu (17al76@queens.ca)
+auther: Anlai Liu (17al76@queens.ca)
 Date: 2018-08-25
 
 Main file:
+
 	echo_cancelation.mpf (used to open project)
 
 	double_16b_tb.v (test bunch for data conversion)
@@ -19,7 +20,9 @@ Main file:
 	echo_cancelation_full.v (main module)
 	echo_cancelation_full_tb.v (main module test bunch)
 
-fpu_package (doule precision floating point core):
+fpu package (doule precision floating point core):
+auther: David Lundgren
+
 	fpu_double.v (main module)
 	fpu_add.v
 	fpu_div.v
@@ -31,19 +34,22 @@ fpu_package (doule precision floating point core):
 	Doulbe_FPU.PDF (instructor)
 
 Document:
+	
 	LSM_algorithm_demo.Rmd (R file for testing LSM algorithm preformers)
 	LSM_algorithm_demo.pdf 
 	echo_cancelation_module_structure.svg
 	echo_cancelation_module_structure.png
+	Description.pdf (More detailed description)
 	
 Usage:
+
 	Open "echo_cancelation.mpf" to open the whole package. 
 	tpye in transcript:
 	vsim -gui work.echo_cancelation_full_tb	
 	add wave -position insertpoint sim:/echo_cancelation_full_tb/*
 	run {480 ms}
 	
-	sig16b_without_echo is the output we are looking at.
+	"sig16b_without_echo" is the output we are looking at.
 
 LSM example:
 e = signal_lag - (lag_0 * parat_0 + lag_1 * parat_1 + lag_2 * parat_2);
