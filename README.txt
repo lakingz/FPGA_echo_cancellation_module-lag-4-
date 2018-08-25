@@ -58,10 +58,10 @@ Note:
 	- 4. division: 			(71 clock cycles)
 	
 	main module
-	- 1. echo_cancelation: 		(4 sampling clks, 120 operation clks)
-	- 2. lag_generator: 		(4 sampling clks, 150 operation clks)
-	- 3. para_approx: 		(4 sampling clks, 250 operation clks)
-	- 4. sig16b_to_double: 		(50 operation clks)
+	- 1. echo_cancelation: 		(4 sampling cycles, 120 operation clock cycles)
+	- 2. lag_generator: 		(4 sampling cycles, 150 operation clock cycles)
+	- 3. para_approx: 		(4 sampling cycles, 250 operation clock cycles)
+	- 4. sig16b_to_double: 		(50 operation clock cycles)
 
 
 LSM example:
