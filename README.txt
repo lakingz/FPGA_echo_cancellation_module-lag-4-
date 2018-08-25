@@ -14,11 +14,11 @@ Main file:
 	lag_generator.v
 	para_approx.v
 	echo_cancelation.v
-	tb_all.v (test bunch for all above module)
+	tb_all.v (test bunch for all sub level modules)
 	ZZZ_TB_4_TEST.v
 
-	echo_cancelation_full.v (main module)
-	echo_cancelation_full_tb.v (main module test bunch)
+	echo_cancelation_full.v (Top level module)
+	echo_cancelation_full_tb.v (Top level module test bunch)
 
 fpu_package (doule precision floating point core):
 author: David Lundgren
