@@ -36,15 +36,15 @@ Generating  "sig_close", "echo" (some combination of L delay of "sig_close + Noi
 We have (n + L) sample points with delay (L)
 We will use the rest n_test sample for corss validation
 ```{r}
-n <- 128                ##training data
-L <- 4                  ##lags
+n <- 64                 ##training data
+L <- 3                  ##lags
 n_test <- 3000          ##testing data
 sig_far <- sig_sam(n + L + n_test)
 par <- rnorm(L + 1)
 echo <- data.frame(par[1] * sig_far)
 for (i in c(1:L)) {
   echo <- cbind(echo, par[i + 1] * c(rep(NA,i), 
-                      sig_far[-((n + L + n_test - i + 1):(n + L + n_test)),]) + (rnorm(1, mean = 0, sd = 1)))
+                      sig_far[-((n + L + n_test - i + 1):(n + L + n_test)),]))# + (rnorm(1, mean = 0, sd = 1)))
 }
 colnames(echo) <- par
 echo_sum <- rowSums(echo[,(1:(L + 1))])
@@ -134,10 +134,10 @@ table((log(abs(error), base = 2) <= 1))
 table((log(abs(error), base = 2) <= 2))
 table((log(abs(error), base = 2) <= 3))
 ```
-In 16 bit nonideal data. With 128 samples, we are expecting:
+In 16 bit nonideal data. With 64 samples, we are expecting:
 
-40% of the predictions are offed by 1 digit
-80% of the predictions are offed by 2 digits
+99% of the predictions are offed by 1 digit
+99% of the predictions are offed by 2 digits
 99% of the predictions are offed by 3 digits
 
 We now show the algorithm step by step on a mini data

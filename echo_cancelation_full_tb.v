@@ -14,7 +14,7 @@ wire [15:0] sig16b_without_echo;                        //finla result. expectin
 wire ready_MUT1,ready_MUT2;
 wire [63:0] signal_lag,signal_align_MUT2;
 reg [63:0] para_in_0,para_in_1,para_in_2,para_in_3;
-integer iteration;
+wire integer iteration;
 reg enable_sampling_MUT2;
 
 initial begin
@@ -25,22 +25,20 @@ rst = 1;
 #200
 rst = 0;
 para_in_0[63] = 0;
-para_in_0[62:52] = 11'b01111111110;
+para_in_0[62:52] = 11'b01111111111;
 para_in_0[51:0] = $urandom;
 
 para_in_1[63] = 0;
-para_in_1[62:52] = 11'b01111111110;
+para_in_1[62:52] = 11'b01111111111;
 para_in_1[51:0] = $urandom;
 
 para_in_2[63] = 0;
-para_in_2[62:52] = 11'b01111111110;
+para_in_2[62:52] = 11'b01111111111;
 para_in_2[51:0] = $urandom;
 
 para_in_3[63] = 0;
-para_in_3[62:52] = 11'b01111111110;
+para_in_3[62:52] = 11'b01111111111;
 para_in_3[51:0] = $urandom;
-
-iteration = 0;
 
 end
 
@@ -113,7 +111,8 @@ echo_cancelation_full MUT5(
 	.sampling_cycle_counter(sampling_cycle_counter),
 	.rst(rst),
 	.enable(enable_MUT5),
-		.sig16b_without_echo(sig16b_without_echo)
+		.sig16b_without_echo(sig16b_without_echo),
+		.iteration(iteration)
 );
 
 initial begin
@@ -140,9 +139,7 @@ always @(posedge clk_operation) begin
 		if (ready_MUT2) begin
 			enable_MUT3 <= 1;
 			enable_MUT4 <= 1;
-			#4 
-			enable_MUT3 <= 0;
-			enable_MUT4 <= 0;
+
 		end
 		#2500
 		enable_MUT5 <= 1;

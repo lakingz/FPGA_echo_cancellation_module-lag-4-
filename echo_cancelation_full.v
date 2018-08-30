@@ -7,7 +7,8 @@ module echo_cancelation_full (
 	sampling_cycle_counter,
 	rst,
 	enable,
-		sig16b_without_echo
+		sig16b_without_echo,
+		iteration
 );
 
 
@@ -15,6 +16,7 @@ input [12:0] sampling_cycle, sampling_cycle_counter;
 input rst,clk_operation,enable;
 input [15:0] sig16b,sig16b_lag;
 output wire [15:0] sig16b_without_echo;
+output integer iteration;
 
 reg enable_MUT1,enable_MUT2,enable_MUT3,enable_MUT4,enable_MUT5;
 wire [63:0] sig_double,sig_lag_double;
@@ -24,7 +26,6 @@ wire ready_MUT1,ready_MUT2,ready_MUT3;
 wire [63:0] para_0,para_1,para_2,para_3;
 wire [10:0] e_exp,normalize_amp_exp;
 wire [63:0] e;
-integer iteration;
 reg enable_sampling_MUT3, enable_sampling_MUT4;
 reg enable_para_approx;
 reg [63:0] double_MUT5;
