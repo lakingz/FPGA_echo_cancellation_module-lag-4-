@@ -153,19 +153,23 @@ always @(posedge clk_operation) begin
 			#160;
 
 			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
+				lp0 <= out_U0;
+				lp1 <= out_U1;
+				lp2 <= out_U2;
+				lp3 <= out_U3;
 				count_operation <= 1;
 			end
 
 		end
 		1: begin
-			opa_U0 <= out_U0;
-			opb_U0 <= out_U1;
+			opa_U0 <= lp0;
+			opb_U0 <= lp1;
 			fpu_op_U0 <= 3'b000; //out = lag_0*para_0 + lag_1*para_1
 			rmode_U0 = 2'b00;
 			enable_U0 <= 1'b1;
 	
-			opa_U1 <= out_U2;
-			opb_U1 <= out_U3;
+			opa_U1 <= lp2;
+			opb_U1 <= lp3;
 			fpu_op_U1 <= 3'b000; //out = lag_2*para_2 + lag_3*para_3
 			rmode_U1 = 2'b00;
 			enable_U1 <= 1'b1;
@@ -191,18 +195,22 @@ always @(posedge clk_operation) begin
 			#160;
 		
 			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
+				lp0_1 <= out_U0;
+				lp2_3 <= out_U1;
+				p0_1 <= out_U2;
+				p2_3 <= out_U3;
 				count_operation <= 2;			
 			end
 		end	
 		2: begin
-			opa_U0 <= out_U0;
-			opb_U0 <= out_U1;
+			opa_U0 <= lp0_1;
+			opb_U0 <= lp2_3;
 			fpu_op_U0 <= 3'b000; //out = lag_0*para_0 + lag_1*para_1+lag_2*para_2 + lag_3*para_3
 			rmode_U0 = 2'b00;
 			enable_U0 <= 1'b1;
 	
-			opa_U1 <= out_U2;
-			opb_U1 <= out_U3; 
+			opa_U1 <= p0_1;
+			opb_U1 <= p2_3; 
 			fpu_op_U1 <= 3'b000; //out = para_0+para_1+para_2+para_3
 			rmode_U1 = 2'b00;
 			enable_U1 <= 1'b1;
@@ -213,11 +221,16 @@ always @(posedge clk_operation) begin
 			
 			#160;
 		
-			if (ready_U0&ready_U1 == 1) count_operation <= 3;
+			if (ready_U0&ready_U1 == 1) 
+			begin
+				lp0_to_3 <= out_U0;
+				p0_to_3 <= out_U1; 
+				count_operation <= 3;
+			end
 		end
 		3: begin		
-			opa_U3 <= out_U0;
-			opb_U3 <= out_U1;
+			opa_U3 <= lp0_to_3;
+			opb_U3 <= p0_to_3;
 			fpu_op_U3 <= 3'b011; //out = (lag_0*para_0+lag_1*para_1+lag_2*para_2+lag_3*para_3)/(para_0+para_1+para_2+para_3)
 			rmode_U3 = 2'b00;
 			enable_U3 <= 1'b1;
