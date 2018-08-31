@@ -47,8 +47,7 @@ wire invalid;
 reg [2:0] count_sampling,count_operation;
 reg [63:0] lag_0,lag_1,lag_2,lag_3;
 reg [63:0] lp0,lp1,lp2,lp3;
-reg [63:0] lp0_1,lp2_3,p0_1,p2_3;
-reg [63:0] lp0_to_3,p0_to_3;
+reg [63:0] lp0_1,lp2_3;
 
 always @(posedge clk_operation) begin
 	if (rst) begin 
