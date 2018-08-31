@@ -52,15 +52,16 @@ Usage:
 Note:
 	time for task completion
 	fpu package
-	- 1. addition : 		(20 clock cycles) 
-	- 2. subtraction: 		(21 clock cycles) 
-	- 3. multiplication: 		(24 clock cycles) 
-	- 4. division: 			(71 clock cycles)
-	
+	- 1. addition : 		(20 clock cycles/60 clks) 
+	- 2. subtraction: 		(21 clock cycles/60 clks) 
+	- 3. multiplication: 		(24 clock cycles/60 clks) 
+	- 4. division: 			(71 clock cycles/160 clks)
+	- 5. exception/ rounding        (1  clock cycles/2  clks)	
+
 	main module
-	- 1. echo_cancelation: 		(4 sampling cycles, 120 operation clock cycles)
-	- 2. lag_generator: 		(4 sampling cycles, 150 operation clock cycles)
-	- 3. para_approx: 		(4 sampling cycles, 250 operation clock cycles)
+	- 1. echo_cancelation: 		(4 sampling cycles, 160 operation cycles/320 clks)
+	- 2. lag_generator: 		(4 sampling cycles, 130 operation cycles/260 clks)
+	- 3. para_approx: 		(4 sampling cycles, 310 operation cycles/620 clks)
 	- 4. sig16b_to_double: 		(50 operation clock cycles)
 
 

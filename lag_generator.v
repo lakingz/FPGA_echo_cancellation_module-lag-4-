@@ -3,7 +3,7 @@
 ***                  For testing. We create a lag signal                ***
 ***                            Author :   LAK                           ***  
 **************************************************************************/
-//take 4 sampling clks + 150 operation clks to complete
+//take 4 sampling clks + 260 operation clks (130 cycle) to complete
 
 
 `timescale 1us/1us
@@ -139,7 +139,7 @@ always @(posedge clk_operation) begin
 			enable_U0 <= 1'b0;
 			enable_U1 <= 1'b0;
 			
-			#160;
+			#60;
 
 			if (ready_U0&ready_U1 == 1) begin
 				lp0 <= out_U0;
@@ -164,7 +164,7 @@ always @(posedge clk_operation) begin
 			enable_U0 <= 1'b0;
 			enable_U1 <= 1'b0;
 			
-			#160;
+			#60;
 
 			if (ready_U0&ready_U1 == 1) begin
 				lp2 <= out_U0;
@@ -190,7 +190,7 @@ always @(posedge clk_operation) begin
 			enable_U0 <= 1'b0;
 			enable_U1 <= 1'b0;
 			
-			#160;
+			#60;
 		
 			if (ready_U0&ready_U1 == 1) begin
 				lp0_1 <= out_U0;
@@ -208,7 +208,7 @@ always @(posedge clk_operation) begin
 			#4;
 			enable_U0 <= 1'b0;
 			
-			#160;
+			#60;
 		
 			if (ready_U0== 1) 
 			begin

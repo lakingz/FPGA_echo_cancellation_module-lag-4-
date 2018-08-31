@@ -2,7 +2,7 @@
 ***                          para approximation                         ***                       
 ***                            Author :   LAK                           ***  
 **************************************************************************/
-//4 sampling clks 250 operation clks
+//4 sampling clks 500 operation clks(250 cycle)
 
 
 `timescale 1us/1us
@@ -168,7 +168,7 @@ always @(posedge clk_operation) begin
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
 	
-			#160
+			#60
 
 			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) 
 			begin
@@ -212,7 +212,7 @@ always @(posedge clk_operation) begin
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
 		
-			#160
+			#60
 
 			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
 				count_operation <= 2;
@@ -270,7 +270,7 @@ always @(posedge clk_operation) begin
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
 		
-			#160
+			#60
 
 			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
 				count_operation <= 3;
@@ -314,7 +314,7 @@ always @(posedge clk_operation) begin
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
 		
-			#160
+			#60
 
 			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
 				count_operation <= 4;
@@ -357,7 +357,7 @@ always @(posedge clk_operation) begin
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
 		
-			#160
+			#60
 
 			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
 				count_operation <= 5;
@@ -402,7 +402,7 @@ always @(posedge clk_operation) begin
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
 		
-			#160
+			#60
 
 			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) 
 			begin
@@ -457,12 +457,12 @@ always @(posedge clk_operation) begin
 		end
 
 		7: begin		
-$display(
+/*$display(
 "##e: %b", e,
 "##e_exp: %d", e_exp,
 "##normalize_amp: %b", normalize_amp,
 "##normalize_amp: %d", normalize_amp
-);	
+);*/	
 			opa_U0 <= para_0;
 			opb_U0 <= D_para_0;
 			fpu_op_U0 <= 3'b000; //out = para_0 + e*mu*lag_0/(gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_2*lag_2)
@@ -493,7 +493,7 @@ $display(
 			enable_U2 <= 1'b0;
 			enable_U3 <= 1'b0;
 		
-			#160
+			#60
 
 			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
 				para_0 <= out_U0;

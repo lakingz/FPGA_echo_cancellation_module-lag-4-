@@ -1,3 +1,8 @@
+//echo_cancelation_full 
+//ankai liu
+//takes at least 950 for proper outputs.
+
+
 `timescale 1us / 1us
 module echo_cancelation_full (
 	sig16b,
@@ -8,7 +13,11 @@ module echo_cancelation_full (
 	rst,
 	enable,
 		sig16b_without_echo,
-		iteration
+		iteration,
+		para_approx_0,
+		para_approx_1,
+		para_approx_2,
+		para_approx_3
 );
 
 
@@ -17,13 +26,13 @@ input rst,clk_operation,enable;
 input [15:0] sig16b,sig16b_lag;
 output wire [15:0] sig16b_without_echo;
 output integer iteration;
+output wire [63:0] para_approx_0,para_approx_1,para_approx_2,para_approx_3;
 
 reg enable_MUT1,enable_MUT2,enable_MUT3,enable_MUT4,enable_MUT5;
 wire [63:0] sig_double,sig_lag_double;
 wire [63:0] signal_without_echo;
 wire [10:0] signal_without_echo_exp;
 wire ready_MUT1,ready_MUT2,ready_MUT3;
-wire [63:0] para_0,para_1,para_2,para_3;
 wire [10:0] e_exp,normalize_amp_exp;
 wire [63:0] e;
 reg enable_sampling_MUT3, enable_sampling_MUT4;
@@ -79,10 +88,10 @@ para_approx MUT3(
 //default      64'b0 01111111101 0000000000000000000000000000000000000000000000000000; //0.01
 	.mu(64'b0011111111110000000000000000000000000000000000000000000000000000),	 
 //default   64'b0 01111111111 0000000000000000000000000000000000000000000000000000; //1
-		.para_0(para_0), 
-		.para_1(para_1), 
-		.para_2(para_2),
-		.para_3(para_3),
+		.para_0(para_approx_0), 
+		.para_1(para_approx_1), 
+		.para_2(para_approx_2),
+		.para_3(para_approx_3),
 		.e(e),
 		.e_exp(e_exp),
 		.normalize_amp_exp(normalize_amp_exp),
@@ -97,10 +106,10 @@ echo_cancelation MUT4(
 	.enable(enable_MUT4),
 	.signal_receive(sig_lag_double),
 	.signal_send(sig_double), 
-	.para_0(para_0), 
-	.para_1(para_1), 
-	.para_2(para_2),
-	.para_3(para_3),
+	.para_0(para_approx_0), 
+	.para_1(para_approx_1), 
+	.para_2(para_approx_2),
+	.para_3(para_approx_3),
 		.signal_without_echo(signal_without_echo),
 		.signal_without_echo_exp(signal_without_echo_exp),
 		.ready(ready_MUT4)
@@ -130,13 +139,13 @@ always @(posedge clk_operation) begin
 				#4 
 				enable_MUT3 <= 0;
 			end
-			#2500
+			#620
 			if (ready_MUT3) begin
 				enable_MUT4 <= 1;
 				#4 
 				enable_MUT4 <= 0;
 			end
-			#1200
+			#330
 			if (ready_MUT4) begin
 				enable_MUT5 <= 1;
 				double_MUT5 <= e;
@@ -157,7 +166,7 @@ always @(posedge clk_operation) begin
 				#4 
 				enable_MUT4 <= 0;
 			end
-			#1200
+			#330
 			if (ready_MUT4) begin
 				enable_MUT5 <= 1;
 				double_MUT5 <= signal_without_echo;

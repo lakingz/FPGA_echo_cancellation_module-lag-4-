@@ -14,6 +14,7 @@ wire [15:0] sig16b_without_echo;                        //finla result. expectin
 wire ready_MUT1,ready_MUT2;
 wire [63:0] signal_lag,signal_align_MUT2;
 reg [63:0] para_in_0,para_in_1,para_in_2,para_in_3;
+wire [63:0] para_approx_0,para_approx_1,para_approx_2,para_approx_3;
 wire integer iteration;
 reg enable_sampling_MUT2;
 
@@ -112,7 +113,11 @@ echo_cancelation_full MUT5(
 	.rst(rst),
 	.enable(enable_MUT5),
 		.sig16b_without_echo(sig16b_without_echo),
-		.iteration(iteration)
+		.iteration(iteration),
+		.para_approx_0(para_approx_0),
+		.para_approx_1(para_approx_1),
+		.para_approx_2(para_approx_2),
+		.para_approx_3(para_approx_3)
 );
 
 initial begin
@@ -135,13 +140,12 @@ always @(posedge clk_operation) begin
 "##iteration: %d", iteration
 );*/
 		end
-		#1200
+		#260
 		if (ready_MUT2) begin
 			enable_MUT3 <= 1;
 			enable_MUT4 <= 1;
-
 		end
-		#2500
+		#4
 		enable_MUT5 <= 1;
 	end
 end

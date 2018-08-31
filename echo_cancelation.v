@@ -2,7 +2,7 @@
 ***                          Echo approximation                         ***                       
 ***                            Author :   LAK                           ***  
 **************************************************************************/
-//4 sampling clks 120 operation clks
+//4 sampling clks 250 operation clks (125 cycles)
 
 
 `timescale 1us/1us
@@ -137,7 +137,7 @@ always @(posedge clk_operation) begin
 			enable_U0 <= 1'b0;			
 			enable_U1 <= 1'b0;
 	
-			#160
+			#60
 
 			if (ready_U0&ready_U1 == 1) 
 			begin
@@ -164,7 +164,7 @@ always @(posedge clk_operation) begin
 			enable_U0 <= 1'b0;			
 			enable_U1 <= 1'b0;
 	
-			#160
+			#60
 
 			if (ready_U0&ready_U1 == 1) 
 			begin
@@ -191,7 +191,7 @@ always @(posedge clk_operation) begin
 			enable_U0 <= 1'b0;			
 			enable_U1 <= 1'b0;
 	
-			#160
+			#60
 
 			if (ready_U0&ready_U1 == 1) 
 			begin
@@ -216,7 +216,7 @@ always @(posedge clk_operation) begin
 
 			enable_U0 <= 1'b0;	
 		
-			#160
+			#60
 
 			if (ready_U0 == 1) begin
 				count_operation <= 4;	
@@ -234,7 +234,7 @@ always @(posedge clk_operation) begin
 
 			enable_U1 <= 1'b0;
 	
-			#160
+			#60
 
 			if (ready_U1 == 1) 
 			begin

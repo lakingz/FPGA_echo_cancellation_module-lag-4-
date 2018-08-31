@@ -167,7 +167,7 @@ always @(posedge clk_operation) begin
 			enable_MUT1 <= 1;
 			#4            //double operation clk       
 			enable_MUT1 <= 0;
-			#16
+			#50
 			if (ready_MUT1) begin
 				enable_MUT2 <= 1;
 				#4 
@@ -176,13 +176,13 @@ always @(posedge clk_operation) begin
 "##iteration: %d", iteration
 );*/
 			end
-			#1200
+			#260
 			if (ready_MUT2) begin
 				enable_MUT3 <= 1;
 				#4 
 				enable_MUT3 <= 0;
 			end
-			#2500
+			#560
 			if (ready_MUT3) begin
 				enable_MUT5 <= 1;
 				double_MUT5 <= e;
@@ -204,13 +204,13 @@ always @(posedge clk_operation) begin
 "##iteration: %d", iteration
 );*/
 			end
-			#1200
+			#260
 			enable_MUT4 <= 1;
 			enable_MUT5 <= 1;
 
 			#4 
 			enable_MUT4 <= 0;
-			#1200
+			#330
 			if (ready_MUT4) begin
 				enable_MUT5 <= 1;
 				double_MUT5 <= signal_without_echo;
