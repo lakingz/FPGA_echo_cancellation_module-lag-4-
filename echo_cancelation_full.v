@@ -1,5 +1,6 @@
 //echo_cancelation_full 
 //ankai liu
+//IMPORTANT    sampling_cycle >= 1200 
 //takes at least 950 for proper outputs.
 
 

@@ -64,6 +64,10 @@ Note:
 	- 3. para_approx: 		(4 sampling cycles, 310 operation cycles/620 clks)
 	- 4. sig16b_to_double: 		(50 operation clock cycles)
 
+VERY IMPORTANT!!!
+
+	echo_cancelation_full.V         INPUT sampling_cycle >= 1200. That means sampling cycle must be at least 1200X operation cycle.
+
 
 LSM example:
 

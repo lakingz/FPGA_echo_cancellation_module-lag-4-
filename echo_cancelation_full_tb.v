@@ -20,7 +20,7 @@ reg enable_sampling_MUT2;
 
 initial begin
 clk_operation = 1;
-sampling_cycle = 4000;
+sampling_cycle = 1510;
 sampling_cycle_counter = 0;
 rst = 1;
 #200
@@ -55,7 +55,7 @@ always #1 begin
 		end
 end
 
-signal_generator MUT0(
+signal_generator MUT0(          //#50
 	.sampling_cycle_counter(sampling_cycle_counter),
 	.clk_operation(clk_operation),
 		.signal(sig16b)
@@ -70,7 +70,7 @@ sig16b_to_double MUT1(
 		.ready(ready_MUT1)
 );
 
-lag_generator MUT2(
+lag_generator MUT2(    //#260
 	.rst(rst),
 	.enable_sampling(enable_sampling_MUT2),
 	.enable(enable_MUT2),
@@ -104,7 +104,7 @@ double_to_sig16b MUT4(
 		.sig16b(sig16b_MUT4)
 );
 
-echo_cancelation_full MUT5(
+echo_cancelation_full MUT5(       //#1200
 	.sig16b(sig16b_MUT4),
 	.sig16b_lag(sig16b_lag_MUT3),
 	.clk_operation(clk_operation),
