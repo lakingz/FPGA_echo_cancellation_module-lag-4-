@@ -335,7 +335,7 @@ always @(posedge clk_operation) begin
 
 			opa_U1 <= gamma_ll_01;
 			opb_U1 <= ll_23;
-			fpu_op_U1 <= 3'b000; //out = normalize_amp = gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_2*lag_2
+			fpu_op_U1 <= 3'b000; //out = normalize_amp = gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_3*lag_3
 			rmode_U1 = 2'b00;
 			enable_U1 <= 1'b1;
 
@@ -360,6 +360,14 @@ always @(posedge clk_operation) begin
 			#60
 
 			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
+$display(
+"##signal_lag_align[sign]: %b", signal_lag_align[63],
+"##signal_lag_align[exp]: %d", signal_lag_align[62:52] - 1023,
+"##signal_lag_align: %b", signal_lag_align[51:45],
+"##lp_0123[sign]: %b", lp_0123[63],
+"##lp_0123[exp]: %d", lp_0123[62:52] - 1023,
+"##lp_0123: %b", lp_0123[51:45]
+);
 				count_operation <= 5;
 				e <= out_U0; // unbais error of prediction	
 				normalize_amp <= out_U1;		

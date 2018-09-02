@@ -13,8 +13,9 @@ module echo_cancelation_full (
 	sampling_cycle_counter,
 	rst,
 	enable,
-		sig16b_without_echo,
+	set_max_iteration,
 		iteration,
+		sig16b_without_echo,
 		para_approx_0,
 		para_approx_1,
 		para_approx_2,
@@ -25,8 +26,9 @@ module echo_cancelation_full (
 input [12:0] sampling_cycle, sampling_cycle_counter;
 input rst,clk_operation,enable;
 input [15:0] sig16b,sig16b_lag;
+input [12:0] set_max_iteration;
+output reg [12:0] iteration = 0;
 output wire [15:0] sig16b_without_echo;
-output integer iteration;
 output wire [63:0] para_approx_0,para_approx_1,para_approx_2,para_approx_3;
 
 reg enable_MUT1,enable_MUT2,enable_MUT3,enable_MUT4,enable_MUT5;
@@ -45,18 +47,8 @@ always @(posedge clk_operation) begin
 	if (rst) begin 
 		iteration = 0;
 		enable_para_approx <= 1;
-		
-		enable_sampling_MUT3 <= 0;
-		enable_sampling_MUT4 <= 0;
-		#8000;	
-		enable_sampling_MUT3 <= 0;
-		enable_sampling_MUT4 <= 1;
-		#8000;
-		enable_sampling_MUT3 <= 1;
-		enable_sampling_MUT4 <= 1;
-		#400000
-		enable_para_approx <= 0;
 	end
+	if (iteration >= set_max_iteration) enable_para_approx <= 0;
 end
 
 sig16b_to_double MUT1(
@@ -77,7 +69,7 @@ sig16b_to_double MUT2(
 		.ready(ready_MUT2)
 );
 
-para_approx MUT3(
+para_approx MUT3(           //4 sampling #620 operation
 	.rst(rst),
 	.sampling_cycle_counter(sampling_cycle_counter),
 	.clk_operation(clk_operation),
@@ -99,8 +91,8 @@ para_approx MUT3(
 		.ready(ready_MUT3)
 );
 
-echo_cancelation MUT4(
-	.rst(rst),
+echo_cancelation MUT4(      //4 sampling #320 operation 
+ 	.rst(rst),
 	.sampling_cycle_counter(sampling_cycle_counter),
 	.clk_operation(clk_operation),
 	.enable_sampling(enable_sampling_MUT4),
@@ -137,7 +129,9 @@ always @(posedge clk_operation) begin
 			#50
 			if (ready_MUT1&ready_MUT2) begin
 				enable_MUT3 <= 1;
-				#4 
+				enable_sampling_MUT3 <= 1;
+				enable_sampling_MUT4 <= 1;
+					#4 
 				enable_MUT3 <= 0;
 			end
 			#620
@@ -164,8 +158,11 @@ always @(posedge clk_operation) begin
 			#50
 			if (ready_MUT1&ready_MUT2) begin
 				enable_MUT4 <= 1;
+				enable_sampling_MUT3 <= 1;
+				enable_sampling_MUT4 <= 1;
 				#4 
 				enable_MUT4 <= 0;
+
 			end
 			#330
 			if (ready_MUT4) begin

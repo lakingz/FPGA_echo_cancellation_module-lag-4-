@@ -22,16 +22,17 @@ reg [63:0] para_in_0,para_in_1,para_in_2,para_in_3;
 wire [63:0] para_0,para_1,para_2,para_3;
 wire [10:0] e_exp,normalize_amp_exp;
 wire [63:0] e;
-integer iteration;
+integer iteration,set_max_iteration;
 reg enable_sampling_MUT2, enable_sampling_MUT3, enable_sampling_MUT4;
 reg enable_para_approx;
 reg [63:0] double_MUT5;
 wire [15:0] sig16b_MUT5;          //final output
 
 initial begin
+set_max_iteration = 20;
 clk_operation = 1;
 enable_para_approx = 1;
-sampling_cycle = 4000;
+sampling_cycle = 1510;
 sampling_cycle_counter = 0;
 rst = 1;
 #200
@@ -53,9 +54,6 @@ para_in_3[62:52] = 11'b01111111110;
 para_in_3[51:0] = $urandom;
 
 iteration = 0;
-
-#400000
-enable_para_approx <= 0;
 end
 
 always #1 begin
@@ -74,7 +72,7 @@ signal_generator MUT0(
 		.signal(sig16b)
 );
 
-sig16b_to_double MUT1(
+sig16b_to_double MUT1(    //#50
 	.clk_operation(clk_operation),
 	.rst(rst),
 	.sig16b(sig16b),
@@ -83,7 +81,7 @@ sig16b_to_double MUT1(
 		.ready(ready_MUT1)
 );
 
-lag_generator MUT2(
+lag_generator MUT2(     //#260
 	.rst(rst),
 	.enable_sampling(enable_sampling_MUT2),
 	.enable(enable_MUT2),
@@ -99,7 +97,7 @@ lag_generator MUT2(
 		.ready(ready_MUT2)
 );
 
-para_approx MUT3(
+para_approx MUT3(	//620
 	.rst(rst),
 	.sampling_cycle_counter(sampling_cycle_counter),
 	.clk_operation(clk_operation),
@@ -121,7 +119,7 @@ para_approx MUT3(
 		.ready(ready_MUT3)
 );
 
-echo_cancelation MUT4(
+echo_cancelation MUT4(	//320
 	.rst(rst),
 	.sampling_cycle_counter(sampling_cycle_counter),
 	.clk_operation(clk_operation),
@@ -148,17 +146,9 @@ double_to_sig16b MUT5(
 );
 
 initial begin
-	enable_sampling_MUT2 <= 0;
+	enable_sampling_MUT2 <= 1;
 	enable_sampling_MUT3 <= 0;
 	enable_sampling_MUT4 <= 0;
-	#8000;	
-	enable_sampling_MUT2 <= 1;
-	enable_sampling_MUT3 <= 0;
-	enable_sampling_MUT4 <= 1;
-	#8000;
-	enable_sampling_MUT2 <= 1;
-	enable_sampling_MUT3 <= 1;
-	enable_sampling_MUT4 <= 1;
 end
 
 always @(posedge clk_operation) begin
@@ -181,8 +171,11 @@ always @(posedge clk_operation) begin
 				enable_MUT3 <= 1;
 				#4 
 				enable_MUT3 <= 0;
+				enable_sampling_MUT2 <= 1;
+				enable_sampling_MUT3 <= 1;
+				enable_sampling_MUT4 <= 1;
 			end
-			#560
+			#620
 			if (ready_MUT3) begin
 				enable_MUT5 <= 1;
 				double_MUT5 <= e;
@@ -205,17 +198,24 @@ always @(posedge clk_operation) begin
 );*/
 			end
 			#260
+			enable_sampling_MUT2 <= 1;
+			enable_sampling_MUT3 <= 1;
+			enable_sampling_MUT4 <= 1;
 			enable_MUT4 <= 1;
 			enable_MUT5 <= 1;
 
 			#4 
 			enable_MUT4 <= 0;
-			#330
+			#320
 			if (ready_MUT4) begin
 				enable_MUT5 <= 1;
 				double_MUT5 <= signal_without_echo;
 			end
 		end
 	end
+end
+
+always @(posedge clk_operation) begin
+	if (iteration >= set_max_iteration) enable_para_approx <= 0;
 end
 endmodule //tb_all

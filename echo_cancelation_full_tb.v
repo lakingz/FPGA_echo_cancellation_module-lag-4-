@@ -15,13 +15,16 @@ wire ready_MUT1,ready_MUT2;
 wire [63:0] signal_lag,signal_align_MUT2;
 reg [63:0] para_in_0,para_in_1,para_in_2,para_in_3;
 wire [63:0] para_approx_0,para_approx_1,para_approx_2,para_approx_3;
-wire integer iteration;
+reg [12:0] set_max_iteration;
+wire [12:0] iteration;
 reg enable_sampling_MUT2;
 
 initial begin
 clk_operation = 1;
 sampling_cycle = 1510;
 sampling_cycle_counter = 0;
+set_max_iteration = 64;                              //set max iteration
+enable_sampling_MUT2 = 1;
 rst = 1;
 #200
 rst = 0;
@@ -112,19 +115,14 @@ echo_cancelation_full MUT5(       //#1200
 	.sampling_cycle_counter(sampling_cycle_counter),
 	.rst(rst),
 	.enable(enable_MUT5),
-		.sig16b_without_echo(sig16b_without_echo),
+	.set_max_iteration(set_max_iteration),		
 		.iteration(iteration),
+		.sig16b_without_echo(sig16b_without_echo),
 		.para_approx_0(para_approx_0),
 		.para_approx_1(para_approx_1),
 		.para_approx_2(para_approx_2),
 		.para_approx_3(para_approx_3)
 );
-
-initial begin
-	enable_sampling_MUT2 <= 0;
-	#8000;	
-	enable_sampling_MUT2 <= 1;
-end
 
 always @(posedge clk_operation) begin
 	if (sampling_cycle_counter == 0) begin
@@ -136,9 +134,9 @@ always @(posedge clk_operation) begin
 			enable_MUT2 <= 1;
 			#4 
 			enable_MUT2 <= 0;
-/*$display(
+$display(
 "##iteration: %d", iteration
-);*/
+);
 		end
 		#260
 		if (ready_MUT2) begin

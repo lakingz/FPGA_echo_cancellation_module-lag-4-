@@ -1,11 +1,4 @@
-D:/WORKING_FOLDER/echo_cancelation/A_code/para_approx.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/para_approx.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module para_approx
-
-Top level modules:
-	para_approx
-
-} {} {}} D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_package/fpu_TB.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_package/fpu_TB.v
+D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_package/fpu_TB.v {1 {vlog -work work -stats=none D:/WORKING_FOLDER/echo_cancelation/A_code/fpu_package/fpu_TB.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module fpu_tb
 
