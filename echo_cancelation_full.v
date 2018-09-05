@@ -33,7 +33,7 @@ output wire [63:0] para_approx_0,para_approx_1,para_approx_2,para_approx_3;
 
 reg enable_MUT1,enable_MUT2,enable_MUT3,enable_MUT4,enable_MUT5;
 wire [63:0] sig_double,sig_lag_double;
-reg [63:0] signal_MUT3, signal_lag_MUT3;
+reg [63:0] signal_MUT3, signal_lag_MUT3,sig_lag_double_MUT4,sig_double_MUT4;
 wire [63:0] signal_without_echo;
 wire [10:0] signal_without_echo_exp;
 wire ready_MUT1,ready_MUT2,ready_MUT3;
@@ -99,8 +99,8 @@ echo_cancelation MUT4(      //4 sampling #320 operation
 	.clk_operation(clk_operation),
 	.enable_sampling(enable_sampling_MUT4),
 	.enable(enable_MUT4),
-	.signal_receive(sig_lag_double),        //
-	.signal_send(sig_double),               // 
+	.signal_receive(sig_lag_double_MUT4),        //
+	.signal_send(sig_double_MUT4),               // 
 	.para_0(para_approx_0), 
 	.para_1(para_approx_1), 
 	.para_2(para_approx_2),
@@ -133,6 +133,8 @@ always @(posedge clk_operation) begin
 			if (ready_MUT1&ready_MUT2) begin
 				signal_MUT3 <= sig_double;
 				signal_lag_MUT3 <= sig_lag_double;
+				sig_lag_double_MUT4 <= sig_lag_double;        //
+				sig_double_MUT4 <= sig_double;       // 
 				enable_MUT3 <= 1;
 				enable_sampling_MUT3 <= 1;
 				enable_sampling_MUT4 <= 1;
@@ -164,6 +166,8 @@ always @(posedge clk_operation) begin
 			if (ready_MUT1&ready_MUT2) begin
 				signal_MUT3 <= sig_double;
 				signal_lag_MUT3 <= sig_lag_double;
+				sig_lag_double_MUT4 <= sig_lag_double;        //
+				sig_double_MUT4 <= sig_double;       // 
 				enable_MUT4 <= 1;
 				enable_sampling_MUT3 <= 1;
 				enable_sampling_MUT4 <= 1;
