@@ -79,4 +79,3 @@ LSM example:
 
 
 
-!!!!!!!!!!!!!!!!!!!!!!!!!1 double_to_sig16b.v is seriously wrong and need to debug.  
