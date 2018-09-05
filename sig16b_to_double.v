@@ -24,7 +24,7 @@ reg [3:0] i;
 always @(posedge clk_operation) begin
    if (rst) begin
       double_sign <= 0;
-      double_exponent <= -1023;
+      double_exponent <= 0;
       sig16b_amp <= 0;
       ready <= 0;
    end
@@ -39,14 +39,14 @@ always @(posedge clk_operation) begin
       if (enable_internal) begin   
          case (sig16b_amp[14])
          1: begin
-            double_exponent <= i - 1;
+            double_exponent <= i;
             sig16b_amp <= sig16b_amp << 1;
 	    enable_internal <= 0;
 	    ready <= 1;
          end
    
          0: begin
-   	    if (i > 0) begin
+   	    if (i >= 1) begin
 	       i <= i - 1;	
 	       sig16b_amp <= sig16b_amp << 1;
 	    end

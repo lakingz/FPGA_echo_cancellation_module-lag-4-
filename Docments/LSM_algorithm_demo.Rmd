@@ -48,6 +48,11 @@ for (i in c(1:L)) {
 }
 colnames(echo) <- par
 echo_sum <- rowSums(echo[,(1:(L + 1))])
+for (k in c(20:length(echo_sum))) {
+  echo_sum[k] <- min(echo_sum[k],32768)
+  echo_sum[k] <- max(echo_sum[k],-32768)
+}
+
 data <- data.frame(sig_far,echo,echo_sum)
 train_data <- data[1:(n + L),]
 ```

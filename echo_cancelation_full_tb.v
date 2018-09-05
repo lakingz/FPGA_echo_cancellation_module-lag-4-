@@ -12,7 +12,8 @@ wire [63:0] sig_double;
 wire [15:0] sig16b_lag_MUT3,sig16b_MUT4;
 wire [15:0] sig16b_without_echo;                        //finla result. expecting to be 0!!!!!!!!!!!!!!
 wire ready_MUT1,ready_MUT2;
-wire [63:0] signal_lag,signal_align_MUT2;
+wire [63:0] signal_lag_MUT2,signal_align_MUT2;
+reg [15:0] sig16b_lag_MUT5,sig16b_MUT5;
 reg [63:0] para_in_0,para_in_1,para_in_2,para_in_3;
 wire [63:0] para_approx_0,para_approx_1,para_approx_2,para_approx_3;
 reg [12:0] set_max_iteration;
@@ -29,19 +30,19 @@ rst = 1;
 #200
 rst = 0;
 para_in_0[63] = 0;
-para_in_0[62:52] = 11'b01111111111;
+para_in_0[62:52] = 11'b01111111100;
 para_in_0[51:0] = $urandom;
 
 para_in_1[63] = 0;
-para_in_1[62:52] = 11'b01111111111;
+para_in_1[62:52] = 11'b01111111100;
 para_in_1[51:0] = $urandom;
 
 para_in_2[63] = 0;
-para_in_2[62:52] = 11'b01111111111;
+para_in_2[62:52] = 11'b01111111100;
 para_in_2[51:0] = $urandom;
 
 para_in_3[63] = 0;
-para_in_3[62:52] = 11'b01111111111;
+para_in_3[62:52] = 11'b01111111100;
 para_in_3[51:0] = $urandom;
 
 end
@@ -84,7 +85,7 @@ lag_generator MUT2(    //#260
 	.para_1(para_in_1), 
 	.para_2(para_in_2), 
 	.para_3(para_in_3),
-		.signal_lag(signal_lag),
+		.signal_lag(signal_lag_MUT2),
 		.signal_align(signal_align_MUT2),
 		.ready(ready_MUT2)
 );
@@ -94,7 +95,7 @@ double_to_sig16b MUT3(
 	.clk_operation(clk_operation),
 	.rst(rst),
 	.enable(enable_MUT3),		
-	.double(signal_lag),
+	.double(signal_lag_MUT2),
 		.sig16b(sig16b_lag_MUT3)
 );
 
@@ -108,8 +109,8 @@ double_to_sig16b MUT4(
 );
 
 echo_cancelation_full MUT5(       //#1200
-	.sig16b(sig16b_MUT4),
-	.sig16b_lag(sig16b_lag_MUT3),
+	.sig16b(sig16b_MUT5),
+	.sig16b_lag(sig16b_lag_MUT5),
 	.clk_operation(clk_operation),
 	.sampling_cycle(sampling_cycle),
 	.sampling_cycle_counter(sampling_cycle_counter),
@@ -126,6 +127,9 @@ echo_cancelation_full MUT5(       //#1200
 
 always @(posedge clk_operation) begin
 	if (sampling_cycle_counter == 0) begin
+		sig16b_MUT5 <= sig16b_MUT4;
+		sig16b_lag_MUT5 <= sig16b_lag_MUT3;      ///alignment
+	
 		enable_MUT1 <= 1;
 		#4            //double operation clk       
 		enable_MUT1 <= 0;
@@ -142,9 +146,9 @@ $display(
 		if (ready_MUT2) begin
 			enable_MUT3 <= 1;
 			enable_MUT4 <= 1;
+			#4
+			enable_MUT5 <= 1;
 		end
-		#4
-		enable_MUT5 <= 1;
 	end
 end
 endmodule //echo_cancelation_full_tb

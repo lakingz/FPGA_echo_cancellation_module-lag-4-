@@ -26,10 +26,10 @@ integer iteration,set_max_iteration;
 reg enable_sampling_MUT2, enable_sampling_MUT3, enable_sampling_MUT4;
 reg enable_para_approx;
 reg [63:0] double_MUT5;
-wire [15:0] sig16b_MUT5;          //final output
+wire [15:0] FINAL_OUTPUT;          //final output
 
 initial begin
-set_max_iteration = 20;
+set_max_iteration = 64;
 clk_operation = 1;
 enable_para_approx = 1;
 sampling_cycle = 1510;
@@ -142,7 +142,7 @@ double_to_sig16b MUT5(
 	.rst(rst),
 	.enable(enable_MUT5),		
 	.double(double_MUT5),
-		.sig16b(sig16b_MUT5)
+		.sig16b(FINAL_OUTPUT)
 );
 
 initial begin

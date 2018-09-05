@@ -1,11 +1,11 @@
 `timescale 1us / 1us
 module double_16b_tb();
 
-reg [15:0] sig16b_in,sig16b_align;
+reg [15:0] sig16b_in,sig16b_in_align,sig16b_out_align;
 reg rst,clk_operation;
 reg enable_MUT,enable_MUTT;
 wire [63:0] double;
-wire [15:0] sig16b_out;
+wire [15:0] sig16b_out,error;
 reg [12:0] sampling_cycle, sampling_cycle_counter;
 reg sampling_light;
 
@@ -50,7 +50,8 @@ double_to_sig16b MUTT(
 always @(posedge clk_operation) begin
 	if (sampling_cycle_counter == 0) begin
 		sig16b_in <= $urandom;
-		sig16b_align <= sig16b_in;
+		sig16b_in_align <= sig16b_in;
+		sig16b_out_align <= sig16b_out;
 		enable_MUT <= 1;
 		#4 
 		enable_MUT <= 0;
@@ -62,6 +63,7 @@ always @(posedge clk_operation) begin
 	end
 end
 
+assign error = sig16b_out_align - sig16b_in_align;
 
 
 endmodule //double_16b_tb

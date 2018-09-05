@@ -58,8 +58,8 @@ reg [63:0] signal_lag_align;
 reg [63:0] lp_0,lp_1,lp_2,lp_3;						//count_operation == 0
 reg [63:0] lp_01,lp_23,ll_0,ll_1;					//count_operation == 1
 reg [63:0] lp_0123,ll_2,ll_3,ll_01;					//count_operation == 2
-reg [63:0] ll_23,gamma_ll_01,mu_lag_0,mu_lag_1;				//count_operation == 3
-reg [63:0] normalize_amp,mu_lag_2,mu_lag_3;				//count_operation == 4
+reg [63:0] ll_23,gamma_ll_01;						//count_operation == 3
+reg [63:0] normalize_amp,e_mu;						//count_operation == 4
 reg [63:0] e_mu_lag_0,e_mu_lag_1,e_mu_lag_2,e_mu_lag_3;			//count_operation == 5
 reg [63:0] D_para_0,D_para_1,D_para_2,D_para_3;				//count_operation == 6
 
@@ -68,10 +68,11 @@ reg [63:0] D_para_0,D_para_1,D_para_2,D_para_3;				//count_operation == 6
 
 always @(posedge clk_operation) begin
 	if (rst) begin 
-		//lag_3 <= 0;
-		//lag_2 <= 0;
-		//lag_1 <= 0;
-		//lag_0 <= 0;	
+		lag_3 <= 0;
+		lag_2 <= 0;
+		lag_1 <= 0;
+		lag_0 <= 0;	
+		signal_lag_align <= 0;
 		para_0 <= 64'b0000000000010000000000000000000000000000000000000000000000000000;
 		para_1 <= 64'b0000000000010000000000000000000000000000000000000000000000000000;
 		para_2 <= 64'b0000000000010000000000000000000000000000000000000000000000000000;
@@ -296,40 +297,33 @@ always @(posedge clk_operation) begin
 			rmode_U1 = 2'b00;
 			enable_U1 <= 1'b1;
 
-			opa_U2 <= mu;
-			opb_U2 <= lag_0;
-			fpu_op_U2 <= 3'b010; //out = mu*lag_0
+			opa_U2 <= signal_lag_align;
+			opb_U2 <= lp_0123;
+			fpu_op_U2 <= 3'b001; //out = e
 			rmode_U2 = 2'b00;
 			enable_U2 <= 1'b1;
-
-			opa_U3 <= mu;
-			opb_U3 <= lag_1;
-			fpu_op_U3 <= 3'b010; //out = mu*lag_1
-			rmode_U3 = 2'b00;
-			enable_U3 <= 1'b1;			
 			#4
 
 			enable_U0 <= 1'b0;			
 			enable_U1 <= 1'b0;
 			enable_U2 <= 1'b0;
-			enable_U3 <= 1'b0;
-		
+	
 			#60
 
-			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
+			if (ready_U0&ready_U1&ready_U2 == 1) begin
 				count_operation <= 4;
 				ll_23 <= out_U0;
 				gamma_ll_01 <= out_U1;
-				mu_lag_0 <= out_U2;
-				mu_lag_1 <= out_U3;
+				e <= out_U2;// unbais error of prediction	
+				e_exp <= out_U2[62:52] - 1023;	
 			end
 		end
 
 		4: begin
 			
-			opa_U0 <= signal_lag_align;
-			opb_U0 <= lp_0123;
-			fpu_op_U0 <= 3'b001; //out = e = signal_lag-(lag_0*para_0+lag_1*para_1+lag_2*para_2+lag_3*para_3)
+			opa_U0 <= e;
+			opb_U0 <= mu;
+			fpu_op_U0 <= 3'b010; //out = e_mu
 			rmode_U0 = 2'b00;
 			enable_U0 <= 1'b1;
 
@@ -339,67 +333,50 @@ always @(posedge clk_operation) begin
 			rmode_U1 = 2'b00;
 			enable_U1 <= 1'b1;
 
-			opa_U2 <= mu;
-			opb_U2 <= lag_2;
-			fpu_op_U2 <= 3'b010; //out = mu*lag_2
-			rmode_U2 = 2'b00;
-			enable_U2 <= 1'b1;
-
-			opa_U3 <= mu;
-			opb_U3 <= lag_3;
-			fpu_op_U3 <= 3'b010; //out = mu*lag_3
-			rmode_U3 = 2'b00;
-			enable_U3 <= 1'b1;			
 			#4
 
 			enable_U0 <= 1'b0;			
 			enable_U1 <= 1'b0;
-			enable_U2 <= 1'b0;
-			enable_U3 <= 1'b0;
 		
 			#60
 
-			if (ready_U0&ready_U1&ready_U2&ready_U3 == 1) begin
-$display(
-"##signal_lag_align[sign]: %b", signal_lag_align[63],
-"##signal_lag_align[exp]: %d", signal_lag_align[62:52] - 1023,
-"##signal_lag_align: %b", signal_lag_align[51:45],
-"##lp_0123[sign]: %b", lp_0123[63],
-"##lp_0123[exp]: %d", lp_0123[62:52] - 1023,
-"##lp_0123: %b", lp_0123[51:45]
-);
-				count_operation <= 5;
-				e <= out_U0; // unbais error of prediction	
+			if (ready_U0&ready_U1 == 1) begin
+/*$display(
+"  ##signal_lag_align[sign]: %b", signal_lag_align[63],
+"  ##lp_0123[sign]: %b", lp_0123[63],
+"  ##signal_lag_align[exp]: %d", signal_lag_align[62:52] - 1023,
+"  ##lp_0123[exp]: %d", lp_0123[62:52] - 1023,
+"  ##signal_lag_align: %b", signal_lag_align[51:45],
+"  ##lp_0123: %b", lp_0123[51:45]
+);*/				count_operation <= 5;
+				e_mu <= out_U0; 
 				normalize_amp <= out_U1;		
-				e_exp <= out_U0[62:52] - 1023;	
 				normalize_amp_exp <= out_U1[62:52] - 1023;
-				mu_lag_2 <= out_U2;
-				mu_lag_3 <= out_U3;
 			end
 		end
 
 		5: begin
 	
-			opa_U0 <= e;
-			opb_U0 <= mu_lag_0;
+			opa_U0 <= e_mu;
+			opb_U0 <= lag_0;
 			fpu_op_U0 <= 3'b010; //out = e*mu*lag_0
 			rmode_U0 = 2'b00;
 			enable_U0 <= 1'b1;
 
-			opa_U1 <= e;
-			opb_U1 <= mu_lag_1;
+			opa_U1 <= e_mu;
+			opb_U1 <= lag_1;
 			fpu_op_U1 <= 3'b010; //out = e*mu*lag_1
 			rmode_U1 = 2'b00;
 			enable_U1 <= 1'b1;
 
-			opa_U2 <= e;
-			opb_U2 <= mu_lag_2;
+			opa_U2 <= e_mu;
+			opb_U2 <= lag_2;
 			fpu_op_U2 <= 3'b010; //out = e*mu*lag_2
 			rmode_U2 = 2'b00;
 			enable_U2 <= 1'b1;
 
-			opa_U3 <= e;
-			opb_U3 <= mu_lag_3;
+			opa_U3 <= e_mu;
+			opb_U3 <= lag_3;
 			fpu_op_U3 <= 3'b010; //out = e*mu*lag_3
 			rmode_U3 = 2'b00;
 			enable_U3 <= 1'b1;			
@@ -424,25 +401,25 @@ $display(
 		6: begin		
 			opa_U0 <= e_mu_lag_0;
 			opb_U0 <= normalize_amp;
-			fpu_op_U0 <= 3'b011; //out = e*mu*lag_0/(gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_2*lag_2)
+			fpu_op_U0 <= 3'b011; //out = e*mu*lag_0/(gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_3*lag_3)
 			rmode_U0 = 2'b00;
 			enable_U0 <= 1'b1;
 
 			opa_U1 <= e_mu_lag_1;
 			opb_U1 <= normalize_amp;
-			fpu_op_U1 <= 3'b011; //out = e*mu*lag_1/(gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_2*lag_2)
+			fpu_op_U1 <= 3'b011; //out = e*mu*lag_1/(gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_3*lag_3)
 			rmode_U1 = 2'b00;
 			enable_U1 <= 1'b1;
 
 			opa_U2 <= e_mu_lag_2;
 			opb_U2 <= normalize_amp;
-			fpu_op_U2 <= 3'b011; //out = e*mu*lag_2/(gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_2*lag_2)
+			fpu_op_U2 <= 3'b011; //out = e*mu*lag_2/(gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_3*lag_3)
 			rmode_U2 = 2'b00;
 			enable_U2 <= 1'b1;
 
 			opa_U3 <= e_mu_lag_3;
 			opb_U3 <= normalize_amp;
-			fpu_op_U3 <= 3'b011; //out = e*mu*lag_3/(gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_2*lag_2)
+			fpu_op_U3 <= 3'b011; //out = e*mu*lag_3/(gamma + lag_0*lag_0+lag_1*lag_1+lag_2*lag_2+lag_3*lag_3)
 			rmode_U3 = 2'b00;
 			enable_U3 <= 1'b1;			
 			#4

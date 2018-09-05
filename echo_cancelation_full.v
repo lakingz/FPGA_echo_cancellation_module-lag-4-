@@ -25,7 +25,7 @@ module echo_cancelation_full (
 
 input [12:0] sampling_cycle, sampling_cycle_counter;
 input rst,clk_operation,enable;
-input [15:0] sig16b,sig16b_lag;
+input [15:0] sig16b,sig16b_lag;              //////////////////////////////
 input [12:0] set_max_iteration;
 output reg [12:0] iteration = 0;
 output wire [15:0] sig16b_without_echo;
@@ -33,11 +33,13 @@ output wire [63:0] para_approx_0,para_approx_1,para_approx_2,para_approx_3;
 
 reg enable_MUT1,enable_MUT2,enable_MUT3,enable_MUT4,enable_MUT5;
 wire [63:0] sig_double,sig_lag_double;
+reg [63:0] signal_MUT3, signal_lag_MUT3;
 wire [63:0] signal_without_echo;
 wire [10:0] signal_without_echo_exp;
 wire ready_MUT1,ready_MUT2,ready_MUT3;
 wire [10:0] e_exp,normalize_amp_exp;
 wire [63:0] e;
+reg [15:0] sig16b_MUT1, sig16b_lag_MUT2;
 reg enable_sampling_MUT3, enable_sampling_MUT4;
 reg enable_para_approx;
 reg [63:0] double_MUT5;
@@ -75,8 +77,8 @@ para_approx MUT3(           //4 sampling #620 operation
 	.clk_operation(clk_operation),
 	.enable_sampling(enable_sampling_MUT3),
 	.enable(enable_MUT3),
-	.signal(sig_double), 
-	.signal_lag(sig_lag_double),
+	.signal(signal_MUT3), 
+	.signal_lag(signal_lag_MUT3),
 	.gamma(64'b0011111111010000000000000000000000000000000000000000000000000000), 
 //default      64'b0 01111111101 0000000000000000000000000000000000000000000000000000; //0.01
 	.mu(64'b0011111111110000000000000000000000000000000000000000000000000000),	 
@@ -97,8 +99,8 @@ echo_cancelation MUT4(      //4 sampling #320 operation
 	.clk_operation(clk_operation),
 	.enable_sampling(enable_sampling_MUT4),
 	.enable(enable_MUT4),
-	.signal_receive(sig_lag_double),
-	.signal_send(sig_double), 
+	.signal_receive(sig_lag_double),        //
+	.signal_send(sig_double),               // 
 	.para_0(para_approx_0), 
 	.para_1(para_approx_1), 
 	.para_2(para_approx_2),
@@ -123,11 +125,14 @@ always @(posedge clk_operation) begin
 		if (sampling_cycle_counter == 0) begin
 			enable_MUT1 <= 1;
 			enable_MUT2 <= 1;
+
 			#4            //double operation clk       
 			enable_MUT1 <= 0;
 			enable_MUT2 <= 0;
 			#50
 			if (ready_MUT1&ready_MUT2) begin
+				signal_MUT3 <= sig_double;
+				signal_lag_MUT3 <= sig_lag_double;
 				enable_MUT3 <= 1;
 				enable_sampling_MUT3 <= 1;
 				enable_sampling_MUT4 <= 1;
@@ -157,6 +162,8 @@ always @(posedge clk_operation) begin
 			enable_MUT2 <= 0;
 			#50
 			if (ready_MUT1&ready_MUT2) begin
+				signal_MUT3 <= sig_double;
+				signal_lag_MUT3 <= sig_lag_double;
 				enable_MUT4 <= 1;
 				enable_sampling_MUT3 <= 1;
 				enable_sampling_MUT4 <= 1;
