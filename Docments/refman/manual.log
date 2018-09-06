@@ -1,0 +1,381 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.4)  6 SEP 2018 18:05
+entering extended mode
+**./manual.tex
+(manual.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
+(C:\Users\ankai\Documents\Latex\tex\latex\refman\refart.cls
+Document Class: refart 2006/11/13 v2.0e LaTeX document class
+\papermarginwidth=\skip41
+(C:\Users\ankai\Documents\Latex\tex\latex\base\size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\leftmarginwidth=\dimen102
+\fullwidth=\dimen103
+\emptyfoottopmargin=\dimen104
+\emptyheadtopmargin=\dimen105
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\bibindent=\dimen106
+)
+(C:\Users\ankai\Documents\Latex\tex\latex\base\makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+(C:\Users\ankai\Documents\Latex\tex\latex\base\ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\ankai\Documents\Latex\tex\latex\easylist\easylist.sty
+Package: easylist 2014/01/11 v.1.4 Numbered items with a single command.
+\el@CounterTotal=\count87
+\el@Scratch=\count88
+\el@ControlCounter=\count89
+\el@CounterLevel=\count90
+\c@List1=\count91
+\c@List2=\count92
+\c@List3=\count93
+\c@List4=\count94
+\c@List5=\count95
+\c@List6=\count96
+\c@List7=\count97
+\c@List8=\count98
+\c@List9=\count99
+\c@List10=\count100
+\el@ProgressiveDimension=\dimen107
+\el@CounterBox=\box26
+\el@ControlBox=\box27
+\el@TotalMargin=\dimen108
+\el@LeftMove=\dimen109
+)
+(C:\Users\ankai\Documents\Latex\tex\latex\graphics\graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\ankai\Documents\Latex\tex\latex\graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(C:\Users\ankai\Documents\Latex\tex\latex\graphics\graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\ankai\Documents\Latex\tex\latex\graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\ankai\Documents\Latex\tex\latex\graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(C:\Users\ankai\Documents\Latex\tex\latex\graphics-def\pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(C:\Users\ankai\Documents\Latex\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(C:\Users\ankai\Documents\Latex\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count101
+))
+\Gin@req@height=\dimen110
+\Gin@req@width=\dimen111
+)
+(C:\Users\ankai\Documents\Latex\tex\latex\float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count102
+\float@exts=\toks15
+\float@box=\box28
+\@float@everytoks=\toks16
+\@floatcapt=\box29
+)
+(C:\Users\ankai\Documents\Latex\tex\latex\paralist\paralist.sty
+Package: paralist 2017/01/22 v2.7 Extended list environments
+\pltopsep=\skip44
+\plpartopsep=\skip45
+\plitemsep=\skip46
+\plparsep=\skip47
+\pl@lab=\toks17
+)
+(C:\Users\ankai\Documents\Latex\tex\latex\setspace\setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+\@indexfile=\write3
+\openout3 = `manual.idx'.
+
+
+Writing index file manual.idx
+(manual.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+)
+\openout1 = `manual.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+ (C:\Users\ankai\Documents\Latex\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count103
+\scratchdimen=\dimen112
+\scratchbox=\box30
+\nofMPsegments=\count104
+\nofMParguments=\count105
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count106
+\MPscratchDim=\dimen113
+\MPnumerator=\count107
+\makeMPintoPDFobject=\count108
+\everyMPtoPDFconversion=\toks19
+) (C:\Users\ankai\Documents\Latex\tex\generic\oberdiek\pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\ankai\Documents\Latex\tex\generic\oberdiek\ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(C:\Users\ankai\Documents\Latex\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\ankai\Documents\Latex\tex\latex\oberdiek\epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(C:\Users\ankai\Documents\Latex\tex\latex\oberdiek\grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(C:\Users\ankai\Documents\Latex\tex\generic\oberdiek\kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(C:\Users\ankai\Documents\Latex\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(C:\Users\ankai\Documents\Latex\tex\generic\oberdiek\kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(C:\Users\ankai\Documents\Latex\tex\generic\oberdiek\etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+<image/echo_cancelation_full.png, id=1, 517.38094pt x 176.122pt>
+File: image/echo_cancelation_full.png Graphic file (type png)
+
+<use image/echo_cancelation_full.png>
+Package pdftex.def Info: image/echo_cancelation_full.png used on input line 64.
+
+(pdftex.def)             Requested size: 362.16418pt x 123.28455pt.
+
+Overfull \hbox (46.16418pt too wide) in paragraph at lines 64--65
+ [][] 
+ []
+
+<image/echo_cancelation_full_module.png, id=3, 244.92303pt x 170.62947pt>
+File: image/echo_cancelation_full_module.png Graphic file (type png)
+
+<use image/echo_cancelation_full_module.png>
+Package pdftex.def Info: image/echo_cancelation_full_module.png used on input l
+ine 70.
+(pdftex.def)             Requested size: 293.90616pt x 204.75432pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+{C:/Users/ankai/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2 <./image
+/echo_cancelation_full.png> <./image/echo_cancelation_full_module.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 92.
+
+(C:\Users\ankai\Documents\Latex\tex\latex\base\omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 92.
+
+Underfull \hbox (badness 1014) in paragraph at lines 92--93
+[]\OT1/cmr/m/n/10 The echo[]cancelation[]full core takes new sam-ple when "sam-
+
+ []
+
+
+Overfull \hbox (64.46928pt too wide) in paragraph at lines 93--94
+[]\OT1/cmr/m/n/10 The recom-menced max-i-mum it-er-a-tion is 64 for lag 4. See 
+LSM[]algorithm[]demo.pdf
+ []
+
+<image/sig16b_to_double.png, id=19, 244.66406pt x 170.88844pt>
+File: image/sig16b_to_double.png Graphic file (type png)
+
+<use image/sig16b_to_double.png>
+Package pdftex.def Info: image/sig16b_to_double.png used on input line 100.
+(pdftex.def)             Requested size: 293.59538pt x 205.0651pt.
+ [3 <./image/sig16b_to_double.png>]
+<image/double_to_sig16b.png, id=25, 244.92303pt x 170.62947pt>
+File: image/double_to_sig16b.png Graphic file (type png)
+
+<use image/double_to_sig16b.png>
+Package pdftex.def Info: image/double_to_sig16b.png used on input line 121.
+(pdftex.def)             Requested size: 293.90616pt x 204.75432pt.
+ [4 <./image/double_to_sig16b.png>]
+<image/para_approx.png, id=30, 244.92303pt x 169.76224pt>
+File: image/para_approx.png Graphic file (type png)
+
+<use image/para_approx.png>
+Package pdftex.def Info: image/para_approx.png used on input line 142.
+(pdftex.def)             Requested size: 293.90616pt x 203.71365pt.
+
+Overfull \hbox (72.89003pt too wide) in paragraph at lines 155--156
+\OT1/cmr/m/n/10 64'b00111111110100000000000000000000000000000000000000000000000
+00000(0.01) 
+ []
+
+
+Overfull \hbox (60.11221pt too wide) in paragraph at lines 156--157
+\OT1/cmr/m/n/10 64'b00111111111100000000000000000000000000000000000000000000000
+00000(1) 
+ []
+
+[5 <./image/para_approx.png>]
+<image/echo_cancelation.png, id=35, 244.92303pt x 169.76224pt>
+File: image/echo_cancelation.png Graphic file (type png)
+
+<use image/echo_cancelation.png>
+Package pdftex.def Info: image/echo_cancelation.png used on input line 173.
+(pdftex.def)             Requested size: 293.90616pt x 203.71365pt.
+ [6 <./image/echo_cancelation.png>]
+<image/lag_generator.png, id=40, 244.92303pt x 169.76224pt>
+File: image/lag_generator.png Graphic file (type png)
+
+<use image/lag_generator.png>
+Package pdftex.def Info: image/lag_generator.png used on input line 199.
+(pdftex.def)             Requested size: 293.90616pt x 203.71365pt.
+ [7 <./image/lag_generator.png>]
+<image/double_16b_tb.png, id=46, 353.25575pt x 91.13248pt>
+File: image/double_16b_tb.png Graphic file (type png)
+
+<use image/double_16b_tb.png>
+Package pdftex.def Info: image/double_16b_tb.png used on input line 226.
+(pdftex.def)             Requested size: 353.25488pt x 91.13223pt.
+
+Overfull \hbox (37.25488pt too wide) in paragraph at lines 226--227
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--229
+
+ []
+
+<image/tb_all.png, id=47, 555.53949pt x 183.20445pt>
+File: image/tb_all.png Graphic file (type png)
+ <use image/tb_all.png>
+Package pdftex.def Info: image/tb_all.png used on input line 240.
+(pdftex.def)             Requested size: 333.32625pt x 109.92351pt.
+
+Overfull \hbox (17.32625pt too wide) in paragraph at lines 240--241
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--243
+
+ []
+
+[8 <./image/double_16b_tb.png>]
+<image/echo_cancelation_full_tb.png, id=52, 523.59615pt x 141.14331pt>
+File: image/echo_cancelation_full_tb.png Graphic file (type png)
+
+<use image/echo_cancelation_full_tb.png>
+Package pdftex.def Info: image/echo_cancelation_full_tb.png used on input line 
+250.
+(pdftex.def)             Requested size: 366.51479pt x 98.79962pt.
+
+Overfull \hbox (50.51479pt too wide) in paragraph at lines 250--251
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--253
+
+ []
+
+No file manual.ind.
+[9 <./image/tb_all.png> <./image/echo_cancelation_full_tb.png>] (manual.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2242 strings out of 493323
+ 30973 string characters out of 3137800
+ 94476 words of memory out of 3000000
+ 5757 multiletter control sequences out of 15000+200000
+ 6478 words of font info for 23 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 39i,7n,25p,326b,218s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/ankai/Documents/Latex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:
+/Users/ankai/Documents/Latex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/User
+s/ankai/Documents/Latex/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/anka
+i/Documents/Latex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ankai/Docu
+ments/Latex/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/ankai/Documents/L
+atex/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/ankai/Documents/Latex/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on manual.pdf (9 pages, 1963895 bytes).
+PDF statistics:
+ 81 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+

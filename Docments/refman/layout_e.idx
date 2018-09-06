@@ -1,0 +1,58 @@
+\indexentry{author}{3}
+\indexentry{designer}{3}
+\indexentry{compositor}{3}
+\indexentry{layout design}{3}
+\indexentry{rules}{3}
+\indexentry{manual}{4}
+\indexentry{telephone directory}{4}
+\indexentry{corporate desing}{4}
+\indexentry{rules of thumb}{4}
+\indexentry{line spacing}{4}
+\indexentry{line length}{4}
+\indexentry{page layout}{4}
+\indexentry{margin notes}{4}
+\indexentry{headings}{4}
+\indexentry{footings}{4}
+\indexentry{design, logical}{5}
+\indexentry{design, generic}{5}
+\indexentry{design, visual}{5}
+\indexentry{changing the layout, step by step}{7}
+\indexentry{headings}{12}
+\indexentry{footings}{12}
+\indexentry{margin notes}{12}
+\indexentry{refrep.cls}{15}
+\indexentry{refart.cls}{15}
+\indexentry{refart, invocation}{15}
+\indexentry{refrep, invocation}{15}
+\indexentry{options}{15}
+\indexentry{page design, horizontal}{15}
+\indexentry{papermarginwidth}{15}
+\indexentry{settextfraction}{16}
+\indexentry{page design, vertical}{16}
+\indexentry{footnote}{16}
+\indexentry{description environment}{16}
+\indexentry{pagestyle}{17}
+\indexentry{headings}{17}
+\indexentry{myheadings}{17}
+\indexentry{footings}{17}
+\indexentry{myfootings}{17}
+\indexentry{marginlabel}{17}
+\indexentry{attention}{17}
+\indexentry{attentionsymbol}{17}
+\indexentry{manfnt}{17}
+\indexentry{seealso}{18}
+\indexentry{maxipage}{18}
+\indexentry{maxipagerule}{18}
+\indexentry{fullpage}{18}
+\indexentry{setleftmarginwidth}{18}
+\indexentry{descriptioncolon}{18}
+\indexentry{descriptionleft}{19}
+\indexentry{maxipagerule}{19}
+\indexentry{condbreak}{19}
+\indexentry{example}{19}
+\indexentry{pageperchapter}{19}
+\indexentry{smallborder}{19}
+\indexentry{dvips}{19}
+\indexentry{pdftex}{19}
+\indexentry{pagesize}{19}
+\indexentry{ifpdfoutput}{20}

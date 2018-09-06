@@ -112,7 +112,6 @@ echo_cancelation_full MUT5(       //#1200
 	.sig16b(sig16b_MUT5),
 	.sig16b_lag(sig16b_lag_MUT5),
 	.clk_operation(clk_operation),
-	.sampling_cycle(sampling_cycle),
 	.sampling_cycle_counter(sampling_cycle_counter),
 	.rst(rst),
 	.enable(enable_MUT5),

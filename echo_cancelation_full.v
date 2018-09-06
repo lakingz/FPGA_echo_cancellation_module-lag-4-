@@ -1,7 +1,6 @@
 //echo_cancelation_full 
 //ankai liu
 //IMPORTANT    sampling_cycle >= 1200 
-//takes at least 950 for proper outputs.
 
 
 `timescale 1us / 1us
@@ -9,7 +8,6 @@ module echo_cancelation_full (
 	sig16b,
 	sig16b_lag,
 	clk_operation,
-	sampling_cycle,
 	sampling_cycle_counter,
 	rst,
 	enable,
@@ -23,7 +21,7 @@ module echo_cancelation_full (
 );
 
 
-input [12:0] sampling_cycle, sampling_cycle_counter;
+input [12:0] sampling_cycle_counter;
 input rst,clk_operation,enable;
 input [15:0] sig16b,sig16b_lag;              //////////////////////////////
 input [12:0] set_max_iteration;
